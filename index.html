@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Roteiro de dois dias em Berlim: sábado na Berlim histórica e Kreuzberg, domingo na antiga Berlim Leste.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="★ Berlim Leste &amp; Oeste 🦅 · Roteiro de fim de semana">
+<meta property="og:description" content="Sábado à moda da Alemanha Federal, domingo em Berlim Leste. Horários, trajetos, fotografias e a história de cada sítio.">
+<meta property="og:image" content="https://filipe-teles.github.io/BERLIM-/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://filipe-teles.github.io/BERLIM-/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://filipe-teles.github.io/BERLIM-/og.png">
+<title>★ Berlim Leste &amp; Oeste 🦅 · Roteiro de fim de semana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&family=Barlow:wght@500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f2ea; --card:#fffdf9; --ink:#24211d; --muted:#6f685e; --line:#e6dfd2;
+    --accent:#c8553d; --accent-ink:#fff; --chip:#efe8db; --done:#9a948a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#16181d; --card:#1f232a; --ink:#ece7de; --muted:#a39d93; --line:#2f343d; --chip:#2a2f37; --done:#6d6b67; }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+  body{padding:env(safe-area-inset-top) env(safe-area-inset-right) calc(24px + env(safe-area-inset-bottom)) env(safe-area-inset-left)}
+  .wrap{max-width:560px;margin:0 auto;padding:0 16px}
+  header{padding:22px 0 8px}
+  h1{font-family:Fraunces,Georgia,serif;font-size:30px;line-height:1.1;margin:0 0 4px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:14px;margin:0}
+  .tabs{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0 10px;display:flex;gap:8px;border-bottom:1px solid var(--line)}
+  .tab{flex:1;appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 15px Inter,sans-serif;padding:11px 10px;border-radius:12px;cursor:pointer}
+  .tab small{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:2px}
+  .tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .tab[aria-selected="true"] small{color:rgba(255,255,255,.85)}
+  .daymeta{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px}
+  .chip{background:var(--chip);border-radius:999px;padding:6px 11px;font-size:13px;color:var(--ink)}
+  .timeline{list-style:none;margin:12px 0 0;padding:0}
+  .stop{position:relative;padding-left:58px;margin-bottom:14px}
+  .stop::before{content:"";position:absolute;left:23px;top:30px;bottom:-14px;width:2px;background:var(--line)}
+  .stop:last-child::before{display:none}
+  .time{position:absolute;left:0;top:10px;width:48px;text-align:center;font:600 14px Inter,sans-serif;font-variant-numeric:tabular-nums;background:var(--bg);padding:2px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .art{display:block;width:100%;height:auto;aspect-ratio:400/130}
+  .photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--chip)}
+  .body{padding:12px 14px 14px}
+  .name{font-family:Fraunces,Georgia,serif;font-size:19px;line-height:1.2;margin:0 0 4px}
+  .note{font-size:14px;line-height:1.45;color:var(--muted);margin:0}
+  .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font:600 13px Inter,sans-serif;padding:9px 12px;border-radius:10px;border:1px solid var(--line);color:var(--ink);background:var(--bg)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn svg{width:15px;height:15px;flex:none}
+  .check{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);cursor:pointer;user-select:none}
+  .check input{width:18px;height:18px;accent-color:var(--accent)}
+  .stop.done .card{opacity:.55}
+  .stop.done .name{text-decoration:line-through;text-decoration-color:var(--done)}
+  .stop.now .card{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+  .nowtag{display:none;font:600 11px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+  .stop.now .nowtag{display:block}
+  .more{margin-top:12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);overflow:hidden}
+  .more summary{list-style:none;cursor:pointer;padding:11px 12px;font:600 13px Inter,sans-serif;display:flex;align-items:center;gap:8px;color:var(--ink)}
+  .more summary::-webkit-details-marker{display:none}
+  .more summary .ico{width:18px;height:18px;border-radius:50%;background:var(--accent);color:#fff;display:inline-grid;place-items:center;font-size:11px;font-weight:700;flex:none}
+  .more summary::after{content:"";margin-left:auto;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+  .more[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+  .more .txt{padding:0 12px 12px;font-size:14px;line-height:1.55}
+  .more .txt p{margin:0 0 9px}
+  .more .txt h4{font:600 13px Inter,sans-serif;margin:10px 0 3px;color:var(--accent)}
+  .more .src{font-size:12px;color:var(--muted);margin:4px 0 0}
+  .more .src a{color:var(--muted)}
+  .tips{margin:22px 0 0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+  .tips h2{font-family:Fraunces,Georgia,serif;font-size:18px;margin:0 0 8px}
+  .tips ul{margin:0;padding-left:18px}
+  .tips li{font-size:14px;line-height:1.5;margin-bottom:6px;color:var(--ink)}
+  .foot{color:var(--muted);font-size:12px;text-align:center;margin:18px 0 0;line-height:1.5}
+
+  /* ---------- Tema de domingo: Berlim Leste ---------- */
+  body[data-day="domingo"]{ --bg:#efe3c8; --card:#fbf4e3; --ink:#1d1916; --muted:#6c5b45; --line:#d8c39b; --chip:#e8d5ad; --accent:#c1121f; --accent-ink:#fff;
+    background:#efe3c8 repeating-linear-gradient(135deg, rgba(193,18,31,.035) 0 14px, transparent 14px 28px); }
+  @media (prefers-color-scheme: dark){ body[data-day="domingo"]{ --bg:#1c1412; --card:#291c19; --ink:#f2e6cf; --muted:#b9a284; --line:#4a312b; --chip:#3a2621; --accent:#e0353f;
+    background:#1c1412 repeating-linear-gradient(135deg, rgba(224,53,63,.06) 0 14px, transparent 14px 28px);} }
+  body[data-day="domingo"] .tabs{background:transparent;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  body[data-day="domingo"] h1, body[data-day="domingo"] .name, body[data-day="domingo"] .tips h2{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em}
+  body[data-day="domingo"] .name{font-size:20px;font-weight:600}
+  body[data-day="domingo"] .tab[aria-selected="true"]{background:var(--accent);border-color:#8f0d17;box-shadow:inset 0 -3px 0 #8f0d17}
+  body[data-day="domingo"] .tab[data-day="domingo"]::before{content:"★ ";color:#f2c14e}
+  body[data-day="domingo"] .stop::before{background:var(--accent);opacity:.55;width:3px}
+  body[data-day="domingo"] .time{color:#fff;background:var(--accent);border-radius:6px;font-family:Oswald,sans-serif;font-weight:600;letter-spacing:.03em;padding:3px 0}
+  body[data-day="domingo"] .time::after{content:"★";display:block;color:var(--accent);font-size:13px;line-height:1;margin-top:6px;background:var(--bg)}
+  body[data-day="domingo"] .card{border:2px solid var(--ink);border-radius:4px;box-shadow:5px 5px 0 var(--accent)}
+  body[data-day="domingo"] .btn{border-radius:3px}
+  body[data-day="domingo"] .btn.primary{background:var(--accent);border-color:var(--accent)}
+  body[data-day="domingo"] .chip{border-radius:3px;background:var(--accent);color:#fff;font-weight:600}
+  body[data-day="domingo"] .more{border-radius:3px;border-color:var(--line)}
+  body[data-day="domingo"] .more summary .ico{background:var(--accent);border-radius:2px}
+  body[data-day="domingo"] .more .txt h4{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:14px}
+  body[data-day="domingo"] .tips{border:2px solid var(--ink);border-radius:4px;box-shadow:5px 5px 0 var(--accent)}
+  body[data-day="domingo"] .stop.now .card{box-shadow:0 0 0 3px #f2c14e, 5px 5px 0 var(--accent)}
+  .ostbanner{display:none}
+  body[data-day="domingo"] .ostbanner{display:block;margin:16px 0 6px;border:2px solid #1d1916;box-shadow:5px 5px 0 #1d1916;line-height:0}
+  .ostbanner svg{width:100%;height:auto;display:block}
+
+  /* ---------- Tema de sábado: cartaz da Alemanha Federal ---------- */
+  body[data-day="sabado"]{ --bg:#f2f0eb; --card:#ffffff; --ink:#111111; --muted:#5d5a55; --line:#d6d2c9; --chip:#e9e5dc; --accent:#111111; --accent-ink:#fff;
+    background:#f2f0eb linear-gradient(rgba(0,0,0,.035) 1px, transparent 1px) 0 0/100% 32px; }
+  @media (prefers-color-scheme: dark){ body[data-day="sabado"]{ --bg:#131313; --card:#1d1d1d; --ink:#f1f1f1; --muted:#a8a49c; --line:#353535; --chip:#2a2a2a; --accent:#f1f1f1; --accent-ink:#111;
+    background:#131313 linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px) 0 0/100% 32px; } }
+  body[data-day="sabado"] .tabs{background:transparent;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  body[data-day="sabado"] h1, body[data-day="sabado"] .name, body[data-day="sabado"] .tips h2{font-family:Barlow,Inter,sans-serif;font-weight:700;letter-spacing:-.01em}
+  body[data-day="sabado"] .name{font-size:21px}
+  body[data-day="sabado"] .tab{border-radius:0;border-color:var(--ink)}
+  body[data-day="sabado"] .tab[aria-selected="true"]{background:#111;color:#fff;border-color:#111;box-shadow:inset 0 -5px 0 #ffce00}
+  body[data-day="sabado"] .tab[aria-selected="true"] small{color:#ffce00}
+  body[data-day="sabado"] .stop::before{background:var(--ink);width:1px;left:24px}
+  body[data-day="sabado"] .time{background:#111;color:#ffce00;border-radius:0;font-family:"Barlow Condensed",Inter,sans-serif;font-weight:700;font-size:16px;padding:3px 0}
+  body[data-day="sabado"] .time::after{content:"";display:block;height:4px;background:linear-gradient(to right,#111 0 33.3%,#dd0000 33.3% 66.6%,#ffce00 66.6%)}
+  body[data-day="sabado"] .card{border-radius:0;border:1px solid var(--ink);padding-top:6px;background:linear-gradient(to right,#111 0 33.34%,#dd0000 33.34% 66.67%,#ffce00 66.67%) top/100% 6px no-repeat, var(--card)}
+  body[data-day="sabado"] .btn{border-radius:0;border-color:var(--ink)}
+  body[data-day="sabado"] .btn.primary{background:#111;border-color:#111;color:#fff}
+  @media (prefers-color-scheme: dark){ body[data-day="sabado"] .btn.primary{background:#ffce00;border-color:#ffce00;color:#111} }
+  body[data-day="sabado"] .chip{border-radius:0;background:transparent;border:1px solid var(--ink);font-weight:600}
+  body[data-day="sabado"] .more{border-radius:0;border-color:var(--line)}
+  body[data-day="sabado"] .more summary .ico{background:#dd0000;border-radius:0}
+  body[data-day="sabado"] .more .txt h4{font-family:Barlow,sans-serif;font-weight:700;color:#dd0000;font-size:14px}
+  body[data-day="sabado"] .tips{border-radius:0;border:1px solid var(--ink);padding-top:20px;background:linear-gradient(to right,#111 0 33.34%,#dd0000 33.34% 66.67%,#ffce00 66.67%) top/100% 6px no-repeat, var(--card)}
+  body[data-day="sabado"] .stop.now .card{box-shadow:0 0 0 3px #ffce00}
+  body[data-day="sabado"] .check input{accent-color:#dd0000}
+  @media (prefers-color-scheme: dark){ body[data-day="sabado"] .time{background:#2b2b2b} }
+  .westbanner{display:none}
+  body[data-day="sabado"] .westbanner{display:block;margin:16px 0 6px;border:1px solid #111;line-height:0}
+  .westbanner svg{width:100%;height:auto;display:block}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Berlim</h1>
+    <p class="sub">Partida e chegada: Motel One Berlin-Spittelmarkt</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" id="tab-sabado" data-day="sabado">Sábado<small>7 nov · 12h–24h</small></button>
+    <button class="tab" role="tab" id="tab-domingo" data-day="domingo">Domingo<small>8 nov · 10h45–19h30</small></button>
+  </nav>
+
+  <section id="day-sabado" data-day="sabado"></section>
+  <section id="day-domingo" data-day="domingo"></section>
+
+  <p class="foot">Tempos de trajeto aproximados: o Google Maps mostra os reais ao abrir cada link.<br>Previsão consultada a 5 de novembro.</p>
+</div>
+
+<script>
+/* ---------- Ilustrações ---------- */
+const SKY = { day:"#cfe2ef", dusk:"#f2c6a0", night:"#232d4b" };
+const GROUND = { day:"#e7e0d2", dusk:"#e2cdb8", night:"#1a2036" };
+const C = { stone:"#ddd2c0", stone2:"#c9bba4", dark:"#3c3934", red:"#c8553d", yellow:"#f0c05a", green:"#5f8f7b", blue:"#4a7fb5", white:"#f7f4ee", grey:"#9aa0a6", grey2:"#7b8188" };
+
+function frame(phase, inner){
+  const stars = phase==="night" ? [ [40,22],[90,14],[150,30],[300,18],[350,34],[372,12],[250,10] ].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.4" fill="#fff" opacity=".8"/>`).join("") + `<circle cx="345" cy="30" r="10" fill="#f4ecd2"/><circle cx="350" cy="27" r="9" fill="${SKY.night}"/>` : "";
+  const sun = phase==="dusk" ? `<circle cx="330" cy="108" r="22" fill="#f6a262" opacity=".9"/>` : (phase==="day" ? `<circle cx="345" cy="30" r="13" fill="#fbe7a1"/>` : "");
+  return `<svg class="art" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+    <rect width="400" height="130" fill="${SKY[phase]}"/>${stars}${sun}
+    <rect y="112" width="400" height="18" fill="${GROUND[phase]}"/>${inner}</svg>`;
+}
+let seed = 11; const rnd = ()=>{ seed=(seed*9301+49297)%233280; return seed/233280; };
+const win = (x,y,w,h,phase,lit=.5)=> `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${phase==="night" && rnd()<lit ? C.yellow : (phase==="night" ? "#3a4566" : "#8fa9bf")}"/>`;
+function grid(x0,y0,cols,rows,dx,dy,w,h,phase,lit){ let s=""; for(let r=0;r<rows;r++)for(let c=0;c<cols;c++) s+=win(x0+c*dx,y0+r*dy,w,h,phase,lit); return s; }
+
+const ART = {
+  hotel:(p)=> frame(p, `<rect x="140" y="34" width="120" height="78" fill="${C.stone}"/><rect x="140" y="30" width="120" height="6" fill="${C.dark}"/>${grid(150,44,5,4,21,15,12,9,p,.6)}<rect x="190" y="96" width="20" height="16" fill="${C.dark}"/><rect x="60" y="64" width="70" height="48" fill="${C.stone2}"/>${grid(68,72,4,2,16,16,9,9,p,.4)}<rect x="270" y="54" width="70" height="58" fill="${C.stone2}"/>${grid(278,62,4,3,16,15,9,8,p,.4)}`),
+  topographie:(p)=> frame(p, `<rect x="40" y="78" width="200" height="34" fill="${C.grey}"/>${Array.from({length:20},(_,i)=>`<rect x="${44+i*10}" y="78" width="3" height="34" fill="${C.grey2}"/>`).join("")}<rect x="250" y="66" width="120" height="46" fill="#b9b3a8"/><rect x="246" y="60" width="128" height="9" rx="4.5" fill="#cfc9be"/>${Array.from({length:7},(_,i)=>`<rect x="${258+i*16}" y="72" width="7" height="${10+(i%3)*8}" fill="#8d877d"/>`).join("")}`),
+  checkpoint:(p)=> frame(p, `<rect x="168" y="70" width="64" height="42" fill="${C.white}"/><rect x="160" y="62" width="80" height="9" fill="${C.dark}"/><rect x="178" y="78" width="18" height="16" fill="#8fa9bf"/><rect x="204" y="78" width="18" height="16" fill="#8fa9bf"/>${[0,1,2,3,4,5,6].map(i=>`<ellipse cx="${150+i*16}" cy="110" rx="9" ry="5" fill="#cdb98f"/>`).join("")}${[0,1,2,3,4,5].map(i=>`<ellipse cx="${158+i*16}" cy="102" rx="9" ry="5" fill="#bfa97c"/>`).join("")}<rect x="296" y="40" width="4" height="72" fill="${C.dark}"/><rect x="266" y="40" width="64" height="30" fill="${C.white}" stroke="${C.dark}" stroke-width="2"/><rect x="273" y="47" width="50" height="4" fill="${C.dark}"/><rect x="273" y="55" width="38" height="4" fill="${C.red}"/>`),
+  lunch:(p)=> frame(p, `<ellipse cx="200" cy="104" rx="70" ry="10" fill="${C.stone2}" opacity=".6"/><circle cx="200" cy="72" r="38" fill="${C.white}" stroke="${C.stone2}" stroke-width="3"/><circle cx="200" cy="72" r="24" fill="none" stroke="${C.stone}" stroke-width="2"/><rect x="138" y="40" width="5" height="64" rx="2" fill="${C.dark}"/>${[0,1,2].map(i=>`<rect x="${132+i*6}" y="40" width="3" height="18" fill="${C.dark}"/>`).join("")}<path d="M258 40 q10 12 0 34 v30 h-5 v-64z" fill="${C.dark}"/>`),
+  brandenburg:(p)=> frame(p, `<rect x="88" y="104" width="224" height="8" fill="${C.stone2}"/>${[0,1,2,3,4,5].map(i=>`<rect x="${104+i*36}" y="66" width="13" height="38" fill="${C.stone}"/>`).join("")}<rect x="94" y="52" width="212" height="15" fill="${C.stone}"/><rect x="94" y="64" width="212" height="3" fill="${C.stone2}"/><rect x="150" y="38" width="100" height="15" fill="${C.stone}"/><path d="M180 38 l4 -10 h6 l3 -6 h14 l3 6 h6 l4 10z" fill="#6f8f7a"/><rect x="198" y="16" width="3" height="10" fill="#6f8f7a"/>`),
+  traenenpalast:(p)=> frame(p, `<rect x="96" y="58" width="208" height="54" fill="${p==="night"?"#f3d27e":"#bcd3e0"}" opacity=".9"/>${Array.from({length:14},(_,i)=>`<rect x="${96+i*16}" y="58" width="2.5" height="54" fill="${C.dark}"/>`).join("")}<rect x="90" y="52" width="220" height="7" fill="${C.dark}"/><rect x="96" y="84" width="208" height="2" fill="${C.dark}" opacity=".5"/><circle cx="340" cy="86" r="16" fill="${C.green}"/><rect x="338" y="98" width="4" height="14" fill="${C.dark}"/>`),
+  bebelplatz:(p)=> frame(p, `<rect x="40" y="40" width="320" height="72" fill="${C.stone2}"/>${grid(56,52,10,2,30,22,14,12,p,.5)}<rect y="100" width="400" height="30" fill="${GROUND[p]}"/>${Array.from({length:40},(_,i)=>`<circle cx="${(i*37)%400}" cy="${104+(i*7)%22}" r="1.2" fill="${C.stone2}"/>`).join("")}<path d="M172 108 h56 l10 14 h-76z" fill="#f6f0dd"/><path d="M172 108 h56 l10 14 h-76z" fill="none" stroke="${C.dark}" stroke-width="1.5"/>${[0,1,2].map(i=>`<line x1="${170-i*2}" y1="${112+i*3.5}" x2="${230+i*2}" y2="${112+i*3.5}" stroke="#c9bfa6" stroke-width="1"/>`).join("")}`),
+  museum:(p)=> frame(p, `<rect x="80" y="62" width="240" height="50" fill="${C.stone}"/><path d="M74 62 L200 26 L326 62z" fill="${C.stone2}"/><path d="M96 58 L200 32 L304 58z" fill="${C.stone}"/>${Array.from({length:9},(_,i)=>`<rect x="${92+i*26}" y="68" width="10" height="40" fill="${C.white}"/>`).join("")}<rect x="74" y="108" width="252" height="6" fill="${C.stone2}"/>`),
+  dom:(p)=> frame(p, `<rect y="108" width="400" height="22" fill="${p==="night"?"#2c3a63":"#7fa7c4"}"/><rect x="120" y="66" width="160" height="44" fill="${C.stone2}"/>${grid(132,76,7,2,21,16,9,10,p,.6)}<path d="M150 66 a50 50 0 0 1 100 0z" fill="${C.green}"/><rect x="194" y="8" width="12" height="10" fill="${C.green}"/><path d="M188 18 h24 l-4 -4 h-16z" fill="${C.green}"/><path d="M196 8 a4 4 0 0 1 8 0z" fill="${C.yellow}"/><path d="M118 66 a14 14 0 0 1 28 0z" fill="${C.green}"/><path d="M254 66 a14 14 0 0 1 28 0z" fill="${C.green}"/><rect x="120" y="112" width="160" height="6" fill="${C.stone2}" opacity=".35"/>`),
+  hackesche:(p)=> frame(p, `<rect x="70" y="30" width="260" height="82" fill="#e9e1cf"/>${Array.from({length:13},(_,i)=>Array.from({length:4},(_,j)=>`<rect x="${74+i*20}" y="${34+j*10}" width="18" height="8" fill="${(i+j)%3===0?"#4f8a8b":((i+j)%3===1?"#2f5d7c":"#d5b46a")}"/>`).join("")).join("")}<path d="M170 112 v-30 a30 30 0 0 1 60 0 v30z" fill="${p==="night"?"#f3d27e":"#5a4e40"}"/>${grid(84,80,3,1,22,0,12,16,p,.7)}${grid(250,80,3,1,22,0,12,16,p,.7)}`),
+  kotti:(p)=> frame(p, `<rect x="0" y="54" width="400" height="10" fill="${C.grey2}"/>${[0,1,2,3,4,5].map(i=>`<path d="M${i*80} 64 h80 v48 h-12 a28 28 0 0 0 -56 0 h-12z" fill="${C.grey}"/>`).join("")}<rect x="120" y="34" width="150" height="20" rx="4" fill="${C.yellow}"/>${[0,1,2,3,4,5].map(i=>`<rect x="${128+i*23}" y="39" width="15" height="8" fill="${p==="night"?"#fff6cf":"#3d4b5f"}"/>`).join("")}<rect x="300" y="82" width="26" height="26" rx="4" fill="#1f5fa8"/><text x="313" y="101" font-family="Inter,Arial" font-weight="700" font-size="19" text-anchor="middle" fill="#fff">U</text><rect x="311" y="108" width="4" height="4" fill="${C.dark}"/>`),
+  bars:(p)=> frame(p, `<path d="M20 20 Q200 52 380 20" stroke="${C.dark}" stroke-width="1.5" fill="none"/>${Array.from({length:12},(_,i)=>{const x=36+i*30; const y=20+32*Math.sin(Math.PI*(x-20)/360)*0.95; return `<circle cx="${x}" cy="${y+5}" r="4" fill="${["#f0c05a","#e8735a","#7fc4b0"][i%3]}"/>`}).join("")}<path d="M150 58 h34 l-4 52 h-26z" fill="#f0b43c"/><rect x="150" y="56" width="34" height="9" fill="#fff8e8"/><path d="M184 70 h8 a8 8 0 0 1 0 16 h-8" stroke="#f7efe0" stroke-width="4" fill="none"/><path d="M226 58 h30 a15 18 0 0 1 -15 26 a15 18 0 0 1 -15 -26z" fill="#8c2f39"/><rect x="239" y="84" width="4" height="22" fill="#e9e3d6"/><rect x="230" y="106" width="22" height="4" fill="#e9e3d6"/>`),
+  home:(p)=> frame("night", `<rect x="150" y="40" width="100" height="72" fill="#2f3858"/>${grid(160,50,4,4,21,15,12,9,"night",.25)}<rect x="60" y="70" width="70" height="42" fill="#283050"/>${grid(68,78,4,2,16,16,9,9,"night",.2)}<rect x="270" y="60" width="70" height="52" fill="#283050"/>${grid(278,68,4,3,16,15,9,8,"night",.2)}`),
+  soviet:(p)=> frame(p, `<path d="M40 112 L80 92 L110 112z" fill="#a8463a"/><path d="M290 112 L320 92 L360 112z" fill="#a8463a"/><ellipse cx="200" cy="112" rx="80" ry="20" fill="#7c9a74"/><rect x="178" y="70" width="44" height="34" fill="${C.stone2}"/><rect x="172" y="66" width="56" height="6" fill="${C.stone}"/><circle cx="200" cy="20" r="6" fill="#5d6a63"/><path d="M192 28 h16 l3 26 h-6 l-1 12 h-8 l-1 -12 h-6z" fill="#5d6a63"/><path d="M208 32 l14 18 l-4 3 l-12 -14z" fill="#5d6a63"/>`),
+  eastside:(p)=> frame(p, `<rect y="70" width="400" height="20" fill="#86a9c2"/>${Array.from({length:8},(_,i)=>{const x=i*50; const cols=[["#e85d4a","#f0c05a"],["#4a7fb5","#f2f2f2"],["#5f8f7b","#e85d4a"],["#f0c05a","#3c3934"],["#9b5fb5","#7fc4b0"],["#e8735a","#4a7fb5"],["#f2f2f2","#e85d4a"],["#7fc4b0","#f0c05a"]][i]; return `<rect x="${x+1}" y="78" width="48" height="34" fill="${C.white}"/><circle cx="${x+18}" cy="92" r="9" fill="${cols[0]}"/><path d="M${x+6} 108 q12 -12 24 0 t18 -4 v8 h-42z" fill="${cols[1]}"/><rect x="${x+1}" y="76" width="48" height="4" rx="2" fill="#e4dfd3"/>`}).join("")}`),
+  market:(p)=> frame(p, `<circle cx="60" cy="68" r="26" fill="${C.green}"/><rect x="57" y="88" width="6" height="24" fill="${C.dark}"/><circle cx="350" cy="64" r="28" fill="#6f9c63"/><rect x="347" y="86" width="6" height="26" fill="${C.dark}"/>${[0,1,2].map(i=>{const x=100+i*72; const col=["#c8553d","#4a7fb5","#5f8f7b"][i]; return `<path d="M${x} 66 h64 l6 12 h-76z" fill="${col}"/>${[0,1,2,3].map(j=>`<path d="M${x+4+j*16} 66 h8 l2 12 h-10z" fill="#fff" opacity=".85"/>`).join("")}<rect x="${x+2}" y="78" width="3" height="34" fill="${C.dark}"/><rect x="${x+59}" y="78" width="3" height="34" fill="${C.dark}"/><rect x="${x}" y="94" width="64" height="5" fill="#9b7b55"/><rect x="${x+8}" y="86" width="10" height="8" fill="#e9b44c"/><rect x="${x+24}" y="88" width="14" height="6" fill="#7b8188"/><circle cx="${x+48}" cy="90" r="4" fill="#c8553d"/>`}).join("")}`),
+  stasi:(p)=> frame(p, `<rect x="70" y="26" width="200" height="86" fill="#a9a59c"/>${Array.from({length:7},(_,r)=>`<rect x="78" y="${32+r*11}" width="184" height="6" fill="${p==="night"?"#3a4566":"#6f7f8c"}"/>`).join("")}<rect x="280" y="60" width="70" height="52" fill="#bdb8ae"/>${grid(288,68,4,3,16,14,9,7,p,.2)}<rect x="160" y="96" width="20" height="16" fill="${C.dark}"/>`),
+  kma:(p)=> frame(p, `<rect x="60" y="62" width="280" height="50" fill="#e8dcc6"/>${grid(70,70,13,3,21,13,10,7,p,.6)}${[[30,"#e8dcc6"],[336,"#e8dcc6"]].map(([x,f])=>`<rect x="${x}" y="38" width="34" height="74" fill="${f}"/>${grid(x+6,46,2,5,12,12,7,7,p,.6)}<rect x="${x+4}" y="28" width="26" height="10" fill="#d8ccb4"/><path d="M${x+5} 28 a12 12 0 0 1 24 0z" fill="#8a7a5c"/><rect x="${x+16}" y="8" width="2" height="12" fill="#8a7a5c"/>`).join("")}${[100,180,260].map(x=>`<rect x="${x}" y="88" width="2.5" height="24" fill="${C.dark}"/><circle cx="${x+1}" cy="87" r="3.5" fill="${p==="night"||p==="dusk"?C.yellow:"#ddd"}"/>`).join("")}`),
+  alex:(p)=> frame(p, `<rect x="40" y="80" width="90" height="32" fill="${C.stone2}"/>${grid(48,86,5,2,16,12,9,7,p,.6)}<rect x="270" y="72" width="100" height="40" fill="${C.stone2}"/><rect x="270" y="72" width="100" height="10" fill="#5f8fb5"/>${grid(278,88,6,2,15,11,8,6,p,.6)}<rect x="196" y="58" width="8" height="54" fill="#cfcac0"/><circle cx="200" cy="50" r="15" fill="#c9cdd3"/><rect x="185" y="48" width="30" height="3" fill="#8a9099"/><rect x="198" y="24" width="4" height="12" fill="#cfcac0"/><rect x="199" y="6" width="2" height="20" fill="#c8553d"/><rect x="153" y="84" width="3" height="28" fill="${C.dark}"/><rect x="140" y="74" width="30" height="10" rx="3" fill="#d9b45a"/><circle cx="155" cy="68" r="5" fill="none" stroke="${C.dark}" stroke-width="1.5"/>`),
+  nikolai:(p)=> frame(p, `<rect x="140" y="62" width="120" height="50" fill="#c9a98a"/>${grid(150,74,6,2,18,16,8,10,p,.6)}<rect x="168" y="42" width="24" height="24" fill="#b5957a"/><rect x="208" y="42" width="24" height="24" fill="#b5957a"/><path d="M168 42 L180 8 L192 42z" fill="${C.green}"/><path d="M208 42 L220 8 L232 42z" fill="${C.green}"/><rect x="60" y="76" width="70" height="36" fill="#e2d4bd"/>${grid(68,84,4,2,16,12,9,8,p,.6)}<rect x="270" y="72" width="80" height="40" fill="#d8c7a8"/>${grid(278,80,4,2,18,14,10,8,p,.6)}`)
+};
+
+/* ---------- Dados ---------- */
+const enc = s => encodeURIComponent(s).replace(/%20/g,"+");
+const dir = (o,d,mode="walking",wp=[]) => `https://www.google.com/maps/dir/?api=1&origin=${enc(o)}&destination=${enc(d)}${wp.length?"&waypoints="+wp.map(enc).join("%7C"):""}&travelmode=${mode}`;
+const place = q => `https://www.google.com/maps/search/?api=1&query=${enc(q)}`;
+const H = "Motel One Berlin-Spittelmarkt";
+
+const DAYS = {
+  sabado:{
+    date:"2026-11-07",
+    chips:["☀️ Seco · máx. ~7 °C","🌙 Pôr do sol ~16h30","🚇 U-Bahn toda a noite"],
+    stops:[
+      {t:"12:00", art:"hotel", img:"img/hotel.jpg", ar:"16/9", ph:"day", name:"Saída do hotel", note:"Motel One Berlin-Spittelmarkt.", photo:H},
+      {t:"12:15", art:"topographie", img:"img/topographie.jpg", ph:"day", name:"Topographie des Terrors", note:"Antiga sede da Gestapo e das SS, com um troço do Muro. Grátis, aberto das 10h às 20h. Conta com 1h.", route:dir(H,"Topographie des Terrors Berlin"), rl:"A pé · 15 min", photo:"Topographie des Terrors Berlin"},
+      {t:"13:15", art:"checkpoint", img:"img/checkpoint.jpg", ph:"day", name:"Checkpoint Charlie", note:"Passagem rápida. É muito turístico.", route:dir("Topographie des Terrors Berlin","Checkpoint Charlie Berlin"), rl:"A pé · 5 min", photo:"Checkpoint Charlie Berlin"},
+      {t:"13:25", art:"lunch", img:"img/almoco.jpg", ph:"day", name:"Almoço · Zimmerstraße 100", note:"Currywurst ao lado do balão Die Welt, a dois passos do Checkpoint Charlie.", route:dir("Checkpoint Charlie Berlin","Zimmerstraße 100, 10117 Berlin"), rl:"A pé · 2 min", photo:"Zimmerstraße 100, 10117 Berlin"},
+      {t:"14:15", art:"brandenburg", img:"img/brandenburg.jpg", ph:"day", name:"Gendarmenmarkt, Memorial do Holocausto e Portas de Brandemburgo", note:"Gendarmenmarkt de passagem. O memorial e as Portas veem-se com luz do dia.", route:dir("Zimmerstraße 100, 10117 Berlin","Brandenburger Tor Berlin","walking",["Gendarmenmarkt Berlin","Holocaust-Mahnmal Berlin"]), rl:"A pé · 25 min", photo:"Brandenburger Tor Berlin"},
+      {t:"15:30", art:"traenenpalast", img:"img/traenenpalast.jpg", ar:"12/5", ph:"dusk", name:"Tränenpalast", note:"Antigo posto fronteiriço da Friedrichstraße. Passam à porta do Reichstag no caminho. Grátis, fecha às 18h.", route:dir("Brandenburger Tor Berlin","Tränenpalast Berlin","walking",["Reichstagsgebäude Berlin"]), rl:"A pé · 15 min", photo:"Tränenpalast Berlin"},
+      {t:"16:30", art:"bebelplatz", img:"img/bebelplatz.jpg", ar:"3/2", ph:"dusk", name:"Bebelplatz", note:"Memorial da queima de livros de 1933: uma biblioteca vazia vista através de um vidro no chão.", route:dir("Tränenpalast Berlin","Bebelplatz Berlin"), rl:"A pé · 12 min", photo:"Bebelplatz Berlin"},
+      {t:"16:45", art:"museum", img:"img/museumsinsel.jpg", ar:"3/2", ph:"night", name:"Museu na Museumsinsel", note:"Sugestão: Neues Museum (Nefertiti e coleção egípcia). Alternativa: Alte Nationalgalerie. Fecha às 18h. Bilhete com hora marcada em smb.museum.", route:dir("Bebelplatz Berlin","Neues Museum Berlin"), rl:"A pé · 8 min", photo:"Neues Museum Berlin"},
+      {t:"18:00", art:"dom", img:"img/dom.jpg", ar:"9/5", ph:"night", name:"Berliner Dom e margem do Spree", note:"A catedral e os museus iluminados à noite.", route:dir("Neues Museum Berlin","Berliner Dom"), rl:"A pé · 5 min", photo:"Berliner Dom"},
+      {t:"18:20", art:"hackesche", img:"img/hackesche.jpg", ar:"3/2", ph:"night", name:"Hackescher Markt e Hackesche Höfe", note:"Pátios Arte Nova, lojas e um copo antes de Kreuzberg. Mesmo ao lado fica o pátio do Haus Schwarzenberg (Rosenthaler Str. 39), cheio de street art.", route:dir("Berliner Dom","Hackesche Höfe Berlin"), rl:"A pé · 10 min", photo:"Hackesche Höfe Berlin"},
+      {t:"19:30", art:"kotti", img:"img/kotti.jpg", ar:"3/2", ph:"night", name:"Jantar em Kreuzberg · Kottbusser Tor", note:"Comida turca e do Médio Oriente à volta do Kotti.", route:dir("Hackesche Höfe Berlin","U Kottbusser Tor Berlin","transit"), rl:"U8 · 15 min", photo:"Kottbusser Tor Berlin"},
+      {t:"21:00", art:"bars", img:"img/oranienstrasse.jpg", ar:"3/2", ph:"night", name:"Bares na Oranienstraße", note:"Desçam a rua para oeste, em direção à Moritzplatz, que fica mais perto do hotel.", route:dir("U Kottbusser Tor Berlin","U Moritzplatz Berlin"), rl:"A pé · 15 min", photo:"Oranienstraße Berlin"},
+      {t:"24:00", art:"home", img:"img/hotel.jpg", ar:"16/9", ph:"night", name:"Regresso ao hotel", note:"Desde a Moritzplatz. O U-Bahn funciona toda a noite de sábado.", route:dir("U Moritzplatz Berlin",H), rl:"A pé · 20 min", photo:H}
+    ],
+    tips:[
+      "Comprem o bilhete do museu com hora marcada em smb.museum, para não perderem tempo na fila.",
+      "Ao sábado, todos os museus da Museumsinsel fecham às 18h.",
+      "O edifício principal do Pergamonmuseum está fechado para obras.",
+      "Faz frio: luvas e gorro para as horas ao ar livre."
+    ]
+  },
+  domingo:{
+    date:"2026-11-08",
+    chips:["☁️ Seco · máx. ~6 °C","🛍️ Lojas fechadas","🌙 Pôr do sol ~16h30"],
+    stops:[
+      {t:"10:45", art:"hotel", img:"img/hotel.jpg", ar:"16/9", ph:"day", name:"Saída do hotel", note:"U2 até à Alexanderplatz e depois S-Bahn até Treptower Park.", photo:H},
+      {t:"11:20", art:"soviet", img:"img/soviet.jpg", ar:"4/5", ph:"day", name:"Memorial Soviético de Treptow", note:"O maior memorial do Exército Vermelho na Alemanha, com cerca de 7000 sepulturas. Ao ar livre. Pode haver zonas vedadas por obras.", route:dir(H,"Sowjetisches Ehrenmal Treptower Park","transit"), rl:"Transportes · 35 min", photo:"Sowjetisches Ehrenmal Treptower Park"},
+      {t:"12:30", art:"eastside", img:"img/eastside.jpg", ar:"3/2", ph:"day", name:"East Side Gallery até à Oberbaumbrücke", note:"Cerca de 1,3 km de Muro pintado com murais. Primeiro S-Bahn até à Ostbahnhof, depois a pé.", route:dir("Sowjetisches Ehrenmal Treptower Park","Berlin Ostbahnhof","transit"), rl:"S-Bahn até à Ostbahnhof", route2:dir("Berlin Ostbahnhof","Oberbaumbrücke Berlin","walking",["East Side Gallery Berlin"]), rl2:"Percurso a pé", photo:"East Side Gallery Berlin"},
+      {t:"13:20", art:"market", img:"img/market.jpg", ar:"12/5", ph:"day", name:"Boxhagener Platz", note:"Feira da ladra aos domingos, das 10h às 18h. Almoço num dos cafés à volta da praça.", route:dir("Oberbaumbrücke Berlin","Boxhagener Platz Berlin"), rl:"A pé · 12 min", photo:"Boxhagener Platz Berlin"},
+      {t:"15:00", art:"stasi", img:"img/stasi.jpg", ar:"8/7", ph:"dusk", name:"Stasi-Museum", note:"Antiga sede da Stasi, com o gabinete de Mielke intacto. Bilhete de 10 €. Aberto das 11h às 18h, última entrada às 17h30.", route:dir("Boxhagener Platz Berlin","Stasimuseum Berlin","transit"), rl:"U5 · 20 min", photo:"Stasimuseum Berlin"},
+      {t:"16:55", art:"kma", img:"img/kma.jpg", ar:"25/18", ph:"night", name:"Karl-Marx-Allee ao anoitecer", note:"A avenida estalinista da RDA. Passa pela Strausberger Platz, o Kino International e o Café Moskau.", route:dir("Stasimuseum Berlin","U Weberwiese Berlin","transit"), rl:"U5 até Weberwiese", route2:dir("U Weberwiese Berlin","Kino International Berlin","walking",["Strausberger Platz Berlin"]), rl2:"Percurso a pé", photo:"Karl-Marx-Allee Berlin"},
+      {t:"18:00", art:"alex", img:"img/alex.jpg", ar:"716/500", ph:"night", name:"Alexanderplatz", note:"Weltzeituhr, Fernsehturm e o mosaico do Haus des Lehrers.", route:dir("Kino International Berlin","Weltzeituhr Berlin"), rl:"A pé · 15 min", photo:"Alexanderplatz Berlin"},
+      {t:"18:30", art:"nikolai", img:"img/nikolai.jpg", ar:"1/1", ph:"night", name:"Jantar", note:"Na Alexanderplatz ou no Nikolaiviertel, a parte mais antiga da cidade (reconstruída).", photo:"Nikolaiviertel Berlin"},
+      {t:"19:30", art:"home", img:"img/hotel.jpg", ar:"16/9", ph:"night", name:"Regresso ao hotel", note:"U2, 3 paragens.", route:dir("Weltzeituhr Berlin",H,"transit"), rl:"U2 · 10 min", photo:H}
+    ],
+    tips:[
+      "Ao domingo as lojas estão quase todas fechadas. Restaurantes, cafés, museus e feiras abrem normalmente.",
+      "Alternativa ao Stasi-Museum: a antiga prisão da Stasi em Hohenschönhausen. Só se visita com visita guiada e ocupa a tarde inteira. Confirmem os horários em stiftung-hsh.de.",
+      "Chegada ao Stasi-Museum: da estação Magdalenenstraße são uns 10 minutos a pé."
+    ]
+  }
+};
+
+/* ---------- Porque é importante (resumos a partir da Wikipédia) ---------- */
+const W = t => `https://en.wikipedia.org/wiki/${t}`, WD = t => `https://de.wikipedia.org/wiki/${t}`;
+const ABOUT = {
+  topographie:{ html:`<p>Entre 1933 e 1945 estavam aqui as sedes da Gestapo, da liderança das SS e do Gabinete Central de Segurança do Reich: o centro de comando da perseguição e do terror nazi. Nas caves da Gestapo foram torturados e mortos presos políticos.</p><p>Os edifícios ficaram em ruínas com os bombardeamentos de 1945 e foram demolidos. Nos anos 50 o terreno chegou a servir de entulheira e de pista de carrinhos de choque, e de 1961 a 1989 o Muro passava mesmo ao lado.</p><p>Nos anos 80 o local foi redescoberto como lugar de memória. A primeira exposição abriu em 1987, para os 750 anos de Berlim, e o atual centro de documentação abriu em maio de 2010. O troço do Muro junto ao centro é o mais longo que resta do muro exterior.</p>`, src:[["Topographie des Terrors",W("Topography_of_Terror")]] },
+  checkpoint:{ html:`<p>Foi a passagem mais famosa entre Berlim Ocidental e Berlim Oriental durante a Guerra Fria. Estava reservada a estrangeiros, diplomatas e militares aliados, e tornou-se um símbolo da divisão.</p><p>Em outubro de 1961, uma disputa sobre se os guardas da RDA podiam verificar os documentos de um diplomata americano pôs tanques soviéticos e americanos frente a frente, a cerca de 100 metros uns dos outros. O impasse terminou ao fim de dias, com um entendimento discreto entre Washington e Moscovo. Kennedy visitou o posto em 1963.</p><p>A guarita original foi retirada em 1990 e está hoje no Museu dos Aliados. A que se vê é uma réplica do primeiro posto de 1961, com os sacos de areia. Uma linha de paralelepípedos no chão marca o traçado do Muro.</p>`, src:[["Checkpoint Charlie",W("Checkpoint_Charlie")]] },
+  brandenburg:{ html:`<h4>Gendarmenmarkt</h4><p>É uma praça do fim do século XVII. O nome vem dos Gendarmen, um regimento prussiano que ali tinha estábulos. De um lado e do outro estão duas igrejas quase gémeas: a Catedral Francesa (1701–05), dos huguenotes, e a Catedral Alemã (1708). Ao centro fica o Konzerthaus de Schinkel (1821). Quase tudo ficou destruído na guerra e foi reconstruído.</p><h4>Memorial aos Judeus Assassinados da Europa</h4><p>É um projeto de Peter Eisenman, inaugurado em 2005: 2711 blocos de betão num terreno ondulado de cerca de 1,9 hectares. Eisenman quis criar uma sensação de desconforto e desorientação, e diz que o número e a forma dos blocos não têm simbolismo. Por baixo há um centro de informação com os nomes de cerca de 3 milhões de vítimas judias, cedidos pelo Yad Vashem.</p><h4>Portas de Brandemburgo</h4><p>Foram mandadas construir pelo rei Frederico Guilherme II e desenhadas por Carl Gotthard Langhans (1788–91). Napoleão levou a Quadriga para Paris em 1806, e ela voltou em 1814 como símbolo da vitória prussiana. Os nazis usaram as Portas como emblema. Com o Muro, ficaram fechadas durante quase três décadas.</p><p>Foi aqui que Reagan, em 1987, desafiou Gorbachev a abrir esta porta. Reabriram a 22 de dezembro de 1989 e acolheram a cerimónia oficial da reunificação, a 3 de outubro de 1990.</p>`, src:[["Gendarmenmarkt",W("Gendarmenmarkt")],["Memorial aos Judeus Assassinados da Europa",W("Memorial_to_the_Murdered_Jews_of_Europe")],["Portas de Brandemburgo",W("Brandenburg_Gate")]] },
+  traenenpalast:{ html:`<p>Era o pavilhão de saída da estação Friedrichstraße. Entre 1962 e 1989 controlava quem passava de Berlim Leste para o Ocidente, com filas separadas para berlinenses ocidentais, estrangeiros, diplomatas e cidadãos da RDA.</p><p>O nome, "Palácio das Lágrimas", vem das despedidas à porta entre os visitantes ocidentais e os familiares da RDA que não os podiam acompanhar.</p><p>Depois da queda do Muro foi discoteca e sala de espetáculos até 2006. A RDA classificou-o como monumento a 2 de outubro de 1990, um dia antes da reunificação. É memorial federal desde 2008 e museu, de entrada livre, desde setembro de 2011.</p>`, src:[["Tränenpalast",W("Tr%C3%A4nenpalast")]] },
+  bebelplatz:{ html:`<p>Na noite de 10 de maio de 1933, organizações de estudantes queimaram aqui cerca de 20 000 livros, depois de um discurso de Goebbels. Entre os autores estavam Heinrich Mann, Erich Maria Remarque, Heinrich Heine, Karl Marx e Albert Einstein.</p><p>O memorial de Micha Ullman, <em>A Biblioteca Vazia</em>, é uma janela de vidro no chão sobre estantes brancas com espaço para todos esses livros. Uma placa ao lado cita uma peça de Heine de 1821, que diz que onde se queimam livros se acaba também por queimar pessoas.</p><p>A praça está rodeada por edifícios do século XVIII: a Ópera Estatal, a Catedral de Santa Edwiges, a antiga Biblioteca Real e o palácio que é hoje o edifício principal da Universidade Humboldt.</p>`, src:[["Bebelplatz",W("Bebelplatz")]] },
+  museum:{ html:`<p>A ilha tem cinco museus construídos entre 1830 e 1930: o Altes Museum, o Neues Museum, a Alte Nationalgalerie, o Bode-Museum e o Pergamonmuseum. É Património Mundial da UNESCO desde 1999.</p><p>O Neues Museum foi destruído na guerra e reconstruído por David Chipperfield, reabrindo em 2009. Lá estão o busto da rainha Nefertiti e a coleção egípcia.</p><p>O Bode-Museum, na ponta norte (o da fotografia), abriu em 1904 como Kaiser-Friedrich-Museum e guarda escultura e arte bizantina. As pontes que ligavam os museus não foram reconstruídas. Desde 2019, a James-Simon-Galerie serve de entrada comum.</p>`, src:[["Ilha dos Museus",W("Museum_Island")]] },
+  dom:{ html:`<p>A catedral atual, protestante, foi construída entre 1894 e 1905 por encomenda do Kaiser Guilherme II, com projeto de Julius Raschdorff. Já existiam igrejas no mesmo local desde o século XV.</p><p>A cripta ocupa quase toda a cave. Ali estão sepultados membros da dinastia Hohenzollern desde 1545, e é considerada um dos túmulos dinásticos mais importantes da Europa.</p><p>Em 1944 uma bomba incendiária fez ruir a lanterna da cúpula. A RDA reconstruiu a catedral a partir de 1975, de forma simplificada e mais curta, e a nave reabriu em 1993.</p>`, src:[["Catedral de Berlim",W("Berlin_Cathedral")]] },
+  hackesche:{ html:`<h4>Hackesche Höfe</h4><p>É um complexo de oito pátios interligados, construído a partir de 1906, com interiores Arte Nova de August Endell. O primeiro pátio tem a fachada de tijolo vidrado colorido. Juntava habitação, oficinas, comércio e cultura. Em 1909 nasceu aqui o Neuer Club, um clube literário cujos serões atraíam centenas de pessoas.</p><h4>Haus Schwarzenberg (Rosenthaler Str. 39)</h4><p>É o pátio de street art, o da fotografia. Entre 1940 e 1944, Otto Weidt empregou trabalhadores judeus na sua oficina para cegos e protegeu-os em parte da deportação. Hoje o edifício alberga o Museu da Oficina de Otto Weidt, o Centro Anne Frank, o cinema Central e galerias.</p>`, src:[["Hackesche Höfe",W("Hackesche_H%C3%B6fe")],["Haus Schwarzenberg",WD("Haus_Schwarzenberg")]] },
+  kotti:{ html:`<p>O nome vem de uma antiga porta da cidade, a sul, de onde saía a estrada para Cottbus.</p><p>A estação elevada abriu em 1902, numa das primeiras linhas de metro de Berlim, sobre a Skalitzer Straße. A plataforma subterrânea do U8 foi acrescentada em 1928.</p><p>É o centro do Kreuzberg 36. A praça tem fama de zona problemática, sobretudo pelo tráfico de droga.</p>`, src:[["Kottbusser Tor",W("Kottbusser_Tor")]] },
+  bars:{ html:`<p>Com cerca de 2 km, é a principal rua comercial do SO 36, o velho Kreuzberg. O nome vem da casa de Orange (Oranien). O principado de Orange passou para França em 1713, e muitos huguenotes de lá fugiram para Berlim. A rua tem o nome atual desde 1849.</p><p>Ficou conhecida fora da cidade pelos confrontos entre autonomistas e polícia no 1.º de Maio. A parte leste concentra restaurantes, bares e clubes, como o SO36.</p><p>No pátio do n.º 6, Konrad Zuse trabalhou em 1944–45 no Z4, um dos primeiros computadores.</p>`, src:[["Oranienstraße",WD("Oranienstra%C3%9Fe")]] },
+  soviet:{ html:`<p>Foi inaugurado a 8 de maio de 1949 e homenageia os cerca de 80 000 soldados do Exército Vermelho mortos na Batalha de Berlim. Cerca de 7000 estão aqui sepultados.</p><p>No topo está a estátua de 12 metros de Yevgeny Vuchetich: um soldado com uma criança alemã ao colo, a pisar uma suástica partida. Ao longo do eixo há 16 sarcófagos de pedra, um por república soviética, com citações de Estaline em russo e alemão.</p><p>Foi o principal memorial de guerra da RDA. Desde a reunificação, a Alemanha mantém-no por acordo internacional e tem de consultar a Rússia antes de qualquer alteração. A sua existência voltou a ser debatida desde a invasão da Ucrânia.</p>`, src:[["Memorial Soviético de Treptow",W("Soviet_War_Memorial_(Treptower_Park)")]] },
+  eastside:{ html:`<p>Com cerca de 1,3 km, é o troço mais longo do Muro que ainda está de pé. Foi pintado na primavera de 1990, logo depois da abertura do Muro, por 118 artistas de 21 países. O mural mais famoso é o beijo entre Brejnev e Honecker, de Dmitri Vrubel.</p><p>É monumento protegido e recebe mais de três milhões de visitantes por ano. Tem sido alvo de polémicas, como troços retirados para dar acesso ao rio e para prédios de luxo, e disputas com artistas sobre o restauro das obras. Desde 2018 é gerida pela Fundação do Muro de Berlim.</p><h4>Oberbaumbrücke</h4><p>É uma ponte de 1896, de tijolo, em estilo gótico. Durante a divisão foi posto fronteiriço para peões. Reabriu em 1994 com um novo tramo central de Santiago Calatrava, e é hoje símbolo do distrito de Friedrichshain-Kreuzberg.</p>`, src:[["East Side Gallery",W("East_Side_Gallery")],["Oberbaumbrücke",W("Oberbaum_Bridge")]] },
+  market:{ html:`<p>A praça recebeu o nome em 1900, de uma antiga quinta chamada Boxhagen, e ficou pronta em 1903. É jardim classificado, e os moradores chamam-lhe "Boxi".</p><p>O bairro à volta é operário desde a industrialização e mudou pouco na RDA. Depois de 1989 teve muitas casas ocupadas. Desde os anos 2000 tem passado por uma forte gentrificação, com uma população cada vez mais jovem.</p><p>Ao sábado há mercado de produtores (desde 1905) e ao domingo a feira da ladra.</p>`, src:[["Boxhagener Platz",WD("Boxhagener_Platz")]] },
+  stasi:{ html:`<p>Aqui ficava a sede da Stasi, a polícia política da RDA. Tinha cerca de 90 000 funcionários e mais de 170 000 informadores não oficiais, e manteve ficheiros sobre cerca de 5,6 milhões de pessoas.</p><p>Quando o regime caiu, os funcionários começaram a destruir documentos. Na noite de 15 de janeiro de 1990, uma multidão entrou no complexo para o impedir. Os ficheiros salvos deram origem ao Arquivo da Stasi, aberto à consulta dos cidadãos.</p><p>O museu ocupa o Haus 1 e abriu em novembro de 1990, gerido por ativistas cívicos (ASTAK). Conserva o gabinete de Erich Mielke, chefe da Stasi de 1957 a 1989.</p>`, src:[["Stasi-Museum",W("Stasi_Museum")],["Stasi",W("Stasi")],["Vigilância em massa na RDA",W("Mass_surveillance_in_East_Germany")]] },
+  kma:{ html:`<p>Foi construída entre 1949 e 1960 como montra do urbanismo socialista da RDA e chamou-se Stalinallee até 1961. Os blocos de oito andares, em "classicismo socialista" e revestidos de cerâmica, são de arquitetos como Hermann Henselmann, autor das torres gémeas da Frankfurter Tor e da Strausberger Platz.</p><p>A 17 de junho de 1953, os operários que a construíam protestaram contra o aumento das normas de trabalho. Foi o início da revolta operária, esmagada pelas tropas soviéticas.</p><p>Em 1961, com a desestalinização, a estátua de Estaline foi retirada e a avenida passou a chamar-se Karl-Marx-Allee. O Kino International faz parte do conjunto de equipamentos culturais da avenida.</p>`, src:[["Karl-Marx-Allee",W("Karl-Marx-Allee")]] },
+  alex:{ html:`<p>A praça tem o nome do czar Alexandre I, que visitou Berlim em 1805, e deu título ao romance <em>Berlin Alexanderplatz</em>, de Alfred Döblin. Nos anos 60, a RDA alargou-a e fez dela o centro de Berlim Leste.</p><p>O relógio mundial (Weltzeituhr, 1969) mostra a hora de 148 cidades. A Fernsehturm (1965–69) tem 368 m e é a estrutura mais alta da Alemanha. O sol desenha uma cruz na esfera, a que os berlinenses chamaram "a vingança do Papa".</p><p>A 4 de novembro de 1989, centenas de milhares de pessoas juntaram-se aqui a pedir liberdade de expressão e de viajar. Foi a maior manifestação não organizada pelo Estado da história da RDA. O Muro abriu cinco dias depois.</p>`, src:[["Alexanderplatz",W("Alexanderplatz")],["Fernsehturm",W("Fernsehturm_Berlin")]] },
+  nikolai:{ html:`<p>É o núcleo mais antigo de Berlim, fundado por volta de 1200. A Igreja de São Nicolau, de cerca de 1230, é a mais antiga da cidade e dá nome ao bairro.</p><p>O bairro medieval foi arrasado na Segunda Guerra Mundial. Foi reconstruído em 1987, para os 750 anos de Berlim, com uma mistura de réplicas de casas históricas e prédios pré-fabricados.</p>`, src:[["Nikolaiviertel",W("Nikolaiviertel")]] }
+};
+function aboutBlock(key){
+  const a = ABOUT[key]; if(!a) return "";
+  return `<details class="more"><summary><span class="ico">i</span>Porque é importante</summary><div class="txt">${a.html}<p class="src">Fonte: Wikipédia · ${a.src.map(([t,u])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(" · ")}</p></div></details>`;
+}
+
+/* ---------- Saber mais (texto alargado, escrito a partir da Wikipédia em inglês/alemão) ---------- */
+const MORE = {
+  topographie:`
+<h4>Antes de 1945</h4>
+<p>A rua chamava-se então Prinz-Albrecht-Straße. A partir de 1933, os edifícios deste quarteirão concentraram os principais órgãos de repressão do regime nazi: a Gestapo (polícia secreta do Estado), a direção das SS, o SD (serviço de segurança das SS), a Polícia de Segurança e, durante a guerra, o Gabinete Central de Segurança do Reich (RSHA). Daqui eram coordenados também os Einsatzgruppen, as unidades móveis que executaram em massa judeus e outros civis na Europa de Leste.</p>
+<p>Nas caves funcionava a prisão interna da Gestapo, onde presos políticos foram interrogados, torturados e, em vários casos, mortos.</p>
+<h4>Ruína, fronteira e esquecimento</h4>
+<p>Os bombardeamentos aliados do início de 1945 deixaram os edifícios em ruínas, e o que restava foi demolido depois da guerra. A rua ficou na linha entre o setor americano e o setor soviético, e de 1961 a 1989 o Muro de Berlim correu ao longo do lado sul. Foi nessa altura que a rua passou a chamar-se Niederkirchnerstraße.</p>
+<p>Durante décadas, o terreno vazio teve usos banais. Nos anos 50 serviu de depósito de entulho das obras de Kreuzberg, e mais tarde teve uma pista de carrinhos de choque, o "Harrys Autodrom". O pequeno bosque de acácias no lado sul do recinto é o que resta dessa época.</p>
+<h4>Redescoberta</h4>
+<p>Em 1978, o crítico de arquitetura Dieter Hoffmann-Axthelm chamou a atenção para a importância histórica do lugar. Em 1987, nos 750 anos de Berlim, abriu a primeira exposição, e as caves foram escavadas, em parte com investigadores da RDA. Em 1989 houve uma exposição conjunta, mostrada no local e na Alemanha Oriental. Em 1992 foi criada a fundação que gere o espaço, dirigida durante anos pelo rabino Andreas Nachama.</p>
+<h4>O edifício que nunca foi acabado</h4>
+<p>Em 1993, o arquiteto suíço Peter Zumthor, vencedor do Prémio Pritzker, ganhou o concurso com um edifício em forma de esqueleto de vigas de betão, com as aberturas envidraçadas. O projeto foi muito elogiado, mas saiu caro: o empreiteiro faliu a meio da obra, a cidade recusou pagar mais 3 a 5 milhões de euros e o financiamento federal atrasou-se. Já se tinham gasto 13,9 milhões quando, em 2004, as torres de escadas que estavam construídas foram demolidas, contra os protestos de Zumthor. A estrutura inacabada esteve no local quase dez anos.</p>
+<h4>O centro atual</h4>
+<p>Um novo concurso, lançado em 2005, recebeu 309 propostas. Em janeiro de 2006 venceram a arquiteta Ursula Wilms e o arquiteto paisagista Heinz W. Hallmann. O edifício tem dois pisos, cerca de 3500 m², fachada de lamelas metálicas e cobertura plana. Lá dentro há cerca de 800 m² de exposição permanente, uma sala para 200 pessoas e, na cave, um centro de seminários e uma biblioteca com cerca de 25 000 volumes sobre as SS, a polícia e o nacional-socialismo.</p>
+<p>A inauguração oficial foi a 6 de maio de 2010, pelo Presidente Horst Köhler, nos 65 anos do fim da guerra, e abriu ao público no dia seguinte.</p>
+<h4>O que ver</h4>
+<p>A exposição permanente trata das instituições das SS e da polícia, dos crimes cometidos em toda a Europa e dos grupos de vítimas. Na trincheira ao ar livre, junto às paredes escavadas das caves (hoje protegidas por vidro), há uma exposição sobre Berlim entre 1933 e 1945. Um percurso pelo recinto tem 15 estações.</p>
+<p>O troço do Muro ao longo da rua é monumento classificado e é o mais longo que sobrevive do muro exterior. A East Side Gallery é mais comprida, mas fazia parte do muro interior.</p>
+<p>As exposições são bilingues, em alemão e inglês. A mesma fundação gere o Centro de Documentação do Trabalho Forçado Nazi, em Schöneweide, aberto em 2006 no último campo de trabalho forçado bem conservado de Berlim, uma cidade que chegou a ter mais de 3000 alojamentos coletivos deste tipo.</p>`,
+
+  checkpoint:`
+<h4>O nome</h4>
+<p>"Charlie" é a letra C no alfabeto fonético da NATO. Era o terceiro posto de controlo aliado: o Checkpoint Alpha ficava em Helmstedt e o Bravo em Dreilinden, ambos na autoestrada. Os soviéticos chamavam-lhe passagem da Friedrichstraße, e a RDA, oficialmente, "posto fronteiriço Friedrich-/Zimmerstraße". Fica no cruzamento da Friedrichstraße com a Zimmerstraße e a Mauerstraße, cujo nome, "Rua do Muro", é anterior ao Muro e pura coincidência.</p>
+<h4>Como funcionava</h4>
+<p>Foi criado cerca de dez semanas depois do fecho da fronteira, em 1961, e destinava-se apenas a turistas estrangeiros, diplomatas e militares aliados. Os outros estrangeiros passavam pela estação de Friedrichstraße, ou seja, pelo Tränenpalast. Os Aliados protestaram contra a restrição, mas acabaram por montar o seu próprio posto do lado ocidental. Nunca construíram estruturas permanentes, porque não reconheciam aquela linha como fronteira internacional.</p>
+<p>Do lado ocidental havia uma guarita de madeira, substituída em 1976 por um contentor metálico maior. Do lado oriental, o que começou por ser um simples portão cresceu ao longo de 28 anos até incluir muros, torres de vigia, barreiras em ziguezague e um pavilhão de inspeção de veículos. Mesmo em cima do posto, o Café Adler era frequentado por militares, diplomatas e visitantes.</p>
+<h4>Contexto: a fuga para Ocidente</h4>
+<p>Entre 1949 e 1961 fugiram para Ocidente mais de 2,5 milhões de alemães de Leste: 144 000 em 1959, 199 000 em 1960 e 207 000 só nos primeiros sete meses de 1961. Até essa altura, perto de 3,5 milhões tinham saído, cerca de 20% da população, sobretudo jovens qualificados. O Muro, começado a 13 de agosto de 1961, foi a resposta do regime.</p>
+<h4>O confronto dos tanques (outubro de 1961)</h4>
+<p>Os acordos entre as quatro potências garantiam aos Aliados liberdade de circulação em toda a cidade, e o Ocidente não reconhecia autoridade à RDA em Berlim Leste. A 22 de outubro de 1961, guardas da RDA quiseram ver os documentos do diplomata americano Allan Lightner, que ia à ópera em Berlim Leste. Seguiu-se uma escalada que, a 27 de outubro, pôs dez tanques soviéticos e dez americanos frente a frente, a cerca de 100 metros. No dia seguinte retiraram-se, depois de um entendimento negociado nos bastidores por Robert F. Kennedy e pelo oficial dos serviços secretos soviéticos Georgi Bolshakov.</p>
+<h4>Fugas e mortes</h4>
+<p>Houve fugas espetaculares. Um cidadão da RDA atravessou o portão de carro, o que levou à instalação de uma barreira reforçada. Outro passou por baixo da cancela num descapotável sem para-brisas e repetiu-o duas semanas depois, até as barreiras serem baixadas.</p>
+<p>A 17 de agosto de 1962, o jovem Peter Fechter foi baleado pelos guardas da RDA ao tentar fugir e esvaiu-se em sangue no arame farpado, a poucos metros do lado ocidental, diante dos jornalistas. O corpo só foi retirado mais de uma hora depois. A morte provocou protestos espontâneos em Berlim Ocidental, e dias depois autocarros soviéticos foram apedrejados.</p>
+<h4>Kennedy e o fim</h4>
+<p>A 26 de junho de 1963, no dia do discurso "Ich bin ein Berliner", John F. Kennedy subiu a uma plataforma junto ao posto para olhar para Berlim Leste.</p>
+<p>Depois da abertura do Muro, a guarita foi retirada a 22 de junho de 1990, e o posto funcionou até à reunificação, em outubro. A guarita americana está hoje no Museu dos Aliados. A torre de vigia da RDA, a última grande estrutura original, foi demolida em 2000 para um projeto de escritórios que nunca chegou a ser construído.</p>
+<h4>Hoje</h4>
+<p>A guarita que se vê é uma réplica da primeira, de 1961, com sacos de areia. A versão retirada em 1990 era bem maior. Em 2019, Berlim proibiu os atores vestidos de militares que cobravam fotografias aos turistas.</p>
+<p>No chão, uma fila de paralelepípedos marca a linha do Muro, e desde 2006 há uma exposição ao ar livre na Friedrichstraße e na Zimmerstraße. Ao lado fica o Museu do Muro (Haus am Checkpoint Charlie), aberto a 14 de junho de 1963 por Rainer Hildebrandt. Mostra objetos usados em fugas, como um balão de ar quente, carros adaptados e um minissubmarino, e teve cerca de 850 000 visitantes em 2007.</p>
+<p>O terreno vazio ao lado foi classificado como área de património em 2018, depois de polémicas sobre a construção de um hotel.</p>`,
+
+  brandenburg:`
+<h4>Gendarmenmarkt</h4>
+<p>A praça foi traçada por Johann Arnold Nering no fim do século XVII, por volta de 1688, como Linden-Markt, na expansão da Friedrichstadt para oeste. Georg Christian Unger reformulou-a em 1773. O nome vem dos Gendarmen, um regimento de couraceiros prussianos que ali teve estábulos até esse ano. Teve vários nomes ao longo do tempo, entre eles Schillerplatz (em parte, de 1871 a 1936) e Platz der Akademie (de 1950 a 1991), antes de recuperar oficialmente o nome atual em 1991.</p>
+<p>Os três edifícios formam um dos conjuntos mais bonitos de Berlim:</p>
+<p><strong>Catedral Francesa</strong>, construída em 1701–05 pela comunidade huguenote, à imagem da igreja destruída de Charenton-Saint-Maurice, em França. "Dom" refere-se à cúpula e não a uma sé episcopal. A torre e os pórticos foram acrescentados por Carl von Gontard em 1785. Tem hoje um miradouro, um restaurante e o Museu Huguenote.</p>
+<p><strong>Catedral Alemã</strong>, igreja luterana de planta pentagonal, projetada por Martin Grünberg e construída em 1708 por Giovanni Simonetti. A torre com cúpula também é de Gontard, de 1785. Ardeu por completo em 1945, foi reconstruída depois da reunificação (1993) e reabriu em 1996 como museu de história alemã.</p>
+<p><strong>Konzerthaus</strong>, construído em 1821 por Karl Friedrich Schinkel como Schauspielhaus (teatro), sobre as ruínas do Teatro Nacional, que ardera em 1817, e reaproveitando colunas e paredes. Ficou muito danificado na guerra e reabriu em 1984 como sala de concertos. É a casa da Konzerthausorchester Berlin.</p>
+<p>No centro está a estátua de Schiller. No Natal, a praça recebe um dos mercados mais concorridos da cidade.</p>
+
+<h4>Memorial aos Judeus Assassinados da Europa</h4>
+<p><strong>Origem.</strong> A ideia partiu, no fim dos anos 80, de um grupo de cidadãos da Alemanha Ocidental liderado pela jornalista Lea Rosh e pelo historiador Eberhard Jäckel. Em 1989 foi criada uma associação para angariar apoios e donativos.</p>
+<p><strong>Os concursos.</strong> O primeiro concurso, de 1994, recebeu 528 propostas. O júri recomendou dois finalistas, mas o chanceler Helmut Kohl rejeitou a escolha. Num segundo concurso, em 1997, ganharam o arquiteto Peter Eisenman e o escultor Richard Serra, com cerca de 4000 pilares. Serra abandonou o projeto em 1998, e o número de blocos foi reduzido num compromisso negociado com o ministro da Cultura, Michael Naumann.</p>
+<p><strong>A decisão e a obra.</strong> A 25 de junho de 1999, o Bundestag aprovou o plano por 314 votos contra 209. A primeira pedra foi lançada em janeiro de 2000 e as obras arrancaram em abril de 2003.</p>
+<p><strong>A polémica da Degussa.</strong> Em outubro de 2003 a construção parou durante algumas semanas, quando se soube que o revestimento anti-grafíti dos blocos era fabricado pela Degussa, cuja antiga subsidiária Degesch produziu o Zyklon B usado nas câmaras de gás. Substituí-lo custaria cerca de 2,3 milhões de euros. A maioria das organizações judaicas opôs-se, Eisenman defendeu a continuação, e acabou por manter-se a empresa.</p>
+<p><strong>Inauguração.</strong> A obra terminou em dezembro de 2004, e o memorial foi inaugurado a 10 de maio de 2005, nos 60 anos do fim da guerra na Europa. Custou cerca de 25 milhões de euros.</p>
+<p><strong>A forma.</strong> São 2711 blocos de betão, cada um com 2,38 m por 0,95 m e alturas entre 0,2 e 4,7 m, numa grelha de 54 por 87 filas ligeiramente inclinada, num terreno de 1,9 hectares. Fica sobre a antiga "faixa da morte" do Muro, perto do local onde estiveram a casa de Goebbels e o bunker de Hitler.</p>
+<p>Eisenman diz que o número e a forma não têm simbolismo e que quis criar um ambiente de inquietação, de um sistema ordenado que perdeu a ligação à razão humana. Muitos visitantes veem ali um cemitério ou filas de caixões.</p>
+<p><strong>O centro de informação.</strong> Desenhado por Dagmar von Wilcken, fica por baixo do canto leste. Tem uma cronologia de 1933 até aos massacres de judeus soviéticos em 1941, uma Sala das Famílias (15 famílias judias) e uma Sala dos Nomes, onde se leem em voz alta nomes de vítimas. A base de dados reúne cerca de 3 milhões de nomes, cedidos pelo Yad Vashem.</p>
+<p><strong>Visitantes.</strong> No primeiro ano houve mais de 3,5 milhões. O centro de informação recebe, em média, cerca de 460 000 pessoas por ano.</p>
+<p><strong>Problemas e debates.</strong> A partir de 2007 surgiram fissuras em centenas de blocos, e em 2012 foram reforçados com cintas de aço escondidas. O memorial foi criticado por não ter nomes nem referências aos perpetradores, e por deixar de fora as vítimas não judias. Mais tarde surgiram memoriais próprios para os homossexuais (2008) e para os sinti e roma (2012).</p>
+<p>O comportamento de alguns visitantes, a fazer selfies, a saltar entre os blocos ou a jogar Pokémon Go, também deu polémica. Em 2017, o artista israelita Shahak Shapira montou o projeto "Yolocaust", que juntava essas fotografias a imagens dos campos de extermínio.</p>
+
+<h4>Portas de Brandemburgo</h4>
+<p><strong>Antecedentes.</strong> Já havia uma porta neste ponto por volta de 1670. Em 1734, com o muro aduaneiro, Philipp Gerlach construiu uma porta barroca na estrada para Brandemburgo an der Havel.</p>
+<p><strong>A construção.</strong> A atual foi mandada construir por Frederico Guilherme II e desenhada por Carl Gotthard Langhans, entre 1788 e 1791, inspirada nos Propileus da Acrópole de Atenas. É uma das primeiras obras do neoclassicismo grego na Alemanha, e chamava-se inicialmente "Porta da Paz". Mede 26 m de altura por 62,5 m de largura e tem doze colunas dóricas que formam cinco passagens. A do meio estava reservada à família real, e os cidadãos só podiam usar as exteriores. Os relevos mostram cenas da mitologia grega e os trabalhos de Hércules.</p>
+<p><strong>A Quadriga.</strong> A escultura do topo é de Johann Gottfried Schadow, feita em chapa de cobre batido, e foi a primeira quadriga desde a Antiguidade. Representava Eirene, deusa da paz. Em 1806, depois de derrotar a Prússia em Jena, Napoleão desfilou pelas Portas e levou a Quadriga para Paris. Voltou em 1814, e Schinkel transformou a figura em Vitória, com uma águia prussiana e uma Cruz de Ferro.</p>
+<p><strong>Século XX.</strong> As Portas foram usadas como posição de tiro pelas tropas do governo na revolta espartaquista (1919) e no Putsch de Kapp (1920). Os nazis fizeram delas um emblema e integraram-nas no eixo leste–oeste da planeada capital "Germania". A guerra deixou-as crivadas de balas, e uma das cabeças de cavalo originais está hoje no Märkisches Museum.</p>
+<p><strong>A divisão.</strong> As Portas ficaram no setor soviético, com a bandeira soviética no topo até 1957. Na revolta de 17 de junho de 1953, três homens arrancaram-na e içaram a bandeira alemã. Entre 1956 e 1957, Berlim Leste e Berlim Oeste colaboraram no restauro, e a Quadriga foi refeita a partir de um molde de gesso de 1942. A RDA retirou-lhe a Cruz de Ferro.</p>
+<p>Com o Muro, em 1961, as Portas ficaram fechadas, isoladas na zona de fronteira. Em 1963, os soviéticos penduraram faixas vermelhas para impedir Kennedy de ver o lado leste. A 12 de junho de 1987, Ronald Reagan discursou aqui e desafiou Gorbachev a deitar abaixo o Muro.</p>
+<p><strong>A reabertura.</strong> As Portas reabriram a 22 de dezembro de 1989, quando Helmut Kohl as atravessou e foi recebido pelo primeiro-ministro da RDA, Hans Modrow. No dia de Natal, Leonard Bernstein dirigiu aqui a Nona de Beethoven, trocando "alegria" por "liberdade" no coro. A 3 de outubro de 1990 acolheram a cerimónia da reunificação.</p>
+<p><strong>Hoje.</strong> Foram restauradas entre 2000 e 2002, por cerca de 6 milhões de euros, e a Cruz de Ferro voltou à Quadriga. Os carros já não passam: a Pariser Platz, do lado leste, é pedonal. As Portas recebem o fim de ano, a meta da Maratona de Berlim e grandes festas, como a da seleção alemã depois do Mundial de 2014. São iluminadas em gestos de solidariedade, por exemplo com a Ucrânia em 2022.</p>`,
+
+  traenenpalast:`
+<h4>Função</h4>
+<p>A estação de Friedrichstraße ficava inteiramente em Berlim Leste, mas era o principal ponto de passagem ferroviária entre os dois lados da cidade. Como o piso inferior da estação já não chegava para o volume de tráfego, a RDA construiu em 1962 este pavilhão de vidro e aço ao lado, só para as saídas para o Ocidente, de S-Bahn, de metro ou de comboio.</p>
+<p>Lá dentro havia filas e cabines de controlo separadas para berlinenses ocidentais, para alemães ocidentais, para estrangeiros, para diplomatas e para os poucos cidadãos da RDA autorizados a viajar.</p>
+<h4>O nome</h4>
+<p>"Palácio das Lágrimas" é o nome que os berlinenses lhe deram por causa das despedidas à porta. Os visitantes do Ocidente podiam entrar e sair, mas os familiares e amigos da RDA ficavam do lado de cá, sem saber quando se voltariam a ver.</p>
+<h4>Depois do Muro</h4>
+<p>Depois de 1989 o edifício perdeu a função e foi usado como discoteca e sala de concertos até 2006. A RDA classificou-o como monumento a 2 de outubro de 1990, um dia antes de deixar de existir.</p>
+<h4>O museu</h4>
+<p>Em 2008 passou a memorial federal. A exposição permanente "GrenzErfahrungen" ("experiências de fronteira"), da Fundação Haus der Geschichte, foi inaugurada pela chanceler Angela Merkel a 14 de setembro de 2011. Mostra objetos originais, documentos, filmes e testemunhos sobre o efeito da divisão no dia a dia, e inclui partes das cabines de controlo. Nas duas primeiras semanas recebeu mais de 30 000 visitantes. A entrada é gratuita.</p>`,
+
+  bebelplatz:`
+<h4>A praça</h4>
+<p>Foi traçada entre 1741 e 1743, no reinado de Frederico II, como parte do "Forum Fridericianum", um conjunto monumental que acabou por ser reduzido porque um primo do rei se recusou a vender-lhe o palácio. Chamou-se Opernplatz, depois Kaiser-Franz-Josef-Platz (a partir de 1910) e, desde 31 de agosto de 1947, Bebelplatz, em homenagem a August Bebel, fundador da social-democracia alemã.</p>
+<p>À volta estão a Ópera Estatal, a Catedral de Santa Edwiges, a primeira igreja católica construída na Prússia depois da Reforma, a Antiga Biblioteca Real e o Palácio do Príncipe Henrique, irmão do rei, que é hoje o edifício principal da Universidade Humboldt. Quase tudo foi destruído na guerra e reconstruído nos anos 50.</p>
+<h4>A queima de livros de 10 de maio de 1933</h4>
+<p>Foi uma de muitas cerimónias organizadas em cidades universitárias alemãs pela Associação de Estudantes Alemães. Em Berlim, a recolha de livros começou a 6 de maio, com o saque da biblioteca do Instituto de Ciência Sexual. Na noite de 10 de maio, depois de um discurso inflamado do ministro da Propaganda, Joseph Goebbels, e na presença de membros da liga de estudantes nazis, das SA, das SS e da Juventude Hitleriana, foram queimados cerca de 20 000 livros.</p>
+<p>Entre os autores estavam Heinrich Mann, Erich Maria Remarque, Heinrich Heine, Karl Marx e Albert Einstein. O escritor Erich Kästner, cujos livros também arderam, assistiu à cena e descreveu-a no seu diário.</p>
+<h4>O memorial</h4>
+<p><em>A Biblioteca Vazia</em>, do artista israelita Micha Ullman, é uma placa de vidro no chão da praça. Através dela vê-se uma sala subterrânea com estantes brancas vazias, com espaço para os cerca de 20 000 livros queimados. Ao lado, uma placa cita uma frase de Heine, da peça <em>Almansor</em> (1821): aquilo foi apenas um prelúdio, porque onde se queimam livros acaba-se por queimar pessoas.</p>
+<p>Todos os anos, no aniversário, os estudantes da Universidade Humboldt fazem uma venda de livros na praça.</p>
+<h4>Polémicas</h4>
+<p>O uso da praça tem sido contestado, por causa de uma pista de gelo no inverno, de tendas da Fashion Week e, em 2012, de um parque de estacionamento subterrâneo para a Ópera, construído por baixo, junto ao memorial.</p>`,
+
+  museum:`
+<h4>A Ilha dos Museus</h4>
+<p>É a ponta norte da ilha do Spree, onde ficava o centro histórico de Cölln. Os cinco museus foram construídos ao longo de um século:</p>
+<p>Altes Museum, de Schinkel (1830), o primeiro museu público da Prússia. Neues Museum, de Friedrich August Stüler (1855). Alte Nationalgalerie, também de Stüler (1876). Bode-Museum (1904). Pergamonmuseum (1910–30).</p>
+<p>O conjunto é Património Mundial da UNESCO desde 1999. As passagens que ligavam os museus foram destruídas na guerra e não foram reconstruídas. O plano diretor desde a reunificação prevê ligá-los por galerias subterrâneas, e em 2019 abriu a James-Simon-Galerie como entrada comum. Depois da guerra, os Aliados levaram parte das coleções. O Tesouro de Príamo, por exemplo, está no Museu Pushkin, em Moscovo.</p>
+<h4>Bode-Museum (o da fotografia)</h4>
+<p>Foi construído entre 1898 e 1904 por Ernst von Ihne, em estilo neobarroco, por encomenda de Guilherme II. Abriu como Kaiser-Friedrich-Museum, em honra de Frederico III, e o primeiro diretor foi Wilhelm von Bode. Recebeu o nome dele em 1956.</p>
+<p>Tem a coleção de escultura, o Museu de Arte Bizantina e o Gabinete de Numismática, com cerca de 500 000 moedas e medalhas desde o século VII a.C.</p>
+<p>Na guerra, parte das coleções foi guardada numa torre antiaérea em Friedrichshain, onde um incêndio, em maio de 1945, destruiu mais de 400 pinturas e cerca de 300 esculturas. O museu fechou para obras em 1997 e reabriu a 18 de outubro de 2006, depois de uma renovação de 156 milhões de euros.</p>
+<p>Em março de 2017 foi palco de um roubo célebre: ladrões entraram por uma janela das traseiras e levaram a "Big Maple Leaf", uma moeda canadiana de ouro com 50 cm de diâmetro, avaliada em cerca de 3,7 milhões de euros. Terá sido derretida.</p>
+<h4>Neues Museum</h4>
+<p>Foi encomendado por Frederico Guilherme IV a Stüler, discípulo de Schinkel, para acolher as coleções que já não cabiam no Altes Museum. As obras começaram em 1841. O terreno pantanoso obrigou a cravar 2344 estacas de madeira, e foi usada pela primeira vez numa obra em Berlim uma máquina a vapor. O uso sistemático de estruturas de ferro fez dele o primeiro edifício monumental prussiano construído com técnicas industriais. Abriu em 1855, e os frescos da escadaria só ficaram prontos em 1866.</p>
+<p>Fechou em 1939. Em novembro de 1943 a escadaria ardeu, e em fevereiro de 1945 a ala noroeste foi destruída. Ficou em ruína durante décadas no setor soviético. A reconstrução, começada pela RDA em 1986, parou com a reunificação.</p>
+<p>O britânico David Chipperfield retomou o projeto em 1997. Conservou as marcas da guerra ao lado das partes novas, uma opção que gerou polémica. O museu reabriu a 16 de outubro de 2009, depois de um investimento de cerca de 295 milhões de euros, e o projeto ganhou o prémio europeu do RIBA (2010) e o Prémio Mies van der Rohe (2011).</p>
+<p>Hoje tem o Museu Egípcio, com o célebre busto da rainha Nefertiti, a Coleção de Papiros, o Museu de Pré-História e Proto-História e parte da coleção de antiguidades clássicas.</p>`,
+
+  dom:`
+<h4>Cinco séculos no mesmo lugar</h4>
+<p>Tudo começou em 1451, quando o príncipe-eleitor Frederico II mudou a residência para Cölln e o novo palácio teve uma capela católica, consagrada a Santo Erasmo em 1454. Em 1536, Joaquim II passou a usar a antiga igreja dominicana como colegiada, com uma nova fachada de duas torres (1538). Em 1539 converteu-se ao luteranismo, e a partir de 1545 os Hohenzollern passaram a ser sepultados ali.</p>
+<p>A igreja tornou-se calvinista no século XVII. Em 1747 foi demolida para ampliar o palácio, e Johann Boumann construiu uma nova igreja barroca, inaugurada em 1750. Schinkel remodelou-a por dentro (1817) e por fora (1820–22), em estilo neoclássico. Foi demolida em 1893.</p>
+<h4>A catedral atual</h4>
+<p>Foi construída entre 1894 e 1905 por ordem de Guilherme II, com projeto de Julius Raschdorff e do filho, Otto, num estilo neorrenascentista com elementos neobarrocos. Foi pensada como um contrapeso protestante à Basílica de São Pedro, em Roma, e o Estado pagou os 11,5 milhões de marcos que custou. Foi inaugurada a 27 de fevereiro de 1905.</p>
+<p>Mede cerca de 114 m de comprimento, 73 m de largura e 115 m de altura até ao topo da cúpula original, e é revestida a arenito da Silésia.</p>
+<h4>Interior</h4>
+<p>O órgão de Wilhelm Sauer, com 113 registos e quatro teclados, foi totalmente restaurado. Na torre noroeste há três sinos, o mais antigo de 1532. A cripta dos Hohenzollern ocupa quase toda a cave e é considerada um dos túmulos dinásticos mais importantes da Europa. A catedral tem hoje vários coros e uma oração cantada mensal em inglês.</p>
+<h4>Guerra e RDA</h4>
+<p>Em 1940 as ondas de choque das bombas rebentaram janelas. A 24 de maio de 1944, uma bomba incendiária atingiu a lanterna da cúpula: o fogo não pôde ser apagado e a lanterna caiu dentro da nave. Entre 1949 e 1953 foi feito um telhado provisório.</p>
+<p>A reconstrução começou em 1975, com um desenho simplificado. O regime da RDA demoliu a ala norte, a Igreja Memorial (Denkmalskirche), que estava intacta, e quis retirar o maior número possível de cruzes. O batistério reabriu em 1980, e a nave foi reinaugurada a 6 de junho de 1993, com a presença de Helmut Kohl. O interior ficou restaurado por volta de 2002.</p>
+<p>Uma associação defende a reconstrução da Igreja Memorial e da cúpula original, mas a falta de dinheiro tem adiado esses planos.</p>`,
+
+  hackesche:`
+<h4>O nome e o bairro</h4>
+<p>O nome vem do conde Hans Christoph von Hacke, comandante da cidade, a quem Frederico, o Grande, mandou urbanizar estes terrenos em 1750, dando origem ao Hackescher Markt. A zona é a Spandauer Vorstadt, um subúrbio que cresceu a partir de 1672, quando ali se abriu um cemitério judaico e para lá foram desterrados os celeiros de feno, por causa do risco de incêndio. Daí vem o nome Scheunenviertel, "bairro dos celeiros".</p>
+<p>No século XIX, parte do bairro era muito pobre e sobrelotada, e outra parte tinha uma classe média maioritariamente judia. A Nova Sinagoga da Oranienburger Straße, inaugurada em 1866, era o centro da comunidade. A economia girava à volta dos têxteis e do pronto-a-vestir, de que Berlim era uma capital no início do século XX.</p>
+<h4>A construção</h4>
+<p>Em 1905 os herdeiros do fabricante de vidro Hans Quilitz demoliram as construções antigas, e em 1906–07 o arquiteto e promotor Kurt Berndt ergueu num terreno de 9200 m², entre a Rosenthaler Straße e a Sophienstraße, o maior conjunto misto de habitação e comércio da Alemanha. Abriu a 23 de setembro de 1906.</p>
+<p>São oito pátios interligados. O primeiro tinha um edifício transversal com salões de festas, o segundo e o terceiro tinham fábricas, e nos interiores, mais verdes, ficavam cerca de 80 apartamentos, quase todos com varanda, casa de banho, sanita interior e aquecimento central, um luxo para a época. Os pátios foram orientados para receber luz e ar dos cemitérios vizinhos, e tinham plantas, fontes e uma caixa de areia.</p>
+<p>August Endell desenhou as fachadas do primeiro pátio, em tijolo vidrado azul e branco a leste e em tons castanhos a oeste, e os salões de festas Neumann. A fachada da rua, eclética e neobarroca, foi destruída nos anos 60, e a atual, de 1997, segue o desenho original.</p>
+<h4>Vida</h4>
+<p>Os Festsäle Neumann acolhiam casamentos, festas de associações e aniversários de empresas, e foi lá que nasceu o Neuer Club, um grupo de poetas expressionistas. Nos pátios funcionaram um banco, fábricas de luvas, peles e instrumentos musicais, armazenistas, um lar de raparigas da Liga das Mulheres Judias e uma cantina de estudantes judeus. Até 1945, grande parte do conjunto foi ocupada pela cadeia de armazéns DeFaKa.</p>
+<h4>RDA e renascimento</h4>
+<p>Em 1951 os pátios passaram a propriedade do Estado e foram degradando-se durante décadas, até serem classificados como monumento em 1977. Em 1993 foram devolvidos aos herdeiros, e em 1994 vendidos a um investidor. O restauro terminou em 1997.</p>
+<p>Hoje há cerca de 40 lojas e empresas em 27 000 m², escritórios de profissões criativas, habitação, o cinema Hackesche Höfe Kino e o teatro de variedades Chamäleon. Os pátios fecham à noite para preservar o sossego dos moradores, e são uma das moradas mais caras e conhecidas de Berlim.</p>
+<h4>Haus Schwarzenberg (Rosenthaler Straße 39)</h4>
+<p>É o edifício ao lado, classificado como monumento, cujo pátio está coberto de street art de artistas de todo o mundo. O nome vem de um romance de Stefan Heym, onde designa uma faixa de terra livre, sem dono.</p>
+<p>Já teve um escritório da produtora estatal DEFA e uma oficina de escovas, e escondeu uma família judia durante a guerra. Entre 1940 e 1944, Otto Weidt empregou ali trabalhadores judeus, na maioria cegos ou surdos, na sua oficina de vassouras e escovas, e protegeu muitos deles da deportação. Uma placa na passagem lembra-o.</p>
+<p>Hoje o edifício tem o Museu da Oficina para Cegos Otto Weidt, o Centro Anne Frank, o cinema Central, a galeria Neurotitan e vários ateliês.</p>`,
+
+  kotti:`
+<h4>O nome</h4>
+<p>Aqui ficava a Cottbusser Tor, uma das portas do muro aduaneiro de Berlim nos séculos XVIII e XIX, de onde saía a estrada para Cottbus. O muro foi demolido nos anos 1860. A grafia mudou muitas vezes (Cottbusserthor, Cottbuser Tor, Kottbuser Tor) até se fixar em Kottbusser Tor em 1930, embora a cidade se escreva com C. Oficialmente nem sequer é uma praça: não tem designação formal nem números de porta. É conhecida por todos como "Kotti".</p>
+<h4>A estação</h4>
+<p>Os comboios elevados (hoje U1 e U3) passam por cima do cruzamento desde 1902, e a estação é a imagem de marca do lugar. A linha subterrânea, hoje U8, chegou em 1928.</p>
+<h4>Urbanismo</h4>
+<p>A maior parte dos prédios à volta é de 1850–1900. Depois da guerra, as casas bombardeadas foram demolidas e o cruzamento virou rotunda. Entre os anos 50 e 80, o Senado de Berlim Ocidental demoliu muitos edifícios do século XIX e encomendou blocos modernos.</p>
+<p>O mais marcante é o Neues Kreuzberger Zentrum (NKZ), construído em 1969–74 por Wolfgang Jokisch e Johannes Uhl, que atravessa a Adalbertstraße. O seu efeito de barreira a norte vem de planos dos anos 60 para autoestradas urbanas que nunca foram construídas.</p>
+<h4>Comunidade e conflitos</h4>
+<p>Kotti é o centro do Kreuzberg 36 (SO 36) e um bairro com grandes dificuldades sociais. A 5 de janeiro de 1980, o sindicalista turco Celalettin Kesim foi assassinado aqui por fascistas e fundamentalistas turcos, e uma estela do artista Hanefi Yeter lembra-o desde os anos 90. A zona foi também palco dos motins do 1.º de Maio, que diminuíram muito graças a iniciativas de moradores como o festival MyFest.</p>
+<p>Tem uma grande cena de consumo e venda de drogas duras, e a polícia classifica-o como um dos sete "locais com elevada criminalidade" de Berlim, o que lhe permite identificar e revistar pessoas sem suspeita concreta. Em fevereiro de 2023 abriu, entre protestos, uma esquadra permanente no primeiro andar do NKZ, com três agentes por turno, 24 horas por dia.</p>`,
+
+  bars:`
+<h4>A rua</h4>
+<p>Tem cerca de 2080 metros e é uma das ruas mais conhecidas de Kreuzberg. Começa no Görlitzer Bahnhof, passa pelo Rio-Reiser-Platz, pelo Oranienplatz e pela Moritzplatz, e termina junto ao edifício-sede da editora Axel Springer. É a principal rua comercial do SO 36.</p>
+<p>Entre o Görlitzer Bahnhof e a Moritzplatz, os prédios são quase todos do fim do século XIX. A oeste da Moritzplatz, a zona foi muito destruída na guerra e reconstruída com prédios novos.</p>
+<h4>O nome e a história</h4>
+<p>Começou antes de 1720 como uma ruela chamada Orangenstraße, em homenagem à casa de Orange-Nassau. O principado de Orange, no sul de França, passou para a coroa francesa em 1713, e muitos huguenotes de lá refugiaram-se em Berlim. Com o crescimento industrial da cidade foi prolongada, e recebeu o nome atual a 24 de março de 1849. A 3 de fevereiro de 1945, um bombardeamento aliado destruiu grande parte da rua.</p>
+<h4>Gente e lugares</h4>
+<p>No pátio do n.º 6, Konrad Zuse, o pioneiro do computador, trabalhou em 1944–45 no Z4, que deveria ter sido o primeiro computador produzido em série. Na rua nasceram também os armazéns Wertheim e a sapataria Leiser, e o compositor Paul Lincke teve aqui a sua editora musical. No n.º 162 funcionou a partir de 1947 o Max und Moritz, um dos primeiros bares lésbicos de Berlim Ocidental no pós-guerra.</p>
+<h4>Hoje</h4>
+<p>A parte leste concentra restaurantes, bares, tascas e clubes, entre os quais o mítico SO36, e é um dos centros da noite berlinense. A rua ficou conhecida no país inteiro pelos confrontos entre autonomistas e polícia no 1.º de Maio, sobretudo entre o Rio-Reiser-Platz e o Oranienplatz.</p>
+<p>No n.º 25 fica a Neue Gesellschaft für Bildende Kunst, e na Moritzplatz o Aufbau Haus e as hortas urbanas Prinzessinnengärten. No n.º 195, uma empena tem o mural "Astronaut Cosmonaut", do francês Victor Ash. Desde 1998 a rua organiza a Lange Buchnacht, uma noite longa dedicada aos livros.</p>`
+};
+Object.assign(MORE, {
+  soviet:`
+<h4>O que é</h4>
+<p>É ao mesmo tempo memorial de guerra e cemitério militar. Homenageia os cerca de 80 000 soldados do Exército Vermelho mortos na Batalha de Berlim, em abril e maio de 1945, e cerca de 7000 estão aqui sepultados, uns 5000 no campo central. É o maior dos três memoriais soviéticos de Berlim, a par do de Tiergarten (1945) e do de Schönholzer Heide, em Pankow. Com o monumento da "Retaguarda à Frente", em Magnitogorsk, e a estátua "A Pátria Chama", em Volgogrado, é visto como parte de um tríptico.</p>
+<h4>Construção</h4>
+<p>O lugar era um antigo campo desportivo do Treptower Park. Pouco depois do fim da guerra abriu-se um concurso, que recebeu 33 propostas, e o projeto final combinou várias delas. A equipa era liderada pelo arquiteto Yakov Belopolsky, com o escultor Yevgeny Vuchetich, o pintor Alexander Gorpenko e a engenheira Sarra Walerius.</p>
+<p>As esculturas, os relevos e as taças de fogo, com 2,5 m de diâmetro, foram fundidos em 1948 na fundição de arte de Lauchhammer. A obra durou mais de três anos e envolveu cerca de 1200 operários, 200 canteiros e 90 escultores. Diz-se muitas vezes que o granito veio das ruínas da Chancelaria de Hitler, mas a Wikipédia classifica esse rumor como falso. O memorial foi inaugurado a 8 de maio de 1949, quatro anos depois do fim da guerra na Europa.</p>
+<h4>O percurso</h4>
+<p>Entra-se por um de dois arcos monumentais, que levam a uma estátua de mulher que chora os filhos, a "Mãe Pátria". Segue-se um portal formado por duas bandeiras soviéticas estilizadas em granito vermelho, com um soldado ajoelhado de cada lado.</p>
+<p>Depois abre-se o campo central, ladeado por 16 sarcófagos de pedra, um por cada república soviética da época, com relevos de cenas de guerra e citações de Estaline em russo e alemão.</p>
+<p>No fim do eixo, sobre um monte, está a estátua de bronze de 12 metros de Vuchetich: um soldado de espada na mão, com uma criança alemã ao colo, a pisar uma suástica partida. O marechal Chuikov disse que ela homenageia o sargento Nikolai Masalov, que terá arriscado a vida debaixo de fogo de metralhadora para salvar uma menina alemã de três anos nos últimos combates no centro de Berlim.</p>
+<h4>Na RDA e depois</h4>
+<p>Foi o principal memorial de guerra da RDA. No fim de 1989 apareceram grafitos antissoviéticos, e a 3 de janeiro de 1990 cerca de 250 000 pessoas manifestaram-se aqui, numa concentração convocada por um pequeno partido trotskista e apoiada pelo PDS, o sucessor do partido de Estado. O historiador Stefan Wolle levantou a hipótese de a pintura ter sido obra da própria Stasi. Em 1994, a cerimónia de despedida das tropas russas contou com Helmut Kohl e Boris Ieltsin.</p>
+<p>Pelo Tratado Dois Mais Quatro, a Alemanha ficou responsável pela manutenção e tem de consultar a Rússia antes de qualquer alteração. Entre 2003 e 2004, a estátua foi levada de barco para uma oficina na ilha de Rügen e restaurada, com limpeza, nova pátina, substituição de 2200 parafusos e uma estrutura interna de aço inoxidável, por cerca de 1,5 milhões de euros. A despesa foi criticada por contraste com a falta de indemnizações a pessoas deportadas para a URSS.</p>
+<p>Uma parte dos berlinenses dá-lhe uma alcunha amarga, em referência às violações em massa cometidas por soldados soviéticos em 1945. Desde 1995 há uma vigília anual a 9 de maio. Depois da invasão da Ucrânia voltou a discutir-se a demolição, e o memorial tem sido alvo de pinturas.</p>`,
+
+  eastside:`
+<h4>O troço</h4>
+<p>Estende-se ao longo da Mühlenstraße, entre a Ostbahnhof e a Oberbaumbrücke, à beira do Spree, com 1316 metros. É o troço mais longo do Muro que ainda está de pé. Não era a fronteira propriamente dita, que aqui passava pela margem de Kreuzberg do rio: era o muro interior ("Hinterlandmauer"), que fechava a faixa de fronteira do lado de Berlim Leste e era mais grosso e mais fortificado do que o exterior.</p>
+<h4>Como nasceu</h4>
+<p>O projeto surgiu em 1990, depois da fusão das associações de artistas plásticos do Leste (VBK) e do Oeste (BBK). Os fundadores foram Bodo Sperling, Barbara Greul Aschanta, Jörg Kubitzki e David Monti. Na primavera de 1990, 118 artistas de 21 países pintaram o muro, que se tornou uma galeria a céu aberto e, segundo a associação de artistas, um monumento à queda do Muro.</p>
+<h4>As obras</h4>
+<p>A mais famosa é a nº 25, de Dmitri Vrubel, que mostra o beijo fraterno entre Leonid Brejnev e Erich Honecker, com o título <em>Meu Deus, ajuda-me a sobreviver a este amor mortal</em>. Vrubel pintou também uma homenagem a Andrei Sakharov. Outros nomes conhecidos são Thierry Noir, Jim Avignon, Kim Prisu, Kani Alavi, Kasra Alavi, Jürgen Große ("Indiano"), Birgit Kinder, com "Test the Rest", e Gerhard Lahr, com "Berlyn".</p>
+<h4>Conservação e polémicas</h4>
+<p>É monumento classificado e recebe mais de três milhões de visitantes por ano. A erosão, os grafitos e o vandalismo danificaram muito as pinturas, e a partir de 2000 uma associação sem fins lucrativos restaurou cerca de um terço. Em 2009 as obras foram repintadas por cima das originais. Oito dos artistas de 1990 recusaram repintar as suas e formaram uma iniciativa para defender os direitos de autor. Em 2011, Bodo Sperling levou a tribunal a questão de saber se uma obra pode ser apagada e recopiada sem autorização do artista.</p>
+<p>Em 2006, um troço de 40 m foi deslocado para abrir acesso ao rio junto à arena desportiva. A 1 de março de 2013, começou a demolição de 23 m para a construção de apartamentos de luxo, sem aviso aos artistas. Os protestos obrigaram a suspender a obra.</p>
+<p>Desde novembro de 2018, a gestão está a cargo da Fundação do Muro de Berlim. O muro aparece no filme <em>Adeus, Lenine!</em> e no vídeo de "One", dos U2.</p>
+<h4>Oberbaumbrücke</h4>
+<p>No lugar de uma ponte de madeira ligada ao muro aduaneiro de 1732, a atual foi construída em dois anos e inaugurada em 1896, a tempo da Exposição Industrial de Berlim. O projeto é de Otto Stahn, em gótico de tijolo do norte da Alemanha, com arcos ogivais e abóbadas, e por cima circula o metro elevado.</p>
+<p>Em abril de 1945, a Wehrmacht fez explodir o tramo central. Depois de 1961, a ponte marcava a fronteira entre Leste e Oeste. A partir de dezembro de 1963 passou a ser travessia de peões para berlinenses ocidentais, e de forma permanente depois do Acordo das Quatro Potências de 1972.</p>
+<p>Restaurada com um novo tramo central em aço de Santiago Calatrava, reabriu a 9 de novembro de 1994. Ligava dois distritos de lados opostos do Muro e por isso aparece no brasão de Friedrichshain-Kreuzberg, que se fundiram em 2001.</p>`,
+
+  market:`
+<h4>A praça</h4>
+<p>Antes de 1900 chamava-se apenas "Praça D". O nome atual, dado em 1900, vem de uma antiga quinta da zona, o Vorwerk Boxhagen, e as obras terminaram em 1903. Por volta de 1925 ganhou um tanque para crianças com esculturas de pinguins e patos, segundo projeto de Erwin Barth. É jardim classificado.</p>
+<p>O antigo urinol octogonal de ferro fundido, o "Café Achteck", do século XIX, ardeu em 1992 e reabriu em 2000. Em 2004 a praça foi remodelada, com vedação e um parque infantil.</p>
+<h4>O bairro</h4>
+<p>Os moradores chamam-lhe "Boxi" e usam a praça como relvado, ponto de encontro, parque infantil e mercado. A zona, operária desde a industrialização, mudou pouco durante a RDA. Depois de 1989 houve muitas casas ocupadas, até à violenta desocupação da Mainzer Straße, em 1990. Uma dessas antigas ocupações, na Grünberger Straße 73, existe ainda como projeto legal.</p>
+<p>Entre 1999 e 2005, um programa de gestão de bairro abrangeu cerca de 75 hectares e 18 500 habitantes, numa das maiores densidades populacionais da cidade. A população cresceu, rejuvenesceu (a maioria tem entre 18 e 35 anos) e tornou-se mais internacional.</p>
+<h4>Gentrificação</h4>
+<p>A requalificação trouxe prédios renovados, lojas novas e rendas mais altas. Os apartamentos pequenos, de um e dois quartos, fazem com que os moradores mudem muito.</p>
+<h4>Mercados</h4>
+<p>Ao sábado há mercado de produtores desde 1905, com fruta, legumes, carne, peixe, pão e especialidades. Ao domingo há a feira da ladra, que em 2004 foi reduzida depois de queixas dos moradores e onde hoje há mais vendedores profissionais do que particulares.</p>`,
+
+  stasi:`
+<h4>A Stasi</h4>
+<p>O Ministério da Segurança do Estado (MfS), conhecido como Stasi, foi criado a 8 de fevereiro de 1950. Era ao mesmo tempo polícia política, serviço de informações e polícia de investigação criminal, e o seu lema era "escudo e espada do Partido". Queria "saber tudo sobre todos".</p>
+<p>No fim tinha cerca de 90 000 funcionários a tempo inteiro e mais de 170 000 colaboradores não oficiais (IM), quase 2% da população. Somando os informadores ocasionais, estima-se que houvesse um por cada 6,5 habitantes. Manteve ficheiros sobre cerca de 5,6 milhões de pessoas, com escutas, vigilância por vídeo, abertura de correio, chantagem e suborno. Erich Mielke dirigiu-a de 1957 a 1989.</p>
+<h4>A sede</h4>
+<p>O complexo de escritórios da Normannenstraße, em Lichtenberg, foi crescendo até ocupar quarteirões inteiros, fechados ao exterior. O Haus 1, onde está o museu, foi construído em 1960–61 como sede do ministro.</p>
+<h4>O assalto à sede</h4>
+<p>No outono de 1989, com o regime a cair, os funcionários começaram a destruir ficheiros: à mão, em incineradoras e em trituradoras. A escritora Anna Funder conta que as trituradoras sobreaqueceram e que a Stasi chegou a mandar agentes comprar mais a Berlim Ocidental.</p>
+<p>A partir de 4 de dezembro de 1989, cidadãos ocuparam sedes regionais da Stasi, a começar por Erfurt e Leipzig. A 13 de janeiro de 1990 o ministério foi formalmente dissolvido, e a 15 de janeiro, numa manifestação convocada pelo Neues Forum, milhares de pessoas forçaram a entrada na sede de Berlim para travar a destruição. Entre elas havia antigos colaboradores que queriam fazer desaparecer provas. Os ficheiros salvos foram essenciais para julgar crimes da Stasi e, depois da reunificação, ficaram a cargo de uma autoridade própria, a primeira dirigida por Joachim Gauck, que abriu aos cidadãos a consulta dos seus próprios processos.</p>
+<h4>O museu</h4>
+<p>A associação ASTAK foi fundada no verão de 1990 por ativistas dos direitos civis, e o museu abriu a 7 de novembro de 1990. Conserva o gabinete de Mielke, a antecâmara, a mesa de reuniões, a central telefónica e uma área de lazer. Desde 2015 tem a exposição permanente "A Segurança do Estado na ditadura do SED", feita com a autoridade dos arquivos da Stasi.</p>
+<p>No antigo parque de estacionamento, a exposição ao ar livre "Revolução e Queda do Muro", da Sociedade Robert Havemann, abriu em junho de 2016. O museu recebe cerca de 100 000 visitantes por ano.</p>`,
+
+  kma:`
+<h4>Nomes e dimensões</h4>
+<p>A rua chamou-se Frankfurter Straße (por volta de 1701), depois Große Frankfurter Straße (até 1872) e Frankfurter Allee. De 1949 a 1961 foi Stalinallee, e desde então é Karl-Marx-Allee. Tem 2,3 km de comprimento e 90 m de largura, entre Mitte e Friedrichshain.</p>
+<h4>A montra do socialismo</h4>
+<p>A RDA construiu-a entre 1949 e 1960 como peça central da reconstrução do pós-guerra e montra do urbanismo socialista: habitação digna para trabalhadores, comércio e cultura. Os arquitetos foram Hermann Henselmann, Egon Hartmann, Hans Hopp, Kurt W. Leucht, Richard Paulick e Josef Souradny.</p>
+<p>Os "palácios para operários", de oito andares, seguem o "classicismo socialista" de inspiração estalinista, conhecido como estilo "bolo de noiva", com motivos berlinenses inspirados em Schinkel e fachadas revestidas a cerâmica. Henselmann desenhou as torres gémeas da Frankfurter Tor e da Strausberger Platz. Nos anos 80 os azulejos começaram a cair, e foi preciso pôr resguardos para os peões.</p>
+<p>O arquiteto americano Philip Johnson chamou-lhe verdadeiro urbanismo em grande escala, e o italiano Aldo Rossi, a última grande rua da Europa.</p>
+<h4>17 de junho de 1953</h4>
+<p>Os operários que construíam a avenida pararam o trabalho em protesto contra o aumento das normas de produção. O protesto espalhou-se a toda a RDA e foi esmagado pelos tanques soviéticos, com muitos mortos. Bertolt Brecht escreveu sobre isso um poema satírico, "A Solução".</p>
+<h4>Estaline sai, Marx entra</h4>
+<p>Em 1951 foi erguida uma estátua monumental de Estaline, oferecida para o Festival Mundial da Juventude. Em 1961, com a desestalinização, foi retirada discretamente e a avenida passou a chamar-se Karl-Marx-Allee. Era aqui que se faziam os desfiles do 1.º de Maio, com material militar. Nas lojas, os visitantes ocidentais tinham de provar que tinham trocado marcos ao câmbio oficial de 1 para 1, quando no Ocidente o câmbio era de cerca de 8 para 1.</p>
+<h4>Kino International</h4>
+<p>Projetado por Josef Kaiser, abriu a 15 de novembro de 1963 e foi a principal sala de estreias da RDA, sobretudo de filmes dos estúdios DEFA. A última estreia da RDA foi "Coming Out", de Heiner Carow, a 9 de novembro de 1989, a noite em que caiu o Muro. Tem 555 lugares e 14 relevos nas fachadas laterais, e é uma das salas da Berlinale. Fechou em maio de 2024 para cerca de dois anos de obras, com reabertura anunciada para o início de 2026.</p>
+<h4>Uma curiosidade</h4>
+<p>Em 2009, alguém escreveu anonimamente na Wikipédia alemã que a avenida tinha a alcunha de "casa de banho de Estaline", por causa dos azulejos. Os jornais repetiram a expressão até o jornalista Andreas Kopietz, do Berliner Zeitung, admitir que a tinha inventado.</p>`,
+
+  alex:`
+<h4>Das origens a 1805</h4>
+<p>No século XIII havia aqui um hospital de São Jorge, que deu nome à Porta de São Jorge. Até cerca de 1400 a zona era quase vazia, e por causa da forca próxima era conhecida como "jardim de recreio do diabo". No século XVI, a porta tornou-se a mais importante de Berlim, por onde entravam as mercadorias do norte e das cidades hanseáticas, e em frente realizava-se um mercado de gado. Em 1701, Frederico I entrou por ela depois da coroação, e passou a chamar-se Porta do Rei. Foi demolida em 1746.</p>
+<p>A 25 de outubro de 1805, o czar Alexandre I foi recebido na praça de armas em frente à antiga porta, e a 2 de novembro o rei Frederico Guilherme III deu-lhe o nome de Alexanderplatz.</p>
+<h4>A grande cidade</h4>
+<p>No século XIX, o bairro de Königsstadt encheu-se de prédios de cinco andares. A praça foi palco de combates de rua na revolução de 1848, ganhou a estação de comboio em 1882, o Grand Hotel (1884) e o mercado central. Em 1886–90 foi construída a sede da polícia, a "Fortaleza Vermelha", tão famosa que "o Alex" passou a ser sinónimo de polícia. Em 1895 foi erguida a estátua de cobre Berolina, com 7,5 m. Os grandes armazéns Tietz, Wertheim e Hahn chegaram a seguir: a fachada do Tietz, com 250 m, era descrita como a mais longa do mundo.</p>
+<p>No antigo Haus des Lehrers (1908) realizaram-se em 1919 as cerimónias fúnebres de Karl Liebknecht e Rosa Luxemburg, e em 1920 o congresso de unificação dos comunistas. Alfred Döblin deu à praça o título do seu romance <em>Berlin Alexanderplatz</em>, e Walter Ruttmann filmou-a em 1927 para <em>Berlim, Sinfonia de uma Capital</em>.</p>
+<h4>Guerra</h4>
+<p>Entre 1941 e 1943 construiu-se por baixo um dos maiores abrigos antiaéreos de Berlim. A Berolina foi retirada em 1944, provavelmente para ser fundida. Em abril de 1945 a praça foi bombardeada pela artilharia soviética. Depois da guerra, as ruínas acolheram um mercado negro.</p>
+<h4>O centro de Berlim Leste</h4>
+<p>Nos anos 60 e 70, a RDA alargou a praça, tornou-a pedonal e rodeou-a de edifícios modernistas: o novo Haus des Lehrers, de Hermann Henselmann, com o friso de mosaico sobre a vida socialista, o Hotel Stadt Berlin (125 m) e a Haus des Reisens. Em 1969 surgiram o relógio mundial, com a hora de 148 cidades, e a Fernsehturm. Em 1970, a Fonte da Amizade entre os Povos, de Walter Womacka.</p>
+<h4>A Fernsehturm</h4>
+<p>Os correios da RDA planeavam uma torre de televisão desde 1952, mas o primeiro local ficava demasiado perto do aeroporto de Schönefeld. Em 1964, Walter Ulbricht exigiu um local central e aprovou um desenho inspirado na torre de Estugarda e no satélite Sputnik. Os arquitetos foram Hermann Henselmann, Jörg Streitparth, Fritz Dieter, Günter Franke e Werner Ahrendt.</p>
+<p>A obra começou a 4 de agosto de 1965 e a torre foi inaugurada a 3 de outubro de 1969, nos 20 anos da RDA. Custou mais de 132 milhões de marcos, quatro vezes o previsto. A esfera tem 32 m de diâmetro e 4800 toneladas, com o miradouro a cerca de 203 m, de onde se veem até 42 km, e o restaurante giratório a 207 m. Os elevadores sobem em cerca de 40 segundos, e há 986 degraus.</p>
+<p>Com a nova antena de 1997, passou de 365 para 368 m, e é a estrutura mais alta da Alemanha. Quando o sol bate na esfera de aço forma-se uma cruz luminosa, a que os berlinenses chamaram "a vingança do Papa", por causa das cruzes que o regime tirava das igrejas. Reagan referiu-a no discurso de 1987. É monumento classificado desde 1979 e recebe cerca de 1,2 milhões de visitantes por ano.</p>
+<h4>4 de novembro de 1989</h4>
+<p>Foi a maior manifestação não organizada pelo Estado da história da RDA. Centenas de milhares de pessoas, entre opositores, artistas e até dirigentes do partido, exigiram reformas e liberdade de expressão, de reunião e de viajar. Cinco dias depois, o Muro abriu.</p>
+<h4>Depois da reunificação</h4>
+<p>Em 1993, Hans Kollhoff ganhou o concurso para redesenhar a praça, com uma ferradura de prédios e torres de 150 m. Só uma parte avançou, como o centro comercial Alexa (2007). Em 2026 estavam em construção as torres Covivio (130 m) e The Berlinian (146 m), e a Alexander Tower estava parada desde 2022.</p>`,
+
+  nikolai:`
+<h4>O berço de Berlim</h4>
+<p>É o núcleo mais antigo da cidade, fundado por volta de 1200, entre a Spandauer Straße, a Rathausstraße, o Spree e o Mühlendamm. Com Cölln, na outra margem, formou a Berlim medieval.</p>
+<h4>A Igreja de São Nicolau</h4>
+<p>Foi construída entre 1220 e 1230 e é a igreja e o edifício mais antigos de Berlim. Era católica e passou ao luteranismo em 1539. Foram pastores ou músicos dela o grande autor de hinos Paul Gerhardt, o compositor Johann Crüger e o teólogo Philipp Jacob Spener. O último culto foi a 31 de outubro de 1938, e nesse ano foi entregue ao Estado para servir de sala de concertos e museu.</p>
+<p>Os bombardeamentos destruíram o telhado e o topo das torres, e em 1949 as abóbadas ruíram. A RDA reconstruiu-a entre 1980 e 1983, a partir de desenhos e plantas históricas. Hoje é um museu do Stadtmuseum Berlin e uma sala de concertos com boa acústica, com um órgão Jehmlich de 44 registos.</p>
+<h4>A reconstrução de 1987</h4>
+<p>Preservado durante séculos, o bairro medieval foi arrasado pelos bombardeamentos e pela Batalha de Berlim. Para os 750 anos da cidade, em 1987, as autoridades de Berlim Leste reconstruíram-no como "coração histórico", misturando réplicas de casas antigas com prédios de painéis pré-fabricados de betão. Muitas das fachadas "antigas" que se veem são, por isso, recriações dos anos 80.</p>`
+});
+
+function moreBlock(key){
+  const m = MORE[key]; if(!m) return "";
+  return `<details class="more"><summary><span class="ico">+</span>Saber mais</summary><div class="txt">${m}<p class="src">Texto escrito a partir dos artigos da Wikipédia indicados na barra acima.</p></div></details>`;
+}
+
+
+/* ---------- Cartaz de Berlim Leste (domingo) ---------- */
+function star(cx,cy,R,r,fill){ let p=[]; for(let i=0;i<10;i++){ const a=-Math.PI/2+i*Math.PI/5, rr=i%2?r:R; p.push((cx+rr*Math.cos(a)).toFixed(1)+","+(cy+rr*Math.sin(a)).toFixed(1)); } return `<polygon points="${p.join(" ")}" fill="${fill}"/>`; }
+function emblem(cx,cy,s){
+  const G="#f2c14e"; let ears="";
+  const ear=(deg)=>{ const a=deg*Math.PI/180, x=Math.cos(a)*40, y=Math.sin(a)*40; return `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="3.6" ry="7.5" fill="${G}" transform="rotate(${deg} ${x.toFixed(1)} ${y.toFixed(1)})"/>`; };
+  for(let d=105; d<=250; d+=13) ears+=ear(d);
+  for(let d=-70; d<=75; d+=13) ears+=ear(d);
+  return `<g transform="translate(${cx} ${cy}) scale(${s})">
+    <circle r="31" fill="#a50e19" stroke="${G}" stroke-width="1.5"/>
+    ${ears}
+    <rect x="-2.6" y="-18" width="5.2" height="44" rx="1.5" fill="${G}"/>
+    <rect x="-15" y="-25" width="30" height="9" rx="1.5" fill="${G}"/>
+    <path d="M0 -30 L-18 22 L-13 23 L0 -17 L13 23 L18 22 Z" fill="${G}"/>
+    <circle cx="0" cy="-30" r="5" fill="${G}" stroke="#a50e19" stroke-width="1.5"/>
+    <path d="M-20 18 h40" stroke="${G}" stroke-width="2.4"/>
+    <g transform="translate(0 43)"><rect x="-26" y="-6" width="52" height="4" fill="#111"/><rect x="-26" y="-2" width="52" height="4" fill="#dd1c2b" stroke="#fbe9c8" stroke-width=".6"/><rect x="-26" y="2" width="52" height="4" fill="${G}"/></g>
+  </g>`;
+}
+function ostBanner(){
+  const cx=92, cy=96; let rays="";
+  for(let i=0;i<28;i++){ if(i%2) continue; const a1=i*2*Math.PI/28, a2=(i+1)*2*Math.PI/28, R=520;
+    rays+=`<polygon points="${cx},${cy} ${(cx+R*Math.cos(a1)).toFixed(0)},${(cy+R*Math.sin(a1)).toFixed(0)} ${(cx+R*Math.cos(a2)).toFixed(0)},${(cy+R*Math.sin(a2)).toFixed(0)}" fill="#a50e19"/>`; }
+  return `<div class="ostbanner"><svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartaz: Berlim Leste">
+    <rect width="400" height="210" fill="#c1121f"/>${rays}
+    ${emblem(cx,cy,1.25)}
+    ${star(368,30,13,5.5,"#f2c14e")}${star(338,24,6,2.5,"#f2c14e")}
+    <text x="178" y="64" font-family="Oswald,Impact,sans-serif" font-weight="600" font-size="13" letter-spacing="3" fill="#f2c14e">HAUPTSTADT DER DDR</text>
+    <text x="176" y="112" font-family="Oswald,Impact,sans-serif" font-weight="700" font-size="44" fill="#fbf1dc">BERLIM</text>
+    <text x="176" y="156" font-family="Oswald,Impact,sans-serif" font-weight="700" font-size="44" fill="#fbf1dc">LESTE</text>
+    <text x="178" y="178" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="11" fill="#fbe9c8">Domingo · 8 de novembro</text>
+    <rect y="192" width="400" height="6" fill="#111"/><rect y="198" width="400" height="6" fill="#dd1c2b"/><rect y="204" width="400" height="6" fill="#f2c14e"/>
+  </svg></div>`;
+}
+
+
+/* ---------- Cartaz da Alemanha Federal (sábado) ---------- */
+function bundesadler(cx,cy,s){
+  const K="#111", R="#dd0000";
+  const wing = `M-9 -18 L-46 -36 L-47 -27 L-38 -24 L-46 -17 L-36 -14 L-43 -7 L-32 -4 L-37 4 L-24 5 L-27 12 L-9 8 Z`;
+  return `<g transform="translate(${cx} ${cy}) scale(${s})">
+    <path d="${wing}" fill="${K}"/><path d="${wing}" fill="${K}" transform="scale(-1 1)"/>
+    <path d="M-9 -22 Q0 -27 9 -22 L11 16 L0 24 L-11 16 Z" fill="${K}"/>
+    <circle cx="0" cy="-30" r="6.5" fill="${K}"/>
+    <path d="M4 -32 L16 -29 L10 -26 L5 -26 Z" fill="${R}"/><circle cx="1.5" cy="-31.5" r="1.3" fill="#ffce00"/>
+    <path d="M-11 16 L-18 34 L-8 30 L0 38 L8 30 L18 34 L11 16 Z" fill="${K}"/>
+    <path d="M-6 18 L-15 30 M-15 30 l-4 3 M-15 30 l0 5 M-15 30 l4 3" stroke="${R}" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <path d="M6 18 L15 30 M15 30 l4 3 M15 30 l0 5 M15 30 l-4 3" stroke="${R}" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  </g>`;
+}
+function westBanner(){
+  return `<div class="westbanner"><svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartaz: Berlim, Alemanha Federal">
+    <rect width="400" height="210" fill="#ffffff"/>
+    <rect x="0" y="0" width="150" height="210" fill="#ffce00"/>
+    ${bundesadler(75,100,1.45)}
+    <rect x="150" y="0" width="1" height="210" fill="#111"/>
+    <text x="172" y="40" font-family="Barlow,Inter,Arial,sans-serif" font-weight="600" font-size="10.5" letter-spacing="1.1" fill="#111">BUNDESREPUBLIK DEUTSCHLAND</text>
+    <rect x="172" y="50" width="206" height="1" fill="#111"/>
+    <text x="170" y="112" font-family="Barlow,Inter,Arial,sans-serif" font-weight="700" font-size="58" letter-spacing="-2" fill="#111">Berlim</text>
+    <text x="172" y="140" font-family="Barlow,Inter,Arial,sans-serif" font-weight="500" font-size="15" fill="#111">Sábado, 7 de novembro</text>
+    <text x="172" y="160" font-family="Barlow,Inter,Arial,sans-serif" font-weight="500" font-size="12" fill="#5d5a55">12.00 – 24.00 Uhr</text>
+    <rect x="172" y="174" width="18" height="6" fill="#111"/><rect x="190" y="174" width="18" height="6" fill="#dd0000"/><rect x="208" y="174" width="18" height="6" fill="#ffce00"/>
+    <rect y="198" width="400" height="4" fill="#111"/><rect y="202" width="400" height="4" fill="#dd0000"/><rect y="206" width="400" height="4" fill="#ffce00"/>
+  </svg></div>`;
+}
+
+/* ---------- Render ---------- */
+const ICON_ROUTE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h6.5"/></svg>`;
+const ICON_PHOTO = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>`;
+
+const store = { get(k){ try{return JSON.parse(localStorage.getItem(k)||"{}")}catch(e){return {}} }, set(k,v){ try{localStorage.setItem(k,JSON.stringify(v))}catch(e){} } };
+const doneKey = "berlim-feito-v1";
+let done = store.get(doneKey);
+
+function render(dayId){
+  const d = DAYS[dayId], el = document.getElementById("day-"+dayId);
+  el.innerHTML = `${dayId==="domingo"?ostBanner():westBanner()}<div class="daymeta">${d.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div>
+  <ol class="timeline">${d.stops.map((s,i)=>{
+    const id = dayId+"-"+i, isDone = !!done[id];
+    return `<li class="stop${isDone?" done":""}" data-id="${id}" data-t="${s.t}">
+      <div class="time">${s.t}</div>
+      <article class="card">
+        ${s.img ? `<img class="photo" src="${s.img}"${s.ar?` style="aspect-ratio:${s.ar}"`:""} alt="${s.name}" loading="lazy">` : ART[s.art](s.ph)}
+        <div class="body">
+          <div class="nowtag">Agora</div>
+          <h3 class="name">${s.name}</h3>
+          <p class="note">${s.note}</p>
+          ${aboutBlock(s.art)}
+          ${moreBlock(s.art)}
+          <div class="actions">
+            ${s.route?`<a class="btn primary" href="${s.route}" target="_blank" rel="noopener">${ICON_ROUTE}${s.rl}</a>`:""}
+            ${s.route2?`<a class="btn primary" href="${s.route2}" target="_blank" rel="noopener">${ICON_ROUTE}${s.rl2}</a>`:""}
+            <a class="btn" href="${place(s.photo)}" target="_blank" rel="noopener">${ICON_PHOTO}Fotos</a>
+            <label class="check"><input type="checkbox" ${isDone?"checked":""} data-id="${id}">Feito</label>
+          </div>
+        </div>
+      </article>
+    </li>`}).join("")}</ol>
+  <aside class="tips"><h2>A ter em conta</h2><ul>${d.tips.map(t=>`<li>${t}</li>`).join("")}</ul></aside>`;
+}
+
+function show(dayId){
+  if(!DAYS[dayId]) dayId = defaultDay();
+  document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", String(b.dataset.day===dayId)));
+  document.querySelectorAll("section[data-day]").forEach(s=>s.hidden = s.dataset.day!==dayId);
+  document.body.dataset.day = dayId;
+  markNow();
+}
+function defaultDay(){ const t=new Date(); const iso=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,"0")}-${String(t.getDate()).padStart(2,"0")}`; return iso===DAYS.domingo.date ? "domingo" : "sabado"; }
+
+function markNow(){
+  const t=new Date(); const iso=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,"0")}-${String(t.getDate()).padStart(2,"0")}`;
+  const mins=t.getHours()*60+t.getMinutes();
+  document.querySelectorAll(".stop.now").forEach(e=>e.classList.remove("now"));
+  for(const id of Object.keys(DAYS)){
+    if(DAYS[id].date!==iso) continue;
+    const items=[...document.querySelectorAll(`#day-${id} .stop`)];
+    const toM = s=>{const [h,m]=s.split(":").map(Number); return h*60+m;};
+    let cur=null; items.forEach(li=>{ if(toM(li.dataset.t)<=mins) cur=li; });
+    if(cur) cur.classList.add("now");
+  }
+}
+
+Object.keys(DAYS).forEach(render);
+document.addEventListener("change", e=>{
+  const cb=e.target.closest('input[type="checkbox"][data-id]'); if(!cb) return;
+  done[cb.dataset.id]=cb.checked; if(!cb.checked) delete done[cb.dataset.id]; store.set(doneKey,done);
+  cb.closest(".stop").classList.toggle("done", cb.checked);
+});
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{ location.hash=b.dataset.day; show(b.dataset.day); window.scrollTo({top:0}); }));
+window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
+show(location.hash.slice(1));
+setInterval(markNow, 60000);
+</script>
+</body>
+</html>
