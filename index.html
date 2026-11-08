@@ -145,7 +145,7 @@
 
   <nav class="tabs" role="tablist">
     <button class="tab" role="tab" id="tab-sabado" data-day="sabado">Sábado<small>7 nov · 12h–00h15</small></button>
-    <button class="tab" role="tab" id="tab-domingo" data-day="domingo">Domingo<small>8 nov · 12h10–19h30</small></button>
+    <button class="tab" role="tab" id="tab-domingo" data-day="domingo">Domingo<small>8 nov · 12h10–20h00</small></button>
   </nav>
 
   <section id="day-sabado" data-day="sabado"></section>
@@ -238,8 +238,8 @@ const DAYS = {
       {t:"15:00", art:"bt", img:"img/brandenburg.jpg", ar:"3/2", ph:"dusk", name:"Memorial do Holocausto e Portas de Brandemburgo", note:"U5 direto de Frankfurter Tor até Brandenburger Tor. Percorram os corredores entre os blocos do memorial e sigam a pé até às Portas, pela Pariser Platz, ainda com luz do dia.", route:dir("Boxhagener Platz Berlin","Holocaust-Mahnmal Berlin","transit"), rl:"U5 · 20 min", route2:dir("Holocaust-Mahnmal Berlin","Brandenburger Tor Berlin"), rl2:"A pé · 5 min", photo:"Brandenburger Tor Berlin"},
       {t:"16:55", art:"kma", img:"img/kma.jpg", ar:"25/18", ph:"night", name:"Karl-Marx-Allee ao anoitecer", note:"A avenida estalinista da RDA. Passa pela Strausberger Platz, o Kino International e o Café Moskau.", route:dir("Brandenburger Tor Berlin","U Weberwiese Berlin","transit"), rl:"U5 até Weberwiese · 15 min", route2:dir("U Weberwiese Berlin","Kino International Berlin","walking",["Strausberger Platz Berlin"]), rl2:"Percurso a pé", photo:"Karl-Marx-Allee Berlin"},
       {t:"18:00", art:"alex", img:"img/alex.jpg", ar:"716/500", ph:"night", name:"Alexanderplatz", note:"Weltzeituhr, Fernsehturm e o mosaico do Haus des Lehrers.", route:dir("Kino International Berlin","Weltzeituhr Berlin"), rl:"A pé · 15 min", photo:"Alexanderplatz Berlin"},
-      {t:"18:30", art:"nikolai", img:"img/nikolai.jpg", ar:"1/1", ph:"night", name:"Jantar", note:"Na Alexanderplatz ou no Nikolaiviertel, a parte mais antiga da cidade (reconstruída).", photo:"Nikolaiviertel Berlin"},
-      {t:"19:30", art:"home", img:"img/hotel.jpg", ar:"16/9", ph:"night", name:"Regresso ao hotel", note:"U2, 3 paragens.", route:dir("Weltzeituhr Berlin",H,"transit"), rl:"U2 · 10 min", photo:H}
+      {t:"18:40", art:"hamy", img:"img/hamy.jpg", ar:"1/1", ph:"night", name:"Jantar · Hamy Café", note:"Cozinha vietnamita barata e muito procurada, na Hasenheide 10, em Kreuzberg, mesmo em frente ao parque Hasenheide. Há sempre pratos do dia. Pela fotografia, só aceitam pagamento em dinheiro.", route:dir("Alexanderplatz Berlin","Hamy Cafe, Hasenheide 10, 10967 Berlin","transit"), rl:"U8 · 20 min", photo:"Hamy Cafe, Hasenheide 10, 10967 Berlin"},
+      {t:"20:00", art:"home", img:"img/hotel.jpg", ar:"16/9", ph:"night", name:"Regresso ao hotel", note:"Do Hermannplatz ou de Südstern, de metro, cerca de 25 minutos.", route:dir("Hamy Cafe, Hasenheide 10, 10967 Berlin",H,"transit"), rl:"Transportes · 25 min", photo:H}
     ],
     tips:[
       "Ao domingo as lojas estão quase todas fechadas. Restaurantes, cafés, museus e feiras abrem normalmente."
@@ -567,6 +567,7 @@ function moreBlock(key){
 
 /* Cartão de domingo: só o Memorial e as Portas (sem o Gendarmenmarkt) */
 ART.bt = ART.brandenburg;
+ART.hamy = ART.lunch;
 ABOUT.bt = { html: ABOUT.brandenburg.html.replace(/<h4>Gendarmenmarkt<\/h4>[\s\S]*?(?=<h4>)/, ""), src: ABOUT.brandenburg.src.slice(1) };
 MORE.bt = MORE.brandenburg.replace(/<h4>Gendarmenmarkt<\/h4>[\s\S]*?(?=<h4>Memorial)/, "");
 
