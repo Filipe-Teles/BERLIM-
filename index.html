@@ -235,16 +235,14 @@ const DAYS = {
       {t:"12:10", art:"hotel", img:"img/hotel.jpg", ar:"16/9", ph:"day", name:"Saída do hotel", note:"U2 até à Alexanderplatz e depois S-Bahn até à Ostbahnhof.", photo:H},
       {t:"12:30", art:"eastside", img:"img/eastside.jpg", ar:"3/2", ph:"day", name:"East Side Gallery até à Oberbaumbrücke", note:"Cerca de 1,3 km de Muro pintado com murais. Do hotel até à Ostbahnhof, depois a pé.", route:dir(H,"Berlin Ostbahnhof","transit"), rl:"U2 + S-Bahn · 20 min", route2:dir("Berlin Ostbahnhof","Oberbaumbrücke Berlin","walking",["East Side Gallery Berlin"]), rl2:"Percurso a pé", photo:"East Side Gallery Berlin"},
       {t:"13:20", art:"market", img:"img/market.jpg", ar:"12/5", ph:"day", name:"Boxhagener Platz", note:"Feira da ladra aos domingos, das 10h às 18h. Almoço num dos cafés à volta da praça.", route:dir("Oberbaumbrücke Berlin","Boxhagener Platz Berlin"), rl:"A pé · 12 min", photo:"Boxhagener Platz Berlin"},
-      {t:"15:00", art:"stasi", img:"img/stasi.jpg", ar:"8/7", ph:"dusk", name:"Stasi-Museum", note:"Antiga sede da Stasi, com o gabinete de Mielke intacto. Bilhete de 10 €. Aberto das 11h às 18h, última entrada às 17h30.", route:dir("Boxhagener Platz Berlin","Stasimuseum Berlin","transit"), rl:"U5 · 20 min", photo:"Stasimuseum Berlin"},
-      {t:"16:55", art:"kma", img:"img/kma.jpg", ar:"25/18", ph:"night", name:"Karl-Marx-Allee ao anoitecer", note:"A avenida estalinista da RDA. Passa pela Strausberger Platz, o Kino International e o Café Moskau.", route:dir("Stasimuseum Berlin","U Weberwiese Berlin","transit"), rl:"U5 até Weberwiese", route2:dir("U Weberwiese Berlin","Kino International Berlin","walking",["Strausberger Platz Berlin"]), rl2:"Percurso a pé", photo:"Karl-Marx-Allee Berlin"},
+      {t:"15:00", art:"bt", img:"img/brandenburg.jpg", ar:"3/2", ph:"dusk", name:"Memorial do Holocausto e Portas de Brandemburgo", note:"U5 direto de Frankfurter Tor até Brandenburger Tor. Percorram os corredores entre os blocos do memorial e sigam a pé até às Portas, pela Pariser Platz, ainda com luz do dia.", route:dir("Boxhagener Platz Berlin","Holocaust-Mahnmal Berlin","transit"), rl:"U5 · 20 min", route2:dir("Holocaust-Mahnmal Berlin","Brandenburger Tor Berlin"), rl2:"A pé · 5 min", photo:"Brandenburger Tor Berlin"},
+      {t:"16:55", art:"kma", img:"img/kma.jpg", ar:"25/18", ph:"night", name:"Karl-Marx-Allee ao anoitecer", note:"A avenida estalinista da RDA. Passa pela Strausberger Platz, o Kino International e o Café Moskau.", route:dir("Brandenburger Tor Berlin","U Weberwiese Berlin","transit"), rl:"U5 até Weberwiese · 15 min", route2:dir("U Weberwiese Berlin","Kino International Berlin","walking",["Strausberger Platz Berlin"]), rl2:"Percurso a pé", photo:"Karl-Marx-Allee Berlin"},
       {t:"18:00", art:"alex", img:"img/alex.jpg", ar:"716/500", ph:"night", name:"Alexanderplatz", note:"Weltzeituhr, Fernsehturm e o mosaico do Haus des Lehrers.", route:dir("Kino International Berlin","Weltzeituhr Berlin"), rl:"A pé · 15 min", photo:"Alexanderplatz Berlin"},
       {t:"18:30", art:"nikolai", img:"img/nikolai.jpg", ar:"1/1", ph:"night", name:"Jantar", note:"Na Alexanderplatz ou no Nikolaiviertel, a parte mais antiga da cidade (reconstruída).", photo:"Nikolaiviertel Berlin"},
       {t:"19:30", art:"home", img:"img/hotel.jpg", ar:"16/9", ph:"night", name:"Regresso ao hotel", note:"U2, 3 paragens.", route:dir("Weltzeituhr Berlin",H,"transit"), rl:"U2 · 10 min", photo:H}
     ],
     tips:[
-      "Ao domingo as lojas estão quase todas fechadas. Restaurantes, cafés, museus e feiras abrem normalmente.",
-      "Alternativa ao Stasi-Museum: a antiga prisão da Stasi em Hohenschönhausen. Só se visita com visita guiada e ocupa a tarde inteira. Confirmem os horários em stiftung-hsh.de.",
-      "Chegada ao Stasi-Museum: da estação Magdalenenstraße são uns 10 minutos a pé."
+      "Ao domingo as lojas estão quase todas fechadas. Restaurantes, cafés, museus e feiras abrem normalmente."
     ]
   }
 };
@@ -566,6 +564,11 @@ function moreBlock(key){
   return `<details class="more"><summary><span class="ico">+</span>Saber mais</summary><div class="txt">${m}<p class="src">Texto escrito a partir dos artigos da Wikipédia indicados na barra acima.</p></div></details>`;
 }
 
+
+/* Cartão de domingo: só o Memorial e as Portas (sem o Gendarmenmarkt) */
+ART.bt = ART.brandenburg;
+ABOUT.bt = { html: ABOUT.brandenburg.html.replace(/<h4>Gendarmenmarkt<\/h4>[\s\S]*?(?=<h4>)/, ""), src: ABOUT.brandenburg.src.slice(1) };
+MORE.bt = MORE.brandenburg.replace(/<h4>Gendarmenmarkt<\/h4>[\s\S]*?(?=<h4>Memorial)/, "");
 
 /* ---------- Cartaz de Berlim Leste (domingo) ---------- */
 function star(cx,cy,R,r,fill){ let p=[]; for(let i=0;i<10;i++){ const a=-Math.PI/2+i*Math.PI/5, rr=i%2?r:R; p.push((cx+rr*Math.cos(a)).toFixed(1)+","+(cy+rr*Math.sin(a)).toFixed(1)); } return `<polygon points="${p.join(" ")}" fill="${fill}"/>`; }
