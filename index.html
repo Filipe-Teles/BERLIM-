@@ -133,7 +133,7 @@
   .westbanner{display:none}
   body[data-day="sabado"] .westbanner{display:block;margin:16px 0 6px;border:1px solid #111;line-height:0}
   .westbanner svg{width:100%;height:auto;display:block}
-  /* ---------- Tema de segunda-feira: «Berlim Colonial e Terceiro Reich» (dossiê de arquivo) ---------- */
+  /* ---------- Tema de quarta-feira: «Berlim Colonial e Terceiro Reich» (dossiê de arquivo) ---------- */
   body[data-day="revolucao"]{ --bg:#e9e1cf; --card:#f6f0e2; --ink:#1f1b16; --muted:#5f5446; --line:#cbbd9f; --chip:#ddd2bb; --accent:#7b4a2a; --accent-ink:#fff;
     background:radial-gradient(ellipse at 20% 0%, rgba(255,255,255,.35), transparent 60%), var(--bg); }
   @media (prefers-color-scheme: dark){ body[data-day="revolucao"]{ --bg:#1a1714; --card:#231f1a; --ink:#e8dfcc; --muted:#a8997f; --line:#3d352b; --chip:#2c2620; --accent:#c48b5e; background:var(--bg); } }
@@ -196,7 +196,7 @@
   <nav class="tabs" role="tablist">
     <button class="tab" role="tab" id="tab-sabado" data-day="sabado">Sábado<small>7 nov · 12h–00h15</small></button>
     <button class="tab" role="tab" id="tab-domingo" data-day="domingo">Domingo<small>8 nov · 12h10–20h00</small></button>
-    <button class="tab" role="tab" id="tab-revolucao" data-day="revolucao">Segunda-feira<small>a partir das 15h</small></button>
+    <button class="tab" role="tab" id="tab-revolucao" data-day="revolucao">Quarta-feira<small>a partir das 15h</small></button>
   </nav>
 
   <section id="day-sabado" data-day="sabado"></section>
@@ -763,7 +763,7 @@ DAYS.revolucao = {
   ]
 };
 
-/* ---------- Mapa do percurso (segunda-feira), desenhado a partir das coordenadas ---------- */
+/* ---------- Mapa do percurso (quarta-feira), desenhado a partir das coordenadas ---------- */
 function routeMap(){
   const st=DAYS.revolucao.stops;
   const park=[[52.5148,13.3350],[52.5188,13.3430],[52.5203,13.3560],[52.5197,13.3700],[52.5175,13.3765],[52.5133,13.3765],[52.5098,13.3720],[52.5088,13.3560],[52.5084,13.3430],[52.5100,13.3350]];
@@ -813,10 +813,10 @@ function revBanner(){
   const path="M"+pts.map(p=>p[0]+" "+p[1]).join(" L");
   let grid=""; for(let x=0;x<=400;x+=40) grid+=`<line x1="${x}" y1="0" x2="${x}" y2="230" stroke="#8a7a5c" stroke-width=".4" opacity=".45"/>`; for(let y=0;y<=230;y+=40) grid+=`<line x1="0" y1="${y}" x2="400" y2="${y}" stroke="#8a7a5c" stroke-width=".4" opacity=".45"/>`;
   const rose=`<g transform="translate(352 58)" opacity=".75"><circle r="22" fill="none" stroke="#5f5446" stroke-width=".8"/><circle r="15" fill="none" stroke="#5f5446" stroke-width=".5"/><path d="M0 -26 L4 0 L0 26 L-4 0 Z" fill="#1f1b16"/><path d="M-26 0 L0 4 L26 0 L0 -4 Z" fill="#7b4a2a"/><text y="-30" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="8" fill="#1f1b16">N</text></g>`;
-  return `<div class="revbanner"><svg viewBox="0 0 400 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Berlim Colonial e Terceiro Reich · segunda-feira">
+  return `<div class="revbanner"><svg viewBox="0 0 400 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Berlim Colonial e Terceiro Reich · quarta-feira">
     <rect width="400" height="230" fill="#efe6d2"/>${grid}${rose}
     <rect x="10" y="10" width="380" height="210" fill="none" stroke="#1f1b16" stroke-width=".8"/>
-    <text x="24" y="38" font-family="IBM Plex Mono,monospace" font-weight="500" font-size="10" letter-spacing="1.2" fill="#7b4a2a">PERCURSO · SEGUNDA-FEIRA · 15H00</text>
+    <text x="24" y="38" font-family="IBM Plex Mono,monospace" font-weight="500" font-size="10" letter-spacing="1.2" fill="#7b4a2a">PERCURSO · QUARTA-FEIRA · 15H00</text>
     <text x="22" y="70" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="27" fill="#1f1b16">Berlim Colonial</text>
     <text x="22" y="98" font-family="Fraunces,Georgia,serif" font-weight="600" font-size="21" font-style="italic" fill="#1f1b16">e Terceiro Reich</text>
     <path d="${path}" fill="none" stroke="#1f1b16" stroke-width="1.2" stroke-dasharray="3 3" transform="translate(10 26)"/>
