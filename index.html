@@ -133,6 +133,34 @@
   .westbanner{display:none}
   body[data-day="sabado"] .westbanner{display:block;margin:16px 0 6px;border:1px solid #111;line-height:0}
   .westbanner svg{width:100%;height:auto;display:block}
+  /* ---------- Tema do passeio revolucionário (cartaz construtivista) ---------- */
+  body[data-day="revolucao"]{ --bg:#f1e9da; --card:#fffaf0; --ink:#141414; --muted:#5e554a; --line:#d9ccb4; --chip:#e7dcc6; --accent:#d7261e; --accent-ink:#fff;
+    background:repeating-linear-gradient(135deg, rgba(20,20,20,.035) 0 2px, transparent 2px 14px), var(--bg); }
+  @media (prefers-color-scheme: dark){ body[data-day="revolucao"]{ --bg:#161312; --card:#211c1a; --ink:#f3ebde; --muted:#b5a894; --line:#3e3430; --chip:#2e2724; --accent:#ec3b31; } }
+  body[data-day="revolucao"] .tabs{background:transparent;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  body[data-day="revolucao"] h1, body[data-day="revolucao"] .name, body[data-day="revolucao"] .tips h2{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em}
+  body[data-day="revolucao"] .name{font-size:20px;font-weight:700}
+  body[data-day="revolucao"] .tab{border-radius:0}
+  body[data-day="revolucao"] .tab[aria-selected="true"]{background:#141414;color:#fff;border-color:#141414;box-shadow:inset 0 -5px 0 var(--accent)}
+  body[data-day="revolucao"] .tab[aria-selected="true"] small{color:#ff8a80}
+  body[data-day="revolucao"] .stop::before{background:var(--accent);width:3px}
+  body[data-day="revolucao"] .time{background:var(--accent);color:#fff;border-radius:0;font-family:Oswald,sans-serif;font-weight:600;letter-spacing:.03em;padding:3px 0;transform:rotate(-4deg)}
+  body[data-day="revolucao"] .card{border-radius:0;border:2px solid var(--ink);border-left:8px solid var(--accent)}
+  body[data-day="revolucao"] .btn{border-radius:0}
+  body[data-day="revolucao"] .btn.primary{background:#141414;border-color:#141414}
+  @media (prefers-color-scheme: dark){ body[data-day="revolucao"] .btn.primary{background:var(--accent);border-color:var(--accent)} }
+  body[data-day="revolucao"] .chip{border-radius:0;background:#141414;color:#fff;font-weight:600}
+  @media (prefers-color-scheme: dark){ body[data-day="revolucao"] .chip{background:var(--accent)} }
+  body[data-day="revolucao"] .more{border-radius:0}
+  body[data-day="revolucao"] .more summary .ico{background:var(--accent);border-radius:0}
+  body[data-day="revolucao"] .more .txt h4{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:14px}
+  body[data-day="revolucao"] .tips{border-radius:0;border:2px solid var(--ink);border-left:8px solid var(--accent)}
+  body[data-day="revolucao"] .stop.now .card{box-shadow:0 0 0 3px var(--accent)}
+  body[data-day="revolucao"] .check input{accent-color:var(--accent)}
+  .revbanner{display:none}
+  body[data-day="revolucao"] .revbanner{display:block;margin:16px 0 6px;border:2px solid #141414;box-shadow:6px 6px 0 #d7261e;line-height:0}
+  .revbanner svg{width:100%;height:auto;display:block}
+  @media (max-width:420px){ .tab{font-size:14px;padding:10px 6px} .tab small{font-size:11px} }
   [hidden]{display:none!important}
 </style>
 </head>
@@ -146,10 +174,12 @@
   <nav class="tabs" role="tablist">
     <button class="tab" role="tab" id="tab-sabado" data-day="sabado">Sábado<small>7 nov · 12h–00h15</small></button>
     <button class="tab" role="tab" id="tab-domingo" data-day="domingo">Domingo<small>8 nov · 12h10–20h00</small></button>
+    <button class="tab" role="tab" id="tab-revolucao" data-day="revolucao">Revolução<small>a partir das 15h</small></button>
   </nav>
 
   <section id="day-sabado" data-day="sabado"></section>
   <section id="day-domingo" data-day="domingo"></section>
+  <section id="day-revolucao" data-day="revolucao"></section>
 
   <p class="foot">Tempos de trajeto aproximados: o Google Maps mostra os reais ao abrir cada link.<br>Previsão consultada a 5 de novembro.</p>
 </div>
@@ -636,6 +666,88 @@ function westBanner(){
   </svg></div>`;
 }
 
+/* ---------- Passeio revolucionário: Tiergarten, Reichstag e Wilhelmstraße ---------- */
+const WATER = p => p==="night" ? "#2c3a63" : (p==="dusk" ? "#8aa3b8" : "#7fa7c4");
+const tree = (x,y,r,col=C.green) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${col}"/><rect x="${x-2}" y="${y+r-4}" width="4" height="${112-(y+r-4)}" fill="${C.dark}"/>`;
+Object.assign(ART, {
+  eden:(p)=> frame(p, `<rect x="150" y="44" width="210" height="68" fill="${C.stone}"/><rect x="146" y="40" width="218" height="6" fill="${C.stone2}"/>${grid(160,54,8,2,24,16,12,10,p,.5)}<path d="M236 112 v-26 a16 16 0 0 1 32 0 v26z" fill="${C.dark}"/>${[[70,104,22,9],[98,100,18,12],[122,106,16,7],[86,92,14,8]].map(([x,y,rx,ry])=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${C.grey2}"/>`).join("")}<path d="M92 82 q6 -14 12 0" stroke="#bcd3e0" stroke-width="2" fill="none"/>`),
+  rosa:(p)=> frame(p, `${tree(30,64,20)}${tree(372,60,22)}<rect y="92" width="400" height="20" fill="${WATER(p)}"/><rect x="50" y="70" width="300" height="8" fill="${C.stone2}"/><rect x="50" y="56" width="300" height="3" fill="${C.dark}"/>${Array.from({length:21},(_,i)=>`<rect x="${54+i*14.3}" y="58" width="2" height="12" fill="${C.dark}"/>`).join("")}<rect x="66" y="78" width="10" height="14" fill="${C.stone2}"/><rect x="324" y="78" width="10" height="14" fill="${C.stone2}"/><text x="200" y="106" text-anchor="middle" font-family="Oswald,Impact,sans-serif" font-weight="700" font-size="13" letter-spacing="2" fill="${p==="night"?"#e9e3d6":C.dark}" transform="rotate(-5 200 106)">ROSA LUXEMBURG</text>`),
+  liebknecht:(p)=> frame(p, `<ellipse cx="80" cy="110" rx="95" ry="10" fill="${WATER(p)}"/>${tree(250,66,18)}${tree(292,58,22,"#4f7a66")}${tree(338,68,17)}${tree(376,60,20,"#4f7a66")}<rect x="186" y="46" width="28" height="66" fill="#a8463a"/>${Array.from({length:8},(_,i)=>`<rect x="186" y="${52+i*8}" width="28" height="1" fill="#7a2f26"/>`).join("")}<rect x="182" y="42" width="36" height="6" fill="#8f3a30"/><rect x="192" y="60" width="16" height="10" fill="${C.stone}"/>`),
+  hirschfeld:(p)=> frame(p, `<rect y="98" width="400" height="14" fill="${WATER(p)}"/><path d="M104 86 Q200 18 296 86 Z" fill="${C.white}" stroke="${C.stone2}" stroke-width="2"/><rect x="116" y="84" width="168" height="14" fill="${C.stone2}"/>${grid(126,87,8,1,20,0,10,7,p,.6)}<rect x="320" y="72" width="32" height="26" fill="#6b4a2f"/><rect x="325" y="79" width="22" height="2" fill="#b08a62"/><rect x="325" y="84" width="16" height="2" fill="#b08a62"/>${tree(44,66,14)}`),
+  reichstag:(p)=> frame(p, `<rect x="90" y="62" width="220" height="50" fill="${C.stone}"/><rect x="78" y="50" width="38" height="62" fill="${C.stone2}"/><rect x="284" y="50" width="38" height="62" fill="${C.stone2}"/><path d="M166 62 h68 l-10 -10 h-48z" fill="${C.stone2}"/>${Array.from({length:6},(_,i)=>`<rect x="${172+i*10}" y="68" width="5" height="36" fill="${C.white}"/>`).join("")}<path d="M166 52 a34 30 0 0 1 68 0z" fill="${p==="night"?"#f3d27e":"#bcd3e0"}" opacity=".92" stroke="${C.dark}" stroke-width="1"/>${[0,1,2,3].map(i=>`<path d="M${174+i*13} 52 q${12-i*3} -20 ${26-i*6} -28" stroke="${C.dark}" stroke-width=".6" fill="none" opacity=".5"/>`).join("")}${grid(124,72,2,2,20,16,10,10,p,.5)}${grid(250,72,2,2,20,16,10,10,p,.5)}${grid(86,60,2,3,14,14,8,8,p,.5)}${grid(292,60,2,3,14,14,8,8,p,.5)}`),
+  wilhelm:(p)=> frame(p, `<rect x="30" y="38" width="160" height="74" fill="#c9a98a"/>${grid(38,46,7,5,22,13,13,7,p,.5)}<rect x="214" y="50" width="160" height="62" fill="#b9997a"/>${grid(222,58,7,4,22,13,13,7,p,.5)}<rect x="184" y="82" width="42" height="26" fill="${C.white}" stroke="${C.dark}" stroke-width="1.5"/><rect x="188" y="86" width="34" height="3" fill="${C.dark}"/><rect x="188" y="92" width="26" height="2" fill="${C.grey2}"/><rect x="188" y="96" width="30" height="2" fill="${C.grey2}"/><rect x="188" y="100" width="22" height="2" fill="${C.grey2}"/><rect x="203" y="108" width="4" height="4" fill="${C.dark}"/>`),
+  stelae:(p)=> frame(p, `${[5,4,3,2,1,0].map(r=>Array.from({length:9},(_,c)=>{const x=24+c*30+r*5, h=10+((c*7+r*3)%5)*8, y=112-h-r*4; return `<rect x="${x}" y="${y}" width="20" height="${h}" fill="${r%2?"#868b90":"#a5a9ae"}"/><rect x="${x}" y="${y}" width="20" height="3" fill="#bfc3c7"/>`}).join("")).join("")}<rect x="322" y="56" width="50" height="56" fill="#9aa0a6"/><rect x="322" y="56" width="50" height="4" fill="#b8bdc2"/><rect x="334" y="74" width="12" height="9" fill="${p==="night"?"#f3d27e":"#3c3934"}"/>${tree(386,66,12)}`),
+  lenne:(p)=> frame(p, `<rect x="330" y="58" width="70" height="54" fill="#b9b3a8"/><rect x="326" y="52" width="78" height="9" rx="4.5" fill="#cfc9be"/><path d="M336 112 L346 58 M352 112 L362 58" stroke="${C.dark}" stroke-width="2"/>${[64,74,84,94,104].map(y=>`<path d="M${336+(112-y)*10/54} ${y} h16" stroke="${C.dark}" stroke-width="1.5"/>`).join("")}<path d="M20 112 L320 112 L180 74 Z" fill="#7c9a74"/>${[[140,98,"#c8553d"],[188,94,"#f0c05a"],[232,100,"#4a7fb5"],[110,104,"#5f8f7b"]].map(([x,y,f])=>`<path d="M${x-14} ${y+10} L${x} ${y-8} L${x+14} ${y+10} Z" fill="${f}"/><path d="M${x} ${y-8} L${x} ${y+10}" stroke="${C.dark}" stroke-width="1"/>`).join("")}${Array.from({length:24},(_,i)=>`<rect x="${12+i*13}" y="98" width="1.5" height="14" fill="${C.dark}"/>`).join("")}<rect x="12" y="100" width="300" height="1" fill="${C.dark}"/><rect x="12" y="106" width="300" height="1" fill="${C.dark}"/>`),
+  potsdamer:(p)=> frame(p, `<rect x="36" y="16" width="46" height="96" fill="#8fa9bf"/>${grid(41,22,3,10,14,9,9,5,p,.5)}<path d="M100 40 h60 v72 h-60z" fill="#a8463a"/><path d="M160 40 q26 36 0 72" fill="#8f3a30"/>${grid(106,48,4,6,13,10,7,6,p,.5)}<rect x="300" y="26" width="58" height="86" fill="#b9c6cf"/>${grid(306,32,4,9,12,9,7,5,p,.5)}<rect x="212" y="88" width="34" height="24" fill="#c9bba4"/><rect x="208" y="84" width="42" height="6" fill="#b5a68e"/><rect x="218" y="94" width="22" height="7" fill="#a6977f"/>`),
+  chancelaria:(p)=> frame(p, `<rect x="24" y="42" width="190" height="70" fill="#c9a98a"/>${grid(32,50,8,4,22,14,13,8,p,.5)}<rect x="54" y="96" width="62" height="16" fill="#b5332b"/><rect x="60" y="100" width="50" height="3" fill="#f0c05a"/><rect x="240" y="54" width="144" height="58" fill="#e9e1cf"/><rect x="236" y="50" width="152" height="6" fill="${C.dark}"/><rect x="290" y="78" width="42" height="34" fill="${p==="night"?"#f3d27e":"#3c3934"}"/><rect x="222" y="60" width="3" height="52" fill="${C.dark}"/><rect x="214" y="56" width="20" height="7" fill="#fff" stroke="${C.dark}" stroke-width="1"/>`),
+  amo:(p)=> frame(p, `<rect x="30" y="56" width="70" height="56" fill="${C.stone2}"/>${grid(38,64,4,3,16,14,9,8,p,.5)}<rect x="300" y="50" width="80" height="62" fill="${C.stone}"/>${grid(308,58,4,3,18,15,10,8,p,.5)}<rect x="196" y="44" width="4" height="68" fill="${C.dark}"/><rect x="104" y="28" width="188" height="24" rx="3" fill="${C.white}" stroke="${C.dark}" stroke-width="2"/><text x="198" y="45" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="12" fill="${C.dark}">Anton-Wilhelm-Amo-Str.</text><rect x="246" y="80" width="26" height="26" rx="4" fill="#1f5fa8"/><text x="259" y="99" font-family="Inter,Arial" font-weight="700" font-size="19" text-anchor="middle" fill="#fff">U</text><rect x="257" y="106" width="4" height="6" fill="${C.dark}"/>`)
+});
+
+const SRC_BOOK = "Revolutionary Berlin: A Walking Guide, de Nathaniel Flakin (Pluto Press, 2022)";
+const BOOK = {
+  eden:{ ref:"3.11", html:`<p>Em janeiro de 1919 o luxuoso Hotel Eden, aqui em frente, era o quartel-general da Divisão de Fuzileiros da Cavalaria da Guarda, sob o comando do capitão Waldemar Pabst. Foi para aqui que levaram Karl Liebknecht e Rosa Luxemburg depois de serem presos, na noite de 15 de janeiro.</p><p>Segundo o relato que o próprio Pabst deixou mais tarde, ele telefonou para a Chancelaria e falou com o ministro da Guerra, Gustav Noske, que lhe devolveu a decisão. Os militares montaram então um plano para matar sem que ninguém assumisse a responsabilidade.</p><p>Liebknecht foi metido num carro, supostamente a caminho da prisão de Moabit. No Tiergarten o motorista fingiu uma avaria e Liebknecht foi morto a tiro pelas costas, "em tentativa de fuga". O autor nota que esta fórmula passou a ser usada muitas vezes nos anos seguintes para matar revolucionários.</p>` },
+  rosa:{ ref:"3.12", html:`<p>Rosa Luxemburg saiu do hotel separadamente. À porta, um soldado agrediu-a com a coronha da espingarda, e já no carro outro soldado deu-lhe um tiro na cabeça. O corpo foi atirado desta ponte para o Landwehrkanal. Os assassinos disseram que uma multidão a tinha levado.</p><p>O corpo só foi encontrado a 31 de maio de 1919. Um tribunal militar da mesma divisão deu uma pena leve a um soldado por "tentativa" de homicídio, e um dos oficiais ajudou-o depois a fugir do país. Pabst nunca foi acusado e fez carreira sob os nazis e, mais tarde, na Alemanha Ocidental.</p><p>O autor defende que os dirigentes sociais-democratas da altura, Noske e Ebert, têm responsabilidade política no crime, que o SPD nunca reconheceu. Hoje a ponte está dividida em duas passagens: uma liga as duas partes do Zoo, a outra pertence ao Tiergarten.</p>` },
+  liebknecht:{ ref:"3.11 e 3.12", html:`<p>Uns 200 metros a norte da ponte, à beira do Neuer See, uma coluna de tijolo marca o sítio onde Liebknecht foi morto na noite de 15 de janeiro de 1919.</p><p>Liebknecht tinha sido o primeiro deputado a votar contra os créditos de guerra, em dezembro de 1914. Em novembro de 1918 proclamou a "República Socialista Livre" a partir do Portal IV do Palácio Real, e em janeiro de 1919 foi um dos fundadores do Partido Comunista. Foi morto duas semanas depois.</p>` },
+  hirschfeld:{ ref:"8.2", html:`<p>Junto ao Spree, ao lado da antiga Sala de Congressos (hoje Haus der Kulturen der Welt), uma caixa de metal castanha assinala o Instituto de Ciência Sexual de Magnus Hirschfeld. A vivenda ficava, na verdade, do outro lado do edifício.</p><p>Hirschfeld tinha dirigido o Comité Científico-Humanitário, a primeira organização do mundo a defender os direitos de homossexuais e pessoas trans. Abriu o instituto em 1919, com consultas médicas, palestras e um enorme arquivo. Ali foi feita uma das primeiras cirurgias de afirmação de género, à mulher trans Dora Richter, e passaram pensadores como Walter Benjamin e Ernst Bloch.</p><p>A 6 de maio de 1933, estudantes nazis invadiram o instituto e as SA levaram os livros. Muitos arderam quatro dias depois, na queima de livros da Bebelplatz (paragem de sábado). Hirschfeld estava no estrangeiro, nunca voltou e morreu em França em 1935.</p>` },
+  reichstag:{ ref:"2.3, 2.4 e 2.6", html:`<p>Para o autor, o edifício traduz o compromisso desconfortável do império de 1871: uma monarquia autoritária com um parlamento sem grande poder. A cúpula de vidro de Norman Foster (1999) é, para ele, decoração moderna sobre uma estrutura herdada dos Kaisers.</p><p>Ironia: durante décadas foi o centro do movimento revolucionário. Com as leis antissocialistas (1878–1890), o SPD estava proibido, mas os deputados eleitos como independentes tinham imunidade e podiam falar abertamente no plenário. Em 1912 o SPD era o maior partido da Alemanha.</p><p>A 4 de agosto de 1914 o grupo parlamentar do SPD votou a favor dos créditos de guerra, o que chocou os trabalhadores. Em dezembro, Liebknecht foi o primeiro a votar contra. A 9 de novembro de 1918, Philipp Scheidemann proclamou a república a partir de uma janela do Reichstag, horas antes de Liebknecht proclamar a república socialista no palácio.</p>` },
+  gate:{ ref:"1.1", html:`<p>É aqui que começa o primeiro passeio do livro, dedicado ao colonialismo alemão. A Alemanha entrou tarde na corrida colonial, mas com violência: a partir da década de 1880 conquistou territórios em África, na Ásia e no Pacífico, e em poucas décadas provocou centenas de milhares de mortos, incluindo o primeiro genocídio alemão.</p><p>A história é mais antiga do que o próprio país. Em 1683, um aristocrata de Brandemburgo, Friedrich Otto von der Groeben, fundou o forte de Groß Friedrichsburg, na atual Gana, que se tornou um centro do tráfico de escravos. Em 1717 o rei vendeu-o aos holandeses, num pagamento que incluía 7200 ducados e doze africanos.</p><p>Com Bismarck, depois de 1871, o Império ficou com quatro colónias em África: Togo, Camarões, Sudoeste Africano (a atual Namíbia) e África Oriental Alemã.</p>` },
+  wilhelm:{ ref:"1.2, 1.3 e 1.7", html:`<h4>Unter den Linden 71 · Ministério da Educação da RDA</h4><p>O edifício duplo em frente à embaixada britânica foi o Ministério da Educação Popular da RDA. A ministra mais duradoura foi Margot Honecker (1963–89). Em 2005 foi convidada de honra na Namíbia, em reconhecimento do apoio da RDA ao movimento de independência SWAPO. O autor, crítico da RDA, vê nisso um exemplo de anticolonialismo concreto.</p><h4>Wilhelmstraße 92 · Chancelaria de Bismarck</h4><p>Hoje só se veem prédios da RDA. Aqui ficava o palácio da Chancelaria, onde Bismarck reuniu catorze potências entre novembro de 1884 e fevereiro de 1885. Na Conferência de Berlim, sem um único africano presente, foram traçadas fronteiras em África que em grande parte ainda existem. O Congo ficou propriedade pessoal do rei Leopoldo II. Há uma placa no passeio desde 2004.</p><h4>Wilhelmstraße 51 (aprox.) · Ministério Colonial</h4><p>Em frente, onde está hoje uma escola, funcionou o Ministério Colonial do Império (1907–1920). Desde 2019 uma placa junto ao centro juvenil Ikarus lembra Martin Dibobe, que veio para Berlim para ser "exibido" na Exposição Colonial de 1896, se tornou maquinista do metro e, em 1919, entregou uma petição com 32 reivindicações de igualdade.</p>` },
+  stelae:{ ref:"8.2", html:`<p>O livro não dedica uma paragem própria ao Memorial aos Judeus Assassinados da Europa, mas é a passagem natural da Wilhelmstraße para o Tiergarten.</p><p>Do outro lado da Ebertstraße, mesmo em frente, fica o Memorial aos Homossexuais Perseguidos pelo Nazismo, inaugurado em 2008: um bloco de betão com um vídeo em repetição, a menos de dois quilómetros de onde ficava o instituto de Hirschfeld. O autor lembra que o memorial foi polémico na comunidade queer, por causa da questão de incluir ou não as lésbicas.</p>` },
+  lenne:{ ref:"6.4", html:`<p>Este triângulo, hoje com prédios novos e o pequeno Henriette-Herz-Park, era território de Berlim Leste que ficava do lado ocidental do Muro. A polícia de Berlim Ocidental não podia entrar.</p><p>Em maio de 1988, punks e ativistas de esquerda ocuparam-no, com 200 a 300 pessoas, e chamaram-lhe "Kubatstan", em memória de Norbert Kubat, um ativista que se tinha suicidado na prisão. A polícia cercou o terreno e lançou gás lacrimogéneo lá para dentro.</p><p>A 1 de julho de 1988 o terreno passou para o Ocidente e a polícia avançou. Muitos ocupantes fugiram por cima do Muro para Leste, por escadas que os guardas da RDA lhes baixaram. Deram-lhes almoço e mandaram-nos de volta para o Ocidente de S-Bahn.</p>` },
+  potsdamer:{ ref:"2.1", html:`<p>Para o autor, o centro comercial de hoje esconde o sítio onde começou a revolução mais importante da história de Berlim. A 1 de maio de 1916, em plena guerra, uns milhares de trabalhadores responderam a um apelo anónimo. Karl Liebknecht, com farda de soldado, gritou contra a guerra e contra o governo, e foi preso.</p><p>No dia do julgamento, a 28 de junho, 50 000 metalúrgicos fizeram greve: foi a primeira ação de massas contra a guerra, organizada pelos Delegados Revolucionários de Richard Müller. Liebknecht foi condenado a quatro anos de prisão.</p><p>O pedestal de pedra sem estátua foi posto pela RDA em 1951, no 80.º aniversário de Liebknecht. A estátua nunca chegou, e em 1961 o Muro deixou o pedestal na faixa da morte. Foi retirado em 1995 e voltou ao lugar em 2002. O autor lê-o como um monumento que diz que Liebknecht já não está cá, e que só continua vivo nas ações de quem vem depois.</p>` },
+  chancelaria:{ ref:"1.4", html:`<p>Neste quarteirão estreito, em frente a uma entrada do Mall of Berlin, ficava a Nova Chancelaria de Hitler, desenhada por Albert Speer e inaugurada em 1939. Por baixo estava o bunker onde Hitler se suicidou em 1945. Não há nada para ver, e é esse o ponto.</p><p>A Wilhelmplatz, onde as multidões o ouviam, desapareceu: o lado norte encheu-se de prédios da RDA nos anos 80 e no lado sul foi construída a embaixada da Checoslováquia (1978), que o autor elogia. Atrás fica a embaixada da Coreia do Norte.</p><p>A RDA mudou o nome da praça para Thälmannplatz (1949) e o da Wilhelmstraße para Otto-Grotewohl-Straße (1964). Os nomes antigos voltaram em 1992 e 1993. A conclusão do autor é irónica: mudar nomes de ruas afinal é fácil, desde que seja para tirar os comunistas.</p>` },
+  amo:{ ref:"1.5", html:`<p>Durante décadas, esta foi a rua com o nome mais ofensivo de Berlim: Mohrenstraße, "rua dos Mouros". A explicação mais comum liga o nome aos africanos entregues ao rei da Prússia na venda do forte de Groß Friedrichsburg, em 1717, mas há outras hipóteses.</p><p>Ativistas pediram a mudança durante anos. Em 2009, um coelho cor-de-rosa gigante acrescentou dois pontos às placas: Möhrenstraße, "rua das Cenouras". A estação de metro nem sequer tinha o nome antigo: chamou-se Kaiserhof (1908), Thälmannplatz e Otto-Grotewohl-Straße, e só passou a Mohrenstraße em 1991.</p><p>Em agosto de 2020 a junta de Mitte decidiu dar à rua o nome de Anton Wilhelm Amo, um filósofo negro do século XVIII que viveu na Prússia. Quando o livro saiu, a mudança ainda não tinha acontecido. Concretizou-se a 23 de agosto de 2025, depois de anos de processos em tribunal, e a estação do U2 também mudou de nome.</p>` }
+};
+function bookBlock(key){
+  const b = BOOK[key]; if(!b) return "";
+  return `<details class="more"><summary><span class="ico">★</span>Segundo o livro</summary><div class="txt">${b.html}<p class="src">Resumo próprio a partir de <em>${SRC_BOOK}</em>, paragem ${b.ref}.</p></div></details>`;
+}
+
+const RT = "Rosa-Luxemburg-Denkmal Lichtensteinbrücke Berlin", LK = "Karl-Liebknecht-Denkmal Neuer See Berlin", HKW = "Haus der Kulturen der Welt Berlin", RS = "Reichstagsgebäude Berlin", BT = "Brandenburger Tor Berlin", W92 = "Wilhelmstraße 92, 10117 Berlin", HOMO = "Denkmal für die im Nationalsozialismus verfolgten Homosexuellen Berlin", LEN = "Henriette-Herz-Park Berlin", PP = "Potsdamer Platz 10, 10785 Berlin", W94 = "Wilhelmstraße 94, 10117 Berlin", AMO = "U Anton-Wilhelm-Amo-Straße Berlin";
+DAYS.revolucao = {
+  date:"",
+  chips:["🚩 Segundo «Revolutionary Berlin», de Nathaniel Flakin","🚶 ~7 km a pé","🌙 Pôr do sol ~16h15"],
+  stops:[
+    {t:"15:00", art:"eden", ph:"day", book:"eden", name:"Antigo Hotel Eden · Olof-Palme-Platz", note:"A praça da fonte de pedras, à entrada do Aquário e junto à Porta dos Elefantes do Zoo. Do outro lado da antiga Budapester Straße ficava o Hotel Eden. Saiam do hotel por volta das 14h35.", route:dir(H,"Olof-Palme-Platz Berlin","transit"), rl:"U2 · ~20 min", photo:"Olof-Palme-Platz Berlin"},
+    {t:"15:20", art:"rosa", ph:"day", book:"rosa", name:"Ponte Lichtenstein · memorial a Rosa Luxemburg", note:"Sobre o Landwehrkanal, entre o Zoo e o Tiergarten. Debaixo da ponte, letras de metal com o nome de Rosa Luxemburg saem da água.", route:dir("Olof-Palme-Platz Berlin",RT), rl:"A pé · 10 min", photo:RT},
+    {t:"15:35", art:"liebknecht", ph:"day", book:"liebknecht", name:"Memorial a Karl Liebknecht · Neuer See", note:"Uma coluna de tijolo à beira do lago, a 200 m da ponte. Mesmo ao lado fica o Café am Neuen See, se precisarem de um café quente antes de atravessar o parque.", route:dir(RT,LK), rl:"A pé · 3 min", photo:LK},
+    {t:"16:15", art:"hirschfeld", ph:"dusk", book:"hirschfeld", name:"Instituto de Magnus Hirschfeld · margem do Spree", note:"Atravessem o Tiergarten pela Grande Estrela, com a Coluna da Vitória, até ao Spree. O memorial é uma caixa de metal castanha junto ao rio, ao lado da Haus der Kulturen der Welt. Chegam por volta do pôr do sol.", route:dir(LK,HKW,"walking",["Großer Stern Berlin"]), rl:"A pé pelo Tiergarten · 35 min", photo:"Gedenkort Institut für Sexualwissenschaft Berlin"},
+    {t:"16:40", art:"reichstag", ph:"dusk", book:"reichstag", name:"Reichstag", note:"A fachada oeste, na Platz der Republik. Ao anoitecer, a cúpula de vidro acende-se.", route:dir(HKW,RS), rl:"A pé · 10 min", photo:RS},
+    {t:"17:00", art:"gate", img:"img/brandenburg.jpg", ar:"3/2", ph:"night", book:"gate", name:"Portas de Brandemburgo", note:"Início do passeio do livro sobre o colonialismo alemão. Sigam pela Pariser Platz até à esquina do Hotel Adlon.", route:dir(RS,BT), rl:"A pé · 7 min", photo:BT},
+    {t:"17:15", art:"wilhelm", ph:"night", book:"wilhelm", name:"Wilhelmstraße · o centro do império colonial", note:"Virem na esquina do Hotel Adlon. São três paragens do livro na mesma rua, com painéis históricos no passeio em quase cada número.", route:dir(BT,W92,"walking",["Wilhelmstraße 65, 10117 Berlin"]), rl:"A pé · 8 min", photo:"Wilhelmstraße Berlin"},
+    {t:"17:45", art:"stelae", ph:"night", book:"stelae", name:"Memorial do Holocausto e Memorial aos Homossexuais Perseguidos", note:"Atravessem os blocos do memorial de leste para oeste. Do outro lado da Ebertstraße, já no Tiergarten, fica o bloco de betão com o vídeo.", route:dir(W92,HOMO,"walking",["Holocaust-Mahnmal Berlin"]), rl:"A pé · 8 min", photo:HOMO},
+    {t:"18:10", art:"lenne", ph:"night", book:"lenne", name:"Triângulo Lenné · «Kubatstan»", note:"Entre a Lennéstraße, a Ebertstraße e a Bellevuestraße. Hoje são prédios novos e o pequeno Henriette-Herz-Park.", route:dir(HOMO,LEN), rl:"A pé · 5 min", photo:LEN},
+    {t:"18:20", art:"potsdamer", ph:"night", book:"potsdamer", name:"Potsdamer Platz · o pedestal de Liebknecht", note:"Um pedestal de pedra sem estátua em frente ao edifício curvo de tijolo vermelho, por cima da entrada do metro.", route:dir(LEN,PP), rl:"A pé · 5 min", photo:"Karl-Liebknecht-Denkmal Potsdamer Platz Berlin"},
+    {t:"18:40", art:"chancelaria", ph:"night", book:"chancelaria", name:"Local da Nova Chancelaria de Hitler", note:"Na esquina da Voßstraße com a Wilhelmstraße, em frente a uma entrada do Mall of Berlin. Hoje só há prédios da RDA.", route:dir(PP,W94,"walking",["Voßstraße Berlin"]), rl:"A pé · 8 min", photo:"Voßstraße Berlin"},
+    {t:"18:55", art:"amo", ph:"night", book:"amo", name:"Anton-Wilhelm-Amo-Straße", note:"A antiga Mohrenstraße. Desde 23 de agosto de 2025 a rua e a estação do U2 têm o nome do filósofo negro Anton Wilhelm Amo.", route:dir(W94,AMO), rl:"A pé · 3 min", photo:"Anton-Wilhelm-Amo-Straße Berlin"},
+    {t:"19:10", art:"home", img:"img/hotel.jpg", ar:"16/9", ph:"night", name:"Regresso ao hotel", note:"U2 da Anton-Wilhelm-Amo-Straße até Spittelmarkt, três paragens, ou 15 minutos a pé pela Leipziger Straße. Chegada por volta das 19h20.", route:dir(AMO,H,"transit"), rl:"U2 · ~10 min", photo:H}
+  ],
+  tips:[
+    "Em novembro o sol põe-se por volta das 16h15. Por isso o parque vem primeiro: o Tiergarten é grande e escuro à noite, e o resto do passeio faz-se pelas ruas iluminadas.",
+    "Quase nenhuma destas paragens é um monumento. Muitas vezes é uma placa, um painel no passeio ou um espaço vazio, e é isso que o livro ensina a ler.",
+    "Chegam dois bilhetes simples AB, um para ir e outro para voltar no U2.",
+    "O mapa do autor com todas as paragens do livro está em revolutionaryberlin.wordpress.com/map."
+  ]
+};
+
+/* ---------- Cartaz construtivista (passeio revolucionário) ---------- */
+function revBanner(){
+  return `<div class="revbanner"><svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartaz: Berlim Revolucionária">
+    <rect width="400" height="210" fill="#f1e7d3"/>
+    <polygon points="0,210 0,120 260,0 400,0 400,40 90,210" fill="#d7261e"/>
+    <g transform="rotate(-25 190 112)">
+      <text x="62" y="106" font-family="Oswald,Impact,sans-serif" font-weight="700" font-size="50" fill="#fff8ec">BERLIM</text>
+      <text x="64" y="138" font-family="Oswald,Impact,sans-serif" font-weight="600" font-size="23" letter-spacing="2" fill="#141414">REVOLUCIONÁRIA</text>
+    </g>
+    <text x="14" y="24" font-family="Oswald,Impact,sans-serif" font-weight="600" font-size="12" letter-spacing="1.5" fill="#141414">TIERGARTEN · REICHSTAG</text>
+    <text x="14" y="40" font-family="Oswald,Impact,sans-serif" font-weight="600" font-size="12" letter-spacing="1.5" fill="#141414">WILHELMSTRASSE</text>
+    <text x="14" y="58" font-family="Oswald,Impact,sans-serif" font-weight="700" font-size="12" letter-spacing="1" fill="#d7261e">A PARTIR DAS 15H</text>
+    <circle cx="346" cy="146" r="34" fill="#141414"/>${star(346,148,24,9.5,"#d7261e")}
+    <text x="392" y="196" text-anchor="end" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="9.5" fill="#141414">segundo Nathaniel Flakin</text>
+    <rect y="202" width="400" height="8" fill="#141414"/>
+  </svg></div>`;
+}
+
 /* ---------- Render ---------- */
 const ICON_ROUTE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H15a3.5 3.5 0 0 0 0-7H9a3.5 3.5 0 0 1 0-7h6.5"/></svg>`;
 const ICON_PHOTO = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg>`;
@@ -646,7 +758,7 @@ let done = store.get(doneKey);
 
 function render(dayId){
   const d = DAYS[dayId], el = document.getElementById("day-"+dayId);
-  el.innerHTML = `${dayId==="domingo"?ostBanner():westBanner()}<div class="daymeta">${d.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div>
+  el.innerHTML = `${dayId==="domingo"?ostBanner():(dayId==="revolucao"?revBanner():westBanner())}<div class="daymeta">${d.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div>
   <ol class="timeline">${d.stops.map((s,i)=>{
     const id = dayId+"-"+i, isDone = !!done[id];
     return `<li class="stop${isDone?" done":""}" data-id="${id}" data-t="${s.t}">
@@ -657,6 +769,7 @@ function render(dayId){
           <div class="nowtag">Agora</div>
           <h3 class="name">${s.name}</h3>
           <p class="note">${s.note}</p>
+          ${s.book?bookBlock(s.book):""}
           ${aboutBlock(s.art)}
           ${moreBlock(s.art)}
           <div class="actions">
