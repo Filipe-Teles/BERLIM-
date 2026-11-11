@@ -164,7 +164,7 @@
   body[data-day="revolucao"] .check input{accent-color:var(--accent)}
   .revbanner{display:none}
   .chipbtn{cursor:pointer;font:inherit;appearance:none}
-  body[data-day="revolucao"] .chipbtn{background:var(--ink);color:var(--card);border-color:var(--ink)}
+  body[data-day="revolucao"] .chipbtn{background:var(--ink);color:var(--card);border-color:var(--ink);text-decoration:none}
   body[data-day="revolucao"] .chipbtn[aria-expanded="true"]{background:var(--accent);border-color:var(--accent)}
   .mapbox{margin:10px 0 4px;background:var(--card);border:1px solid var(--ink);box-shadow:3px 3px 0 var(--line);padding:10px}
   .mapbox > svg{display:block;width:100%;height:auto;background:#efe6d2;border:1px solid var(--line)}
@@ -183,6 +183,47 @@
   body[data-day="revolucao"] .revbanner{display:block;margin:16px 0 6px;border:1px solid #1f1b16;box-shadow:3px 3px 0 #cbbd9f;line-height:0}
   .revbanner svg{width:100%;height:auto;display:block}
   @media (max-width:420px){ .tab{font-size:14px;padding:10px 6px} .tab small{font-size:11px} }
+  /* ---------- Mapa interativo (página própria: #mapa) ---------- */
+  body.mapmode{overflow:hidden}
+  body.mapmode .wrap{display:none}
+  #mapview{position:fixed;inset:0;z-index:50;background:#efe6d2;color:#1f1b16;font-family:Inter,system-ui,sans-serif}
+  #mv-svg{position:absolute;inset:0;width:100%;height:100%;touch-action:none;display:block;cursor:grab}
+  #mv-svg .m-park{fill:#cdd6b4}#mv-svg .m-water{fill:none;stroke:#9fb6c4;stroke-linecap:round;stroke-linejoin:round}
+  #mv-svg .m-street{fill:none;stroke:#fbf6ea;stroke-linecap:round}#mv-svg .m-metro{fill:none;stroke:#3f6fa8}
+  #mv-svg .m-route{fill:none;stroke:#7b4a2a;stroke-linejoin:round;stroke-linecap:round}
+  #mv-svg .mk{cursor:pointer}
+  #mv-svg .mk.sel circle{fill:#7b4a2a}
+  .mv-top{position:absolute;top:0;left:0;right:0;padding:calc(10px + env(safe-area-inset-top)) 12px 10px;display:flex;align-items:center;gap:10px;background:linear-gradient(#efe6d2 60%,rgba(239,230,210,0));pointer-events:none}
+  .mv-top > *{pointer-events:auto}
+  .mv-back{font:500 13px "IBM Plex Mono",monospace;color:#f6f0e2;background:#1f1b16;padding:9px 12px;border-radius:2px;text-decoration:none;white-space:nowrap}
+  .mv-title{font:700 17px Fraunces,Georgia,serif;line-height:1.15}
+  .mv-title i{font-weight:600}
+  .mv-zoom{position:absolute;right:12px;top:calc(64px + env(safe-area-inset-top));display:flex;flex-direction:column;gap:6px}
+  .mv-zoom button{width:42px;height:42px;border:1px solid #1f1b16;background:#f6f0e2;color:#1f1b16;font:600 20px "IBM Plex Mono",monospace;border-radius:2px;box-shadow:2px 2px 0 #cbbd9f}
+  .mv-hint{position:absolute;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));background:#f6f0e2;border:1px solid #1f1b16;box-shadow:3px 3px 0 #cbbd9f;padding:10px 12px;font:500 12px/1.5 "IBM Plex Mono",monospace;text-align:center}
+  .mv-sheet{position:absolute;left:0;right:0;bottom:0;max-height:62dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#f6f0e2;border-top:2px solid #1f1b16;box-shadow:0 -6px 20px rgba(0,0,0,.18);padding:0 0 calc(14px + env(safe-area-inset-bottom))}
+  .mv-sheet .grab{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;background:#f6f0e2;border-bottom:1px solid #cbbd9f;z-index:1}
+  .mv-sheet .grab span{font:500 12px "IBM Plex Mono",monospace;color:#7b4a2a;letter-spacing:.04em}
+  .mv-sheet .grab button{border:1px solid #1f1b16;background:#f6f0e2;font:600 13px "IBM Plex Mono",monospace;padding:6px 10px;border-radius:2px;color:#1f1b16}
+  .mv-sheet .ph{display:block;width:100%;max-height:34dvh;object-fit:cover;filter:grayscale(.35) sepia(.25)}
+  .mv-sheet .ph.art{max-height:none;aspect-ratio:400/130}
+  .mv-sheet .in{padding:12px 14px 4px}
+  .mv-sheet h2{font:700 21px/1.2 Fraunces,Georgia,serif;margin:2px 0 8px}
+  .mv-sheet .addr{color:#7b4a2a}
+  .mv-sheet .addr a{color:#5f5446}
+  .mv-sheet .what{font-size:15px;line-height:1.5;color:#3d352b;margin:0 0 10px}
+  .mv-sheet h3{font:600 12px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:#7b4a2a;margin:14px 0 6px;border-top:1px dashed #cbbd9f;padding-top:12px}
+  .mv-sheet .imp{font-size:14.5px;line-height:1.55}
+  .mv-sheet .imp p{margin:0 0 9px}.mv-sheet .imp h4{font:600 12px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:#7b4a2a;margin:10px 0 3px}
+  .mv-sheet .src{font:400 11px/1.5 "IBM Plex Mono",monospace;color:#5f5446;margin:6px 0 0}
+  .mv-sheet .src a{color:#5f5446}
+  .mv-sheet .acts{display:flex;flex-wrap:wrap;gap:8px;padding:6px 14px 0}
+  .mv-sheet .acts a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font:500 12px "IBM Plex Mono",monospace;padding:9px 12px;border:1px solid #1f1b16;border-radius:2px;color:#1f1b16;background:#f6f0e2}
+  .mv-sheet .acts a.pri{background:#1f1b16;color:#f6f0e2}
+  .mv-sheet .acts svg{width:15px;height:15px}
+  .mv-sheet .nav{display:flex;gap:8px;padding:12px 14px 0}
+  .mv-sheet .nav button{flex:1;border:1px solid #1f1b16;background:#efe6d2;font:600 13px "IBM Plex Mono",monospace;padding:11px 8px;border-radius:2px;color:#1f1b16}
+  .mv-sheet .nav button:disabled{opacity:.35}
   [hidden]{display:none!important}
 </style>
 </head>
@@ -204,6 +245,17 @@
   <section id="day-revolucao" data-day="revolucao"></section>
 
   <p class="foot">Tempos de trajeto aproximados: o Google Maps mostra os reais ao abrir cada link.<br>Previsão consultada a 5 de novembro.</p>
+</div>
+
+<div id="mapview" hidden>
+  <svg id="mv-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa interativo do percurso"></svg>
+  <div class="mv-top">
+    <a class="mv-back" href="#revolucao" aria-label="Voltar ao roteiro">← Roteiro</a>
+    <div class="mv-title">Berlim Colonial <i>e Terceiro Reich</i></div>
+  </div>
+  <div class="mv-zoom"><button type="button" data-z="in" aria-label="Aproximar">+</button><button type="button" data-z="out" aria-label="Afastar">−</button><button type="button" data-z="fit" aria-label="Ver tudo">⤢</button></div>
+  <div class="mv-hint" id="mv-hint">Toque num número para saber o que é.<br>Arraste para mover · dois dedos para ampliar.</div>
+  <section class="mv-sheet" id="mv-sheet" hidden aria-live="polite"></section>
 </div>
 
 <script>
@@ -834,7 +886,7 @@ let done = store.get(doneKey);
 
 function render(dayId){
   const d = DAYS[dayId], el = document.getElementById("day-"+dayId);
-  el.innerHTML = `${dayId==="domingo"?ostBanner():(dayId==="revolucao"?revBanner():westBanner())}<div class="daymeta">${d.chips.map(c=>`<span class="chip">${c}</span>`).join("")}${d.map?`<button class="chip chipbtn" type="button" data-map="${dayId}" aria-expanded="false">🗺️ Mapa do percurso</button>`:""}</div>${d.map?`<div class="mapbox" id="map-${dayId}" hidden>${d.map()}</div>`:""}
+  el.innerHTML = `${dayId==="domingo"?ostBanner():(dayId==="revolucao"?revBanner():westBanner())}<div class="daymeta">${d.chips.map(c=>`<span class="chip">${c}</span>`).join("")}${d.map?`<a class="chip chipbtn" href="#mapa">🗺️ Mapa interativo</a>`:""}</div>
   <ol class="timeline">${d.stops.map((s,i)=>{
     const id = dayId+"-"+i, isDone = !!done[id];
     return `<li class="stop${isDone?" done":""}" data-id="${id}" data-t="${s.t}">
@@ -862,6 +914,8 @@ function render(dayId){
 }
 
 function show(dayId){
+  if(dayId==="mapa"){ openMap(); return; }
+  closeMap();
   if(!DAYS[dayId]) dayId = defaultDay();
   document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", String(b.dataset.day===dayId)));
   document.querySelectorAll("section[data-day]").forEach(s=>s.hidden = s.dataset.day!==dayId);
@@ -884,16 +938,125 @@ function markNow(){
   }
 }
 
+/* ---------- Mapa interativo: geografia simplificada + paragens nas coordenadas exatas ---------- */
+const MAPGEO = {
+  b:[52.5240,52.4960,13.3270,13.4085],
+  park:[[52.5148,13.3350],[52.5188,13.3430],[52.5203,13.3560],[52.5197,13.3700],[52.5175,13.3765],[52.5133,13.3765],[52.5098,13.3720],[52.5088,13.3560],[52.5084,13.3430],[52.5100,13.3350]],
+  spree:[[52.5236,13.3270],[52.5207,13.3470],[52.5195,13.3600],[52.5201,13.3690],[52.5224,13.3745],[52.5214,13.3840],[52.5205,13.3920],[52.5180,13.4000],[52.5145,13.4085]],
+  kanal:[[52.5066,13.3270],[52.5089,13.3432],[52.5072,13.3550],[52.5046,13.3650],[52.5026,13.3760],[52.5010,13.3900],[52.4986,13.4085]],
+  streets:[ [[52.5145,13.3501],[52.5163,13.3777]], [[52.5170,13.3806],[52.5086,13.3836]], [[52.5096,13.3770],[52.5100,13.4010]], [[52.5180,13.3770],[52.5088,13.3770]], [[52.5168,13.3777],[52.5172,13.3990]], [[52.5140,13.3770],[52.5139,13.3806]], [[52.5118,13.3770],[52.5114,13.3832]], [[52.5070,13.3790],[52.5072,13.3960]], [[52.5170,13.3890],[52.5020,13.3920]], [[52.5145,13.3501],[52.5105,13.3400]], [[52.5145,13.3501],[52.5186,13.3600]] ],
+  metro:[[52.5098,13.3998],[52.5112,13.4036],[52.5110,13.3920],[52.5097,13.3762],[52.5036,13.3745],[52.4994,13.3746],[52.4993,13.3536],[52.5017,13.3426],[52.5072,13.3326]],
+  walk:[[52.5072,13.3326],[52.5056,13.3406],[52.5089,13.3432],[52.5125,13.3413],[52.5145,13.3501],[52.5186,13.3620],[52.5186,13.3762],[52.5163,13.3777],[52.5133,13.3761],[52.5139,13.3787],[52.5126,13.3832],[52.5126,13.3823],[52.5116,13.3828],[52.5085,13.3771],[52.5096,13.3838],[52.5070,13.3842],[52.5072,13.3905],[52.5038,13.3916]],
+  labels:[[52.5112,13.3540,"Tiergarten","#5c6b45",1],[52.5222,13.3330,"Spree","#5f7f93"],[52.5052,13.3600,"Landwehrkanal","#5f7f93"],[52.4980,13.3560,"U2","#3f6fa8"],[52.5046,13.3300,"Zoo"],[52.5178,13.3800,"Unter den Linden"],[52.5150,13.3812,"Wilhelmstr."],[52.5062,13.3800,"Zimmerstr."],[52.5072,13.3712,"Potsdamer Pl."]]
+};
+const MV = { W:900, vb:null, built:false, sel:-1 };
+MV.H = MV.W*((MAPGEO.b[0]-MAPGEO.b[1])*111.2)/((MAPGEO.b[3]-MAPGEO.b[2])*67.85);
+const mvX = lo => (lo-MAPGEO.b[2])/(MAPGEO.b[3]-MAPGEO.b[2])*MV.W;
+const mvY = la => (MAPGEO.b[0]-la)/(MAPGEO.b[0]-MAPGEO.b[1])*MV.H;
+const mvPL = pts => pts.map(([la,lo])=>mvX(lo).toFixed(1)+","+mvY(la).toFixed(1)).join(" ");
+
+function buildMap(){
+  const svg=document.getElementById("mv-svg"), st=DAYS.revolucao.stops, G=MAPGEO;
+  const s7=st.findIndex(s=>s.art==="stelae");
+  svg.innerHTML = `<rect x="-3000" y="-3000" width="${MV.W+6000}" height="${MV.H+6000}" fill="#efe6d2"/>
+    <g id="mv-grid">${Array.from({length:23},(_,i)=>`<line x1="${i*40}" y1="0" x2="${i*40}" y2="${MV.H}" stroke="#8a7a5c" stroke-width=".3" opacity=".35"/>`).join("")}${Array.from({length:14},(_,i)=>`<line x1="0" y1="${i*40}" x2="${MV.W}" y2="${i*40}" stroke="#8a7a5c" stroke-width=".3" opacity=".35"/>`).join("")}</g>
+    <polygon class="m-park" points="${mvPL(G.park)}"/>
+    <polyline class="m-water" stroke-width="6" points="${mvPL(G.spree)}"/><polyline class="m-water" stroke-width="3.5" points="${mvPL(G.kanal)}"/>
+    ${G.streets.map(x=>`<polyline class="m-street" stroke-width="3" points="${mvPL(x)}"/>`).join("")}
+    <polyline class="m-metro" stroke-width="1.8" stroke-dasharray="5 4" points="${mvPL(G.metro)}"/>
+    <polyline class="m-route" stroke-width="2.6" points="${mvPL(G.walk)}"/>
+    <g id="mv-labels">${G.labels.map(([la,lo,t,c,it])=>`<text x="${mvX(lo).toFixed(1)}" y="${mvY(la).toFixed(1)}" font-family="IBM Plex Mono,monospace" font-size="9" fill="${c||"#5f5446"}"${it?' font-style="italic"':""}>${t}</text>`).join("")}</g>
+    <g id="mv-marks">${st.map((s,i)=>{ const [ ,la,lo]=s.loc[0]; const lab=i===0?"H":String(i);
+      return `<g class="mk" data-i="${i}" data-x="${mvX(lo).toFixed(2)}" data-y="${mvY(la).toFixed(2)}"><circle r="13" fill="${i===0?"#3f6fa8":"#1f1b16"}" stroke="#efe6d2" stroke-width="2.5"/><text y="4.8" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-weight="600" font-size="13" fill="#fff">${lab}</text></g>`;}).join("")}
+      ${s7>=0&&st[s7].loc[1]?`<g class="mk mk2" data-i="${s7}" data-x="${mvX(st[s7].loc[1][2]).toFixed(2)}" data-y="${mvY(st[s7].loc[1][1]).toFixed(2)}"><circle r="7" fill="#1f1b16" stroke="#efe6d2" stroke-width="2"/></g>`:""}</g>`;
+  // marks: put the small second dot behind the numbered ones
+  const marks=svg.querySelector("#mv-marks"), small=marks.querySelector(".mk2"); if(small) marks.prepend(small);
+  wireMap(svg); MV.built=true;
+}
+function setVB(v){
+  const svg=document.getElementById("mv-svg");
+  const minW=90, maxW=MV.W*2.2; if(v.w<minW){ const k=minW/v.w; v.x-= (v.w*k-v.w)/2; v.y-=(v.h*k-v.h)/2; v.w*=k; v.h*=k; } if(v.w>maxW){ const k=maxW/v.w; v.x+=(v.w-v.w*k)/2; v.y+=(v.h-v.h*k)/2; v.w*=k; v.h*=k; }
+  MV.vb=v; svg.setAttribute("viewBox",`${v.x.toFixed(2)} ${v.y.toFixed(2)} ${v.w.toFixed(2)} ${v.h.toFixed(2)}`);
+  // markers keep a constant size on screen
+  const px = v.w / (svg.clientWidth||1), k = px*1.0;
+  svg.querySelectorAll(".mk").forEach(g=>g.setAttribute("transform",`translate(${g.dataset.x} ${g.dataset.y}) scale(${k.toFixed(4)})`));
+  svg.querySelectorAll("#mv-labels text").forEach(t=>{ t.setAttribute("font-size",(11*px).toFixed(2)); });
+}
+function fitBox(x0,y0,x1,y1,padPx=40,bottomPx=0){
+  const svg=document.getElementById("mv-svg"), cw=svg.clientWidth, ch=svg.clientHeight;
+  const topPx=70, availW=cw-2*padPx, availH=ch-topPx-bottomPx-padPx;
+  const s=Math.max((x1-x0)/availW,(y1-y0)/availH);
+  const w=cw*s, h=ch*s; const cx=(x0+x1)/2, cy=(y0+y1)/2;
+  const offY=(topPx-bottomPx)/2*s - padPx/2*s*0;
+  setVB({x:cx-w/2, y:cy-h/2-offY, w, h});
+}
+function fitAll(){ const pts=DAYS.revolucao.stops.map(s=>[mvX(s.loc[0][2]),mvY(s.loc[0][1])]); const xs=pts.map(p=>p[0]), ys=pts.map(p=>p[1]); fitBox(Math.min(...xs)-10,Math.min(...ys)-10,Math.max(...xs)+10,Math.max(...ys)+10,24,90); }
+function centerOn(i){
+  const svg=document.getElementById("mv-svg"), s=DAYS.revolucao.stops[i], x=mvX(s.loc[0][2]), y=mvY(s.loc[0][1]);
+  const ch=svg.clientHeight, cw=svg.clientWidth, sheetPx=Math.min(ch*0.62, document.getElementById("mv-sheet").offsetHeight||ch*0.55);
+  let w=Math.min(MV.vb.w, 260); const px=w/cw, h=ch*px;
+  const visibleCenterPx=(ch-sheetPx)/2+30; // centre of the map area above the sheet
+  setVB({x:x-w/2, y:y-visibleCenterPx*px, w, h});
+}
+function wireMap(svg){
+  const pts=new Map(); let start=null, moved=false;
+  const toSvg=(cx,cy)=>{ const r=svg.getBoundingClientRect(), v=MV.vb; return [v.x+(cx-r.left)/r.width*v.w, v.y+(cy-r.top)/r.height*v.h]; };
+  svg.addEventListener("pointerdown",e=>{ svg.setPointerCapture(e.pointerId); pts.set(e.pointerId,[e.clientX,e.clientY]); moved=false; start={vb:{...MV.vb},pts:new Map(pts)}; });
+  svg.addEventListener("pointermove",e=>{
+    if(!pts.has(e.pointerId)) return; pts.set(e.pointerId,[e.clientX,e.clientY]);
+    const r=svg.getBoundingClientRect(), v0=start.vb;
+    if(pts.size===1){ const [a]=[...start.pts.values()], [b]=[...pts.values()]; if(!a) return;
+      const dx=b[0]-a[0], dy=b[1]-a[1]; if(Math.hypot(dx,dy)>6) moved=true;
+      setVB({x:v0.x-dx/r.width*v0.w, y:v0.y-dy/r.height*v0.h, w:v0.w, h:v0.h});
+    } else if(pts.size===2 && start.pts.size===2){ moved=true;
+      const [a1,a2]=[...start.pts.values()], [b1,b2]=[...pts.values()];
+      const d0=Math.hypot(a1[0]-a2[0],a1[1]-a2[1]), d1=Math.hypot(b1[0]-b2[0],b1[1]-b2[1]); if(!d0) return;
+      const k=d0/d1, m0=[(a1[0]+a2[0])/2,(a1[1]+a2[1])/2], m1=[(b1[0]+b2[0])/2,(b1[1]+b2[1])/2];
+      const fx=(m0[0]-r.left)/r.width, fy=(m0[1]-r.top)/r.height, px=v0.x+fx*v0.w, py=v0.y+fy*v0.h;
+      const w=v0.w*k, h=v0.h*k; const gx=(m1[0]-r.left)/r.width, gy=(m1[1]-r.top)/r.height;
+      setVB({x:px-gx*w, y:py-gy*h, w, h});
+    }
+  });
+  const end=e=>{ if(!pts.has(e.pointerId)) return; pts.delete(e.pointerId);
+    if(!moved && pts.size===0){ const t=document.elementFromPoint(e.clientX,e.clientY); const g=t&&t.closest&&t.closest(".mk"); if(g) selectStop(+g.dataset.i,true); }
+    start={vb:{...MV.vb},pts:new Map(pts)}; };
+  svg.addEventListener("pointerup",end); svg.addEventListener("pointercancel",end);
+  svg.addEventListener("wheel",e=>{ e.preventDefault(); const [px,py]=toSvg(e.clientX,e.clientY), v=MV.vb, k=e.deltaY>0?1.15:1/1.15; setVB({x:px-(px-v.x)*k, y:py-(py-v.y)*k, w:v.w*k, h:v.h*k}); },{passive:false});
+  document.querySelector(".mv-zoom").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return; const v=MV.vb;
+    if(b.dataset.z==="fit"){ fitAll(); return; } const k=b.dataset.z==="in"?1/1.5:1.5; const cx=v.x+v.w/2, cy=v.y+v.h/2; setVB({x:cx-v.w*k/2, y:cy-v.h*k/2, w:v.w*k, h:v.h*k}); });
+  window.addEventListener("resize",()=>{ if(!document.getElementById("mapview").hidden && MV.vb){ const svgW=svg.clientWidth, svgH=svg.clientHeight; const v=MV.vb; const h=v.w*svgH/svgW; setVB({x:v.x, y:v.y+(v.h-h)/2, w:v.w, h}); } });
+}
+function selectStop(i, fromTap){
+  const st=DAYS.revolucao.stops, s=st[i], sheet=document.getElementById("mv-sheet"); MV.sel=i;
+  document.getElementById("mv-hint").hidden=true;
+  document.querySelectorAll("#mv-marks .mk").forEach(g=>g.classList.toggle("sel", +g.dataset.i===i));
+  const b=BOOK[s.book], lab=i===0?"Partida":`Paragem ${i} de ${st.length-1}`;
+  const media = s.img ? `<img class="ph" src="${s.img}" alt="${s.name}">` : `<div class="ph art">${ART[s.art](s.ph)}</div>`;
+  const addr = s.loc ? `<div class="addr">${s.loc.map(([a,la,lo])=>`<div>${a} · <a href="https://www.google.com/maps/search/?api=1&query=${la},${lo}" target="_blank" rel="noopener">${la.toFixed(5)}° N, ${lo.toFixed(5)}° E</a></div>`).join("")}</div>` : "";
+  sheet.innerHTML = `<div class="grab"><span>${s.t} · ${lab}</span><button type="button" data-close>Fechar ✕</button></div>${media}
+    <div class="in">${addr}<h2>${s.name}</h2><p class="what">${s.note}</p>
+    ${b?`<h3>Importância</h3><div class="imp">${b.html}</div><p class="src">Fonte: <em>${SRC_BOOK}</em>, ${b.ref} (paginação da edição impressa).${b.extra?" "+b.extra:""}</p>`:""}</div>
+    <div class="acts">${s.route?`<a class="pri" href="${s.route}" target="_blank" rel="noopener">${ICON_ROUTE}${s.rl}</a>`:""}<a href="${place(s.photo)}" target="_blank" rel="noopener">${ICON_PHOTO}Fotos</a></div>
+    <div class="nav"><button type="button" data-step="-1" ${i===0?"disabled":""}>◀ Anterior</button><button type="button" data-step="1" ${i===st.length-1?"disabled":""}>Seguinte ▶</button></div>`;
+  sheet.hidden=false; sheet.scrollTop=0;
+  requestAnimationFrame(()=>centerOn(i));
+}
+document.getElementById("mv-sheet").addEventListener("click",e=>{
+  if(e.target.closest("[data-close]")){ e.currentTarget.hidden=true; document.querySelectorAll("#mv-marks .mk").forEach(g=>g.classList.remove("sel")); return; }
+  const b=e.target.closest("[data-step]"); if(b){ const n=MV.sel+(+b.dataset.step); if(n>=0 && n<DAYS.revolucao.stops.length) selectStop(n); }
+});
+function openMap(){
+  const mv=document.getElementById("mapview"); document.body.classList.add("mapmode"); document.body.dataset.day="revolucao"; mv.hidden=false;
+  if(!MV.built) buildMap();
+  requestAnimationFrame(()=>{ if(MV.sel>=0) selectStop(MV.sel); else fitAll(); });
+}
+function closeMap(){ document.body.classList.remove("mapmode"); const mv=document.getElementById("mapview"); if(mv) mv.hidden=true; }
+
 Object.keys(DAYS).forEach(render);
 document.addEventListener("change", e=>{
   const cb=e.target.closest('input[type="checkbox"][data-id]'); if(!cb) return;
   done[cb.dataset.id]=cb.checked; if(!cb.checked) delete done[cb.dataset.id]; store.set(doneKey,done);
   cb.closest(".stop").classList.toggle("done", cb.checked);
-});
-document.addEventListener("click", e=>{
-  const b=e.target.closest(".chipbtn[data-map]"); if(!b) return;
-  const box=document.getElementById("map-"+b.dataset.map); box.hidden=!box.hidden;
-  b.setAttribute("aria-expanded", String(!box.hidden));
 });
 document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{ location.hash=b.dataset.day; show(b.dataset.day); window.scrollTo({top:0}); }));
 window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
