@@ -133,32 +133,24 @@
   .westbanner{display:none}
   body[data-day="sabado"] .westbanner{display:block;margin:16px 0 6px;border:1px solid #111;line-height:0}
   .westbanner svg{width:100%;height:auto;display:block}
-  /* ---------- Tema do passeio revolucionário (cartaz construtivista) ---------- */
-  body[data-day="revolucao"]{ --bg:#f1e9da; --card:#fffaf0; --ink:#141414; --muted:#5e554a; --line:#d9ccb4; --chip:#e7dcc6; --accent:#d7261e; --accent-ink:#fff;
-    background:repeating-linear-gradient(135deg, rgba(20,20,20,.035) 0 2px, transparent 2px 14px), var(--bg); }
-  @media (prefers-color-scheme: dark){ body[data-day="revolucao"]{ --bg:#161312; --card:#211c1a; --ink:#f3ebde; --muted:#b5a894; --line:#3e3430; --chip:#2e2724; --accent:#ec3b31; } }
+  /* ---------- Tema de segunda-feira: Berlim vista da esquerda (sóbrio, editorial) ---------- */
+  body[data-day="revolucao"]{ --bg:#f3efe7; --card:#fffdf9; --ink:#22201d; --muted:#6a645b; --line:#e2dbcf; --chip:#ebe4d7; --accent:#9b4436; --accent-ink:#fff; }
+  @media (prefers-color-scheme: dark){ body[data-day="revolucao"]{ --bg:#171614; --card:#201e1b; --ink:#ece6dc; --muted:#a59e93; --line:#35312c; --chip:#2b2824; --accent:#d07a68; } }
   body[data-day="revolucao"] .tabs{background:transparent;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
-  body[data-day="revolucao"] h1, body[data-day="revolucao"] .name, body[data-day="revolucao"] .tips h2{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em}
-  body[data-day="revolucao"] .name{font-size:20px;font-weight:700}
-  body[data-day="revolucao"] .tab{border-radius:0}
-  body[data-day="revolucao"] .tab[aria-selected="true"]{background:#141414;color:#fff;border-color:#141414;box-shadow:inset 0 -5px 0 var(--accent)}
-  body[data-day="revolucao"] .tab[aria-selected="true"] small{color:#ff8a80}
-  body[data-day="revolucao"] .stop::before{background:var(--accent);width:3px}
-  body[data-day="revolucao"] .time{background:var(--accent);color:#fff;border-radius:0;font-family:Oswald,sans-serif;font-weight:600;letter-spacing:.03em;padding:3px 0;transform:rotate(-4deg)}
-  body[data-day="revolucao"] .card{border-radius:0;border:2px solid var(--ink);border-left:8px solid var(--accent)}
-  body[data-day="revolucao"] .btn{border-radius:0}
-  body[data-day="revolucao"] .btn.primary{background:#141414;border-color:#141414}
-  @media (prefers-color-scheme: dark){ body[data-day="revolucao"] .btn.primary{background:var(--accent);border-color:var(--accent)} }
-  body[data-day="revolucao"] .chip{border-radius:0;background:#141414;color:#fff;font-weight:600}
-  @media (prefers-color-scheme: dark){ body[data-day="revolucao"] .chip{background:var(--accent)} }
-  body[data-day="revolucao"] .more{border-radius:0}
-  body[data-day="revolucao"] .more summary .ico{background:var(--accent);border-radius:0}
-  body[data-day="revolucao"] .more .txt h4{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:14px}
-  body[data-day="revolucao"] .tips{border-radius:0;border:2px solid var(--ink);border-left:8px solid var(--accent)}
-  body[data-day="revolucao"] .stop.now .card{box-shadow:0 0 0 3px var(--accent)}
+  body[data-day="revolucao"] .name{font-size:20px}
+  body[data-day="revolucao"] .tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  body[data-day="revolucao"] .tab[aria-selected="true"] small{color:var(--bg);opacity:.75}
+  body[data-day="revolucao"] .stop::before{background:var(--line)}
+  body[data-day="revolucao"] .time{color:var(--accent);font-weight:700}
+  body[data-day="revolucao"] .card{border-radius:10px;border-top:3px solid var(--accent)}
+  body[data-day="revolucao"] .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  body[data-day="revolucao"] .chip{background:transparent;border:1px solid var(--line);color:var(--muted)}
+  body[data-day="revolucao"] .more summary .ico{background:var(--accent)}
+  body[data-day="revolucao"] .more .txt h4{color:var(--accent)}
+  body[data-day="revolucao"] .stop.now .card{box-shadow:0 0 0 2px var(--accent)}
   body[data-day="revolucao"] .check input{accent-color:var(--accent)}
   .revbanner{display:none}
-  body[data-day="revolucao"] .revbanner{display:block;margin:16px 0 6px;border:2px solid #141414;box-shadow:6px 6px 0 #d7261e;line-height:0}
+  body[data-day="revolucao"] .revbanner{display:block;margin:16px 0 6px;border:1px solid var(--line);border-radius:10px;overflow:hidden;line-height:0}
   .revbanner svg{width:100%;height:auto;display:block}
   @media (max-width:420px){ .tab{font-size:14px;padding:10px 6px} .tab small{font-size:11px} }
   [hidden]{display:none!important}
@@ -707,9 +699,9 @@ const H2 = "Courtyard by Marriott Berlin City Center", RT = "Rosa-Luxemburg-Denk
 DAYS.revolucao = {
   date:"",
   hotel:H2,
-  chips:["🚩 Segundo «Revolutionary Berlin», de Nathaniel Flakin","🚶 ~7 km a pé","🌙 Pôr do sol ~16h15"],
+  chips:["📖 A partir de «Revolutionary Berlin», de Nathaniel Flakin","🚶 ~6 km a pé","🌙 Pôr do sol ~16h15"],
   stops:[
-    {t:"15:00", art:"hotel", ph:"day", name:"Saída do hotel", note:"Courtyard by Marriott Berlin City Center, na Axel-Springer-Straße. São 5 minutos a pé até à estação de Spittelmarkt, e daí o U2 vai direto até Zoologischer Garten, sem mudanças. O passeio faz-se de oeste para leste e acaba perto do hotel.", photo:H2},
+    {t:"15:00", art:"hotel", img:"img/courtyard.jpg", ar:"4/3", ph:"day", name:"Saída do hotel", note:"Courtyard by Marriott Berlin City Center, na Axel-Springer-Straße. São 5 minutos a pé até à estação de Spittelmarkt, e daí o U2 vai direto até Zoologischer Garten, sem mudanças. O passeio faz-se de oeste para leste e acaba perto do hotel.", photo:H2},
     {t:"15:25", art:"eden", img:"img/eden.jpg", ar:"1024/734", ph:"day", book:"eden", name:"Antigo Hotel Eden · Olof-Palme-Platz", note:"A praça da fonte de pedras, à entrada do Aquário e junto à Porta dos Elefantes do Zoo. Do outro lado da antiga Budapester Straße ficava o Hotel Eden, o da fotografia antiga. O edifício já não existe.", route:dir(H2,"Olof-Palme-Platz Berlin","transit"), rl:"U2 · ~25 min", photo:"Olof-Palme-Platz Berlin"},
     {t:"15:40", art:"rosa", img:"img/rosa.jpg", ar:"3/2", ph:"day", book:"rosa", name:"Ponte Lichtenstein · memorial a Rosa Luxemburg", note:"Sobre o Landwehrkanal, entre o Zoo e o Tiergarten. Junto à ponte, à beira do canal, o nome de Rosa Luxemburg ergue-se em letras de metal sobre uma placa inclinada, virada para a água.", route:dir("Olof-Palme-Platz Berlin",RT), rl:"A pé · 10 min", photo:RT},
     {t:"15:55", art:"liebknecht", img:"img/liebknecht.jpg", ar:"4/3", ph:"day", book:"liebknecht", name:"Memorial a Karl Liebknecht · Neuer See", note:"Uma coluna de tijolo à beira do lago, a 200 m da ponte, com uma placa de texto no chão à frente. Mesmo ao lado fica o Café am Neuen See, se precisarem de um café quente antes de atravessar o parque.", route:dir(RT,LK), rl:"A pé · 3 min", photo:LK},
@@ -718,10 +710,8 @@ DAYS.revolucao = {
     {t:"17:20", art:"gate", img:"img/brandenburg.jpg", ar:"3/2", ph:"night", book:"gate", name:"Portas de Brandemburgo", note:"Início do passeio do livro sobre o colonialismo alemão. Sigam pela Pariser Platz até à esquina do Hotel Adlon.", route:dir(RS,BT), rl:"A pé · 7 min", photo:BT},
     {t:"17:35", art:"wilhelm", img:"img/wilhelm.jpg", ar:"519/799", ph:"night", book:"wilhelm", name:"Wilhelmstraße · o centro do império colonial", note:"Virem na esquina do Hotel Adlon. São três paragens do livro na mesma rua, com painéis históricos no passeio em quase cada número. A fotografia, tirada de um desses painéis, mostra o Ministério Colonial do Império no antigo n.º 62 (hoje cerca do n.º 51).", route:dir(BT,W92,"walking",["Wilhelmstraße 65, 10117 Berlin"]), rl:"A pé · 8 min", photo:"Wilhelmstraße Berlin"},
     {t:"18:05", art:"stelae", img:"img/stelae.jpg", ar:"900/500", ph:"night", book:"stelae", name:"Memorial do Holocausto e Memorial aos Homossexuais Perseguidos", note:"Atravessem os blocos do memorial de leste para oeste. Do outro lado da Ebertstraße, já no Tiergarten, fica o bloco de betão com o vídeo.", route:dir(W92,HOMO,"walking",["Holocaust-Mahnmal Berlin"]), rl:"A pé · 8 min", photo:HOMO},
-    {t:"18:30", art:"lenne", ph:"night", book:"lenne", name:"Triângulo Lenné · «Kubatstan»", note:"Entre a Lennéstraße, a Ebertstraße e a Bellevuestraße. Hoje são prédios novos e o pequeno Henriette-Herz-Park.", route:dir(HOMO,LEN), rl:"A pé · 5 min", photo:LEN},
-    {t:"18:40", art:"potsdamer", img:"img/pedestal.jpg", ar:"800/583", ph:"night", book:"potsdamer", name:"Potsdamer Platz · o pedestal de Liebknecht", note:"Um pedestal de pedra sem estátua em frente ao edifício curvo de tijolo vermelho, por cima da entrada do metro. A fotografia é de dezembro de 1951, pouco depois da inauguração (Bundesarchiv). A inscrição diz que foi deste sítio que Liebknecht apelou, a 1 de maio de 1916, à luta contra a guerra imperialista e pela paz.", route:dir(LEN,PP), rl:"A pé · 5 min", photo:"Karl-Liebknecht-Denkmal Potsdamer Platz Berlin"},
-    {t:"19:00", art:"chancelaria", img:"img/chancelaria.jpg", ar:"800/691", ph:"night", book:"chancelaria", name:"Local da Nova Chancelaria de Hitler", note:"Na esquina da Voßstraße com a Wilhelmstraße, em frente a uma entrada do Mall of Berlin. Hoje só há prédios da RDA. A fotografia mostra a antiga Chancelaria do Reich (o Palais Radziwill, a Chancelaria de Bismarck), que Hitler usou a partir de 1933. A nova chancelaria de Speer foi construída ao lado, ao longo da Voßstraße.", route:dir(PP,W94,"walking",["Voßstraße Berlin"]), rl:"A pé · 8 min", photo:"Voßstraße Berlin"},
-    {t:"19:15", art:"amo", ph:"night", book:"amo", name:"Anton-Wilhelm-Amo-Straße", note:"A antiga Mohrenstraße. Desde 23 de agosto de 2025 a rua e a estação do U2 têm o nome do filósofo negro Anton Wilhelm Amo.", route:dir(W94,AMO), rl:"A pé · 3 min", photo:"Anton-Wilhelm-Amo-Straße Berlin"}
+    {t:"18:30", art:"potsdamer", img:"img/pedestal.jpg", ar:"800/583", ph:"night", book:"potsdamer", name:"Potsdamer Platz · o pedestal de Liebknecht", note:"Um pedestal de pedra sem estátua em frente ao edifício curvo de tijolo vermelho, por cima da entrada do metro. A fotografia é de dezembro de 1951, pouco depois da inauguração (Bundesarchiv). A inscrição diz que foi deste sítio que Liebknecht apelou, a 1 de maio de 1916, à luta contra a guerra imperialista e pela paz.", route:dir(HOMO,PP), rl:"A pé · 8 min", photo:"Karl-Liebknecht-Denkmal Potsdamer Platz Berlin"},
+    {t:"18:50", art:"chancelaria", img:"img/chancelaria.jpg", ar:"800/691", ph:"night", book:"chancelaria", name:"Local da Nova Chancelaria de Hitler", note:"Na esquina da Voßstraße com a Wilhelmstraße, em frente a uma entrada do Mall of Berlin. Hoje só há prédios da RDA. A fotografia mostra a antiga Chancelaria do Reich (o Palais Radziwill, a Chancelaria de Bismarck), que Hitler usou a partir de 1933. A nova chancelaria de Speer foi construída ao lado, ao longo da Voßstraße.", route:dir(PP,W94,"walking",["Voßstraße Berlin"]), rl:"A pé · 8 min", photo:"Voßstraße Berlin"},
   ],
   tips:[
     "O percurso vai de oeste para leste: metro até ao Zoo e depois sempre a pé, até acabar a cerca de 1 km do hotel. Em novembro o sol põe-se por volta das 16h15, por isso o parque vem primeiro: o Tiergarten é grande e escuro à noite, e o resto do passeio faz-se pelas ruas iluminadas.",
@@ -733,19 +723,15 @@ DAYS.revolucao = {
 
 /* ---------- Cartaz construtivista (passeio revolucionário) ---------- */
 function revBanner(){
-  return `<div class="revbanner"><svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartaz: Berlim Revolucionária">
-    <rect width="400" height="210" fill="#f1e7d3"/>
-    <polygon points="0,210 0,120 260,0 400,0 400,40 90,210" fill="#d7261e"/>
-    <g transform="rotate(-25 190 112)">
-      <text x="62" y="106" font-family="Oswald,Impact,sans-serif" font-weight="700" font-size="50" fill="#fff8ec">BERLIM</text>
-      <text x="64" y="138" font-family="Oswald,Impact,sans-serif" font-weight="600" font-size="23" letter-spacing="2" fill="#141414">REVOLUCIONÁRIA</text>
-    </g>
-    <text x="14" y="24" font-family="Oswald,Impact,sans-serif" font-weight="600" font-size="12" letter-spacing="1.5" fill="#141414">TIERGARTEN · REICHSTAG</text>
-    <text x="14" y="40" font-family="Oswald,Impact,sans-serif" font-weight="600" font-size="12" letter-spacing="1.5" fill="#141414">WILHELMSTRASSE</text>
-    <text x="14" y="58" font-family="Oswald,Impact,sans-serif" font-weight="700" font-size="12" letter-spacing="1" fill="#d7261e">SEGUNDA-FEIRA</text>
-    <circle cx="346" cy="146" r="34" fill="#141414"/>${star(346,124,7,3,"#d7261e")}<text x="346" y="160" text-anchor="middle" font-family="Oswald,Impact,sans-serif" font-weight="700" font-size="26" fill="#d7261e">15H</text>
-    <text x="392" y="196" text-anchor="end" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="9.5" fill="#141414">segundo Nathaniel Flakin</text>
-    <rect y="202" width="400" height="8" fill="#141414"/>
+  const pts=[[34,128,"Zoo"],[70,120,""],[104,96,""],[150,76,"Spree"],[184,90,"Reichstag"],[214,108,""],[244,122,"Wilhelmstraße"],[300,146,"Potsdamer Platz"],[338,138,""]];
+  const path="M"+pts.map(p=>p[0]+" "+p[1]).join(" L");
+  return `<div class="revbanner"><svg viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Berlim vista da esquerda · segunda-feira">
+    <rect width="400" height="210" fill="#efe8db"/>
+    <rect x="0" y="0" width="400" height="4" fill="#9b4436"/>
+    <text x="24" y="44" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="10.5" letter-spacing="1.6" fill="#6a645b">SEGUNDA-FEIRA · A PARTIR DAS 15H</text>
+    <text x="22" y="82" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="34" fill="#22201d">Berlim à esquerda</text>
+    <path d="${path}" fill="none" stroke="#9b4436" stroke-width="1.6" stroke-dasharray="2 4" stroke-linecap="round" transform="translate(10 30)"/>
+    ${pts.map(([x,y,l])=>`<circle cx="${x+10}" cy="${y+30}" r="${l?4:2.6}" fill="${l?"#9b4436":"#efe8db"}" stroke="#9b4436" stroke-width="1.4"/>${l?`<text x="${x+10}" y="${y+47}" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="8.5" fill="#6a645b">${l}</text>`:""}`).join("")}
   </svg></div>`;
 }
 
@@ -790,7 +776,7 @@ function show(dayId){
   document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", String(b.dataset.day===dayId)));
   document.querySelectorAll("section[data-day]").forEach(s=>s.hidden = s.dataset.day!==dayId);
   document.body.dataset.day = dayId;
-  document.getElementById("sub").textContent = "Partida e chegada: " + (DAYS[dayId].hotel || H);
+  document.getElementById("sub").textContent = (DAYS[dayId].hotel ? "Partida: " + DAYS[dayId].hotel : "Partida e chegada: " + H);
   markNow();
 }
 function defaultDay(){ const t=new Date(); const iso=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,"0")}-${String(t.getDate()).padStart(2,"0")}`; return iso===DAYS.domingo.date ? "domingo" : "sabado"; }
