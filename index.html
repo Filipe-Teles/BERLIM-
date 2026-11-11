@@ -163,6 +163,23 @@
   body[data-day="revolucao"] .check{font-family:"IBM Plex Mono",monospace;font-size:12px}
   body[data-day="revolucao"] .check input{accent-color:var(--accent)}
   .revbanner{display:none}
+  .chipbtn{cursor:pointer;font:inherit;appearance:none}
+  body[data-day="revolucao"] .chipbtn{background:var(--ink);color:var(--card);border-color:var(--ink)}
+  body[data-day="revolucao"] .chipbtn[aria-expanded="true"]{background:var(--accent);border-color:var(--accent)}
+  .mapbox{margin:10px 0 4px;background:var(--card);border:1px solid var(--ink);box-shadow:3px 3px 0 var(--line);padding:10px}
+  .mapbox > svg{display:block;width:100%;height:auto;background:#efe6d2;border:1px solid var(--line)}
+  .mapbox .maptitle{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:4px 0 6px}
+  .mapbox .maptitle ~ .maptitle{margin-top:14px}
+  .mapbox .mapnote{font:400 11px "IBM Plex Mono",monospace;color:var(--muted);margin:8px 0 0;line-height:1.5}
+  .mapbox .m-park{fill:#cdd6b4}.mapbox .m-water{fill:none;stroke:#9fb6c4;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+  .mapbox .m-street{fill:none;stroke:#fbf6ea;stroke-width:4;stroke-linecap:round}.mapbox .m-metro{fill:none;stroke:#3f6fa8;stroke-width:2.2;stroke-dasharray:6 5}
+  .mapbox .m-route{fill:none;stroke:#7b4a2a;stroke-width:3.2;stroke-linejoin:round;stroke-linecap:round}
+  .mapbox .m-lbl{font:500 11px "IBM Plex Mono",monospace;fill:#5f5446}
+  .mapbox ol{margin:10px 0 0;padding:0;list-style:none;font:500 12px "IBM Plex Mono",monospace;line-height:1.55;color:var(--ink);columns:2;column-gap:14px}
+  .mapbox ol li{break-inside:avoid}
+  .mapbox ol b{display:inline-block;min-width:22px;color:var(--accent)}
+  .mapbox .maplinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  @media (max-width:420px){ .mapbox ol{columns:1} }
   body[data-day="revolucao"] .revbanner{display:block;margin:16px 0 6px;border:1px solid #1f1b16;box-shadow:3px 3px 0 #cbbd9f;line-height:0}
   .revbanner svg{width:100%;height:auto;display:block}
   @media (max-width:420px){ .tab{font-size:14px;padding:10px 6px} .tab small{font-size:11px} }
@@ -715,6 +732,7 @@ DAYS.revolucao = {
   date:"",
   hotel:H2,
   chips:["Fonte: «Revolutionary Berlin», N. Flakin","~6 km a pé","Pôr do sol ~16h15"],
+  map:()=>routeMap(),
   stops:[
     {t:"15:00", loc:[["Axel-Springer-Straße 55, 10117 Berlin",52.5098492,13.3998213]], art:"hotel", img:"img/courtyard.jpg", ar:"4/3", ph:"day", name:"Saída do hotel", note:"Courtyard by Marriott Berlin City Center, na Axel-Springer-Straße. São 5 minutos a pé até à estação de Spittelmarkt, e daí o U2 vai direto até Zoologischer Garten, sem mudanças. O passeio faz-se de oeste para leste e acaba na Potsdamer Platz.", photo:H2},
     {t:"15:25", loc:[["Olof-Palme-Platz, 10787 Berlin",52.5055584,13.3405896]], art:"eden", img:"img/eden.jpg", ar:"1024/734", ph:"day", book:"eden", name:"Antigo Hotel Eden · Olof-Palme-Platz", note:"A praça da fonte de pedras, à entrada do Aquário e junto à Porta dos Elefantes do Zoo. Do outro lado da antiga Budapester Straße ficava o Hotel Eden, o da fotografia antiga. O edifício já não existe.", route:dir(H2,"Olof-Palme-Platz Berlin","transit"), rl:"U2 · ~25 min", photo:"Olof-Palme-Platz Berlin"},
@@ -736,6 +754,49 @@ DAYS.revolucao = {
     "O mapa do autor com todas as paragens do livro está em revolutionaryberlin.wordpress.com/map."
   ]
 };
+
+/* ---------- Mapa do percurso (segunda-feira), desenhado a partir das coordenadas ---------- */
+function routeMap(){
+  const st=DAYS.revolucao.stops;
+  const park=[[52.5148,13.3350],[52.5188,13.3430],[52.5203,13.3560],[52.5197,13.3700],[52.5175,13.3765],[52.5133,13.3765],[52.5098,13.3720],[52.5088,13.3560],[52.5084,13.3430],[52.5100,13.3350]];
+  const spree=[[52.5228,13.3290],[52.5207,13.3470],[52.5195,13.3600],[52.5201,13.3690],[52.5224,13.3745],[52.5214,13.3840],[52.5205,13.3920],[52.5180,13.4000],[52.5150,13.4065]];
+  const kanal=[[52.5068,13.3290],[52.5089,13.3432],[52.5072,13.3550],[52.5046,13.3650],[52.5026,13.3760],[52.5010,13.3900],[52.4990,13.4065]];
+  const streets=[ [[52.5145,13.3501],[52.5163,13.3777]], [[52.5170,13.3806],[52.5086,13.3836]], [[52.5096,13.3770],[52.5100,13.4010]], [[52.5180,13.3770],[52.5088,13.3770]], [[52.5168,13.3777],[52.5172,13.3990]], [[52.5140,13.3770],[52.5139,13.3806]], [[52.5118,13.3770],[52.5114,13.3832]] ];
+  const metro=[[52.5098,13.3998],[52.5112,13.4036],[52.5110,13.3920],[52.5097,13.3762],[52.5036,13.3745],[52.4994,13.3746],[52.4993,13.3536],[52.5017,13.3426],[52.5072,13.3326]];
+  const walk=[[52.5072,13.3326],[52.5056,13.3406],[52.5089,13.3432],[52.5125,13.3413],[52.5145,13.3501],[52.5186,13.3620],[52.5186,13.3762],[52.5163,13.3777],[52.5133,13.3761],[52.5139,13.3787],[52.5126,13.3832],[52.5126,13.3823],[52.5116,13.3828],[52.5085,13.3771]];
+  function draw(b, W, onlyFrom, k, labels){
+    const [la0,la1,lo0,lo1]=b, Hh=Math.round(W*((la0-la1)*111.2)/((lo1-lo0)*67.85));
+    const X=lo=>+((lo-lo0)/(lo1-lo0)*W).toFixed(1), Y=la=>+((la0-la)/(la0-la1)*Hh).toFixed(1);
+    const pl=pts=>pts.map(([la,lo])=>X(lo)+","+Y(la)).join(" ");
+    const r=13*k, fs=14*k, lf=15*k;
+    const marks=st.map((s,i)=>{ if(i<onlyFrom && i!==0) return ""; const [ ,la,lo]=s.loc[0]; const lab=i===0?"H":String(i);
+      return `<circle cx="${X(lo)}" cy="${Y(la)}" r="${r}" fill="${i===0?"#3f6fa8":"#1f1b16"}" stroke="#efe6d2" stroke-width="${2.5*k}"/><text x="${X(lo)}" y="${(Y(la)+fs*.36).toFixed(1)}" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-weight="600" font-size="${fs}" fill="#fff">${lab}</text>`; }).join("");
+    const s7=st.findIndex(s=>s.art==="stelae"); const [ ,hla,hlo]=st[s7].loc[1];
+    const km=(1/((lo1-lo0)*67.85)*W), sb=km>W/3?{w:km*0.2,t:"200 m"}:{w:km,t:"1 km"};
+    return `<svg viewBox="0 0 ${W} ${Hh}" xmlns="http://www.w3.org/2000/svg" role="img">
+      <polygon class="m-park" points="${pl(park)}"/>
+      <polyline class="m-water" style="stroke-width:${9*k}" points="${pl(spree)}"/><polyline class="m-water" style="stroke-width:${5*k}" points="${pl(kanal)}"/>
+      ${streets.map(x=>`<polyline class="m-street" style="stroke-width:${5*k}" points="${pl(x)}"/>`).join("")}
+      <polyline class="m-metro" style="stroke-width:${3*k};stroke-dasharray:${8*k} ${6*k}" points="${pl(metro)}"/>
+      <polyline class="m-route" style="stroke-width:${4.5*k}" points="${pl(walk)}"/>
+      ${labels.map(([la,lo,t,c,it])=>`<text x="${X(lo)}" y="${Y(la)}" font-family="IBM Plex Mono,monospace" font-size="${lf}" fill="${c||"#5f5446"}"${it?' font-style="italic"':""}>${t}</text>`).join("")}
+      <circle cx="${X(hlo)}" cy="${Y(hla)}" r="${7*k}" fill="#1f1b16" stroke="#efe6d2" stroke-width="${2*k}"/>
+      ${marks}
+      <g transform="translate(${W-40*k} ${40*k})"><path d="M0 ${-22*k} L${6*k} 0 L0 ${22*k} L${-6*k} 0 Z" fill="#1f1b16"/><text y="${-27*k}" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="${lf}" fill="#1f1b16">N</text></g>
+      <g transform="translate(${20*k} ${Hh-18*k})"><rect width="${sb.w.toFixed(1)}" height="${6*k}" fill="#1f1b16"/><text y="${-8*k}" font-family="IBM Plex Mono,monospace" font-size="${lf}" fill="#1f1b16">${sb.t}</text></g>
+    </svg>`;
+  }
+  const full=draw([52.5232,52.4970,13.3290,13.4065], 900, 0, 1.9, [
+    [52.5108,13.3530,"Tiergarten","#5c6b45",1],[52.5216,13.3330,"Spree","#5f7f93"],[52.5052,13.3600,"Landwehrkanal","#5f7f93"],
+    [52.4980,13.3560,"U2","#3f6fa8"],[52.5046,13.3300,"Zoo"],[52.5160,13.3470,"Coluna da Vitória"]]);
+  const zoom=draw([52.5196,52.5076,13.3700,13.3880], 900, 5, 2.1, [
+    [52.5178,13.3704,"Tiergarten","#5c6b45",1],[52.5173,13.3792,"Unter den Linden"],
+    [52.5152,13.3814,"Wilhelmstr."],[52.5110,13.3774,"Ebertstr."],[52.5082,13.3786,"Leipziger Pl."]]);
+  const legend=`<ol>${st.map((s,i)=>`<li><b>${i===0?"H":i}</b>${s.t} · ${s.name.split(" · ")[0]}</li>`).join("")}</ol>`;
+  const leg1=dir("Olof-Palme-Platz Berlin","Reichstagsgebäude Berlin","walking",[RT,LK,"Großer Stern Berlin",HKW]);
+  const leg2=dir("Reichstagsgebäude Berlin",PP,"walking",[BT,HOMO,"Holocaust-Mahnmal Berlin","Wilhelmstraße 51, 10117 Berlin",W92,W94]);
+  return `<div class="maptitle">Percurso completo</div>${full}<div class="maptitle">Pormenor: do Reichstag à Potsdamer Platz</div>${zoom}`+legend+`<div class="maplinks"><a class="btn primary" href="${leg1}" target="_blank" rel="noopener">${ICON_ROUTE}Zoo → Reichstag</a><a class="btn primary" href="${leg2}" target="_blank" rel="noopener">${ICON_ROUTE}Reichstag → Potsdamer Platz</a></div><p class="mapnote">Esquema simplificado: parque, rios e ruas aproximados; paragens nas coordenadas exatas. Linha castanha: a pé. Tracejado azul: U2. O ponto pequeno junto ao 7 é o Memorial do Holocausto.</p>`;
+}
 
 /* ---------- Cartaz construtivista (passeio revolucionário) ---------- */
 function revBanner(){
@@ -765,7 +826,7 @@ let done = store.get(doneKey);
 
 function render(dayId){
   const d = DAYS[dayId], el = document.getElementById("day-"+dayId);
-  el.innerHTML = `${dayId==="domingo"?ostBanner():(dayId==="revolucao"?revBanner():westBanner())}<div class="daymeta">${d.chips.map(c=>`<span class="chip">${c}</span>`).join("")}</div>
+  el.innerHTML = `${dayId==="domingo"?ostBanner():(dayId==="revolucao"?revBanner():westBanner())}<div class="daymeta">${d.chips.map(c=>`<span class="chip">${c}</span>`).join("")}${d.map?`<button class="chip chipbtn" type="button" data-map="${dayId}" aria-expanded="false">🗺️ Mapa do percurso</button>`:""}</div>${d.map?`<div class="mapbox" id="map-${dayId}" hidden>${d.map()}</div>`:""}
   <ol class="timeline">${d.stops.map((s,i)=>{
     const id = dayId+"-"+i, isDone = !!done[id];
     return `<li class="stop${isDone?" done":""}" data-id="${id}" data-t="${s.t}">
@@ -820,6 +881,11 @@ document.addEventListener("change", e=>{
   const cb=e.target.closest('input[type="checkbox"][data-id]'); if(!cb) return;
   done[cb.dataset.id]=cb.checked; if(!cb.checked) delete done[cb.dataset.id]; store.set(doneKey,done);
   cb.closest(".stop").classList.toggle("done", cb.checked);
+});
+document.addEventListener("click", e=>{
+  const b=e.target.closest(".chipbtn[data-map]"); if(!b) return;
+  const box=document.getElementById("map-"+b.dataset.map); box.hidden=!box.hidden;
+  b.setAttribute("aria-expanded", String(!box.hidden));
 });
 document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{ location.hash=b.dataset.day; show(b.dataset.day); window.scrollTo({top:0}); }));
 window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
