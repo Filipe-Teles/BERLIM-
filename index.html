@@ -232,7 +232,7 @@
   .mv-bar{position:absolute;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:8px;background:#1f1b16;color:#f6f0e2;border:0;border-radius:2px;padding:13px 14px;font:600 13px "IBM Plex Mono",monospace;box-shadow:3px 3px 0 #cbbd9f}
   .mv-bar[hidden]{display:none}
   .mv-bar b{font-weight:500;font-size:12px;color:#e6d8bb}
-  .mv-hint{bottom:calc(72px + env(safe-area-inset-bottom))!important}
+  .mv-hint{bottom:calc(140px + env(safe-area-inset-bottom))!important}
   .mv-sheet .how{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:baseline;padding:10px 14px;background:#efe6d2;border-bottom:1px dashed #cbbd9f;font:500 12px/1.45 "IBM Plex Mono",monospace}
   .mv-sheet .how b{font-size:18px;color:#1f1b16;grid-row:span 2}.mv-sheet .how span{color:#7b4a2a}.mv-sheet .how small{color:#5f5446;font-size:11px}
   .mv-sheet .tot{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:2px 0 12px}
@@ -253,7 +253,6 @@
   #mv-svg .me-halo{fill:rgba(43,111,214,.22)}#mv-svg .me-dot{fill:#2b6fd6;stroke:#fff;stroke-width:3}
   .mv-zoom button.txt{font-size:12px;letter-spacing:.02em}
   .mv-zoom button.on{background:#1f1b16;color:#f6f0e2}
-  #mv-locate.on{color:#2b6fd6}#mv-locate.on.on{background:#f6f0e2}
   .mv-toast{position:absolute;left:12px;right:66px;top:calc(64px + env(safe-area-inset-top));background:#1f1b16;color:#f6f0e2;padding:10px 12px;font:500 12px/1.45 "IBM Plex Mono",monospace;border-radius:2px;box-shadow:3px 3px 0 #cbbd9f;z-index:3}
   .mv-guide{position:absolute;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));background:#f6f0e2;border:1.5px solid #1f1b16;box-shadow:3px 3px 0 #cbbd9f;padding:10px 12px 12px;border-radius:2px}
   .mv-guide .g-t{display:flex;justify-content:space-between;align-items:center;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:#7b4a2a}
@@ -321,6 +320,11 @@
   #mapview.night .mv-sheet details.passos{background:#262a31;border-bottom-color:#3a3f47}#mapview.night .mv-sheet details.passos summary{color:#e6a565}
   #mapview.night .mv-sheet ol.steps li{border-top-color:#3a3f47}#mapview.night .mv-sheet ol.steps small{color:#a8a194}
   #mapview.night .mv-sheet ol.steps .st-ride .ar{background:#ff6a4d;color:#fff}#mapview.night .mv-sheet ol.steps .st-arrive .ar{background:#e6a565}
+  .mv-fab{position:absolute;right:12px;bottom:calc(84px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:7px;padding:11px 15px 11px 12px;border:1.5px solid #1f1b16;border-radius:24px;background:#f6f0e2;color:#1f1b16;font:600 14px Inter,system-ui,sans-serif;box-shadow:2px 3px 0 #cbbd9f;z-index:2}
+  .mv-fab svg{width:22px;height:22px}
+  .mv-fab.on{color:#2b6fd6;border-color:#2b6fd6}
+  #mapview.guiding .mv-fab{bottom:calc(232px + env(safe-area-inset-bottom))}
+  #mapview.night .mv-fab{background:#22252b;color:#e8e2d4;border-color:#5a5f68;box-shadow:2px 2px 0 #000}#mapview.night .mv-fab.on{color:#6ea4ff;border-color:#6ea4ff}
   .mv-sheet{position:absolute;left:0;right:0;bottom:0;max-height:62dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#f6f0e2;border-top:2px solid #1f1b16;box-shadow:0 -6px 20px rgba(0,0,0,.18);padding:0 0 calc(14px + env(safe-area-inset-bottom))}
   .mv-sheet .grab{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;background:#f6f0e2;border-bottom:1px solid #cbbd9f;z-index:1}
   .mv-sheet .grab span{font:500 12px "IBM Plex Mono",monospace;color:#7b4a2a;letter-spacing:.04em}
@@ -374,7 +378,8 @@
     <a class="mv-back" href="#revolucao" aria-label="Voltar ao roteiro">← Roteiro</a>
     <div class="mv-title">Berlim Colonial <i>e Terceiro Reich</i></div>
   </div>
-  <div class="mv-zoom"><button type="button" data-z="in" aria-label="Aproximar">+</button><button type="button" data-z="out" aria-label="Afastar">−</button><button type="button" data-z="fit" aria-label="Ver tudo">⤢</button><button type="button" id="mv-locate" data-a="me" aria-label="Estou aqui">◎</button><button type="button" id="mv-night" data-a="night" aria-label="Modo noturno">☾</button><button type="button" id="mv-guidebtn" data-a="guide" class="txt" aria-label="Modo guia">Guia</button></div>
+  <div class="mv-zoom"><button type="button" data-z="in" aria-label="Aproximar">+</button><button type="button" data-z="out" aria-label="Afastar">−</button><button type="button" data-z="fit" aria-label="Ver tudo">⤢</button><button type="button" id="mv-night" data-a="night" aria-label="Modo noturno">☾</button><button type="button" id="mv-guidebtn" data-a="guide" class="txt" aria-label="Modo guia">Guia</button></div>
+  <button type="button" class="mv-fab" id="mv-locate" aria-label="Ir para onde estou"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>Onde estou</span></button>
   <div class="mv-toast" id="mv-toast" hidden></div>
   <section class="mv-guide" id="mv-guide" hidden aria-live="polite"></section>
   <div class="mv-scale" id="mv-scale"><i></i><b>200 m</b><span>© OpenStreetMap</span></div>
@@ -1367,7 +1372,7 @@ function nextStop(){ const st=DAYS.revolucao.stops; for(let i=1;i<st.length;i++)
 function setDone(i,val){ setTimeout(()=>{ if(MV.px) zoomUpdate(MV.px); },0); const id="revolucao-"+i; if(val) done[id]=true; else delete done[id]; store.set(doneKey,done);
   const cb=document.querySelector(`input[data-id="${id}"]`); if(cb){ cb.checked=val; cb.closest(".stop").classList.toggle("done",val); } }
 function guideToggle(on){
-  GUIDE.on=on; document.getElementById("mv-guidebtn").classList.toggle("on",on);
+  GUIDE.on=on; document.getElementById("mv-guidebtn").classList.toggle("on",on); document.getElementById("mapview").classList.toggle("guiding",on);
   if(on){ closeSheet(); document.getElementById("mv-hint").hidden=true; GEO.follow=true; geoStart(false); guideUpdate(true); }
   else { document.getElementById("mv-guide").hidden=true; GEO.follow=false; highlightLeg(-1); document.getElementById("mv-bar").hidden=false; }
 }
@@ -1421,6 +1426,7 @@ function initNight(){ let v=null; try{ v=localStorage.getItem(NIGHT_KEY); }catch
   const h=new Date().getHours(); setNight(v===null ? (h>=17||h<7) : v==="1", false); }
 
 document.getElementById("mv-bar").addEventListener("click",showLegs);
+document.getElementById("mv-locate").addEventListener("click",()=>geoStart(true));
 function openMap(){
   const mv=document.getElementById("mapview"); document.body.classList.add("mapmode"); document.body.dataset.day="revolucao"; mv.hidden=false;
   if(!MV.built){ initNight(); buildMap(); const D=md(); document.getElementById("mv-bar-t").textContent=`${fmtM(D.legs.reduce((a,l)=>a+l.m,0))} a pé · U2 ~${RIDE_MIN} min`; }
