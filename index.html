@@ -245,6 +245,65 @@
   .mv-legend{position:absolute;left:12px;top:calc(112px + env(safe-area-inset-top));background:rgba(246,240,226,.94);border:1px solid #1f1b16;box-shadow:2px 2px 0 #cbbd9f;padding:6px 8px;font:500 10.5px/1.2 "IBM Plex Mono",monospace;color:#1f1b16;display:flex;flex-direction:column;gap:4px;pointer-events:none}
   .mv-legend div{display:flex;align-items:center;gap:6px;white-space:nowrap}
   .mv-legend svg{width:30px;height:8px;flex:none;overflow:visible}
+  #mv-svg .m-bg{fill:#efe6d2}#mv-svg .m-grid{fill:none;stroke:#8a7a5c;stroke-width:.35;opacity:.35}
+  .mv-legend .lg-cas{stroke:#f6f0e2}.mv-legend .lg-walk{stroke:#7b4a2a}.mv-legend .lg-ride{stroke:#c2412a}.mv-legend .lg-path{stroke:#b7a47e}
+  #mv-svg .mk.hid{display:none}
+  #mv-svg .mk.ok circle{fill:#9a8f7b}#mapview.night #mv-svg .mk.ok circle{fill:#6d675c}#mapview.night #mv-svg .mk.ok text{fill:#ece4d2}
+  #mv-svg .m-acc{fill:rgba(43,111,214,.14);stroke:rgba(43,111,214,.5);stroke-width:.6}
+  #mv-svg .me-halo{fill:rgba(43,111,214,.22)}#mv-svg .me-dot{fill:#2b6fd6;stroke:#fff;stroke-width:3}
+  .mv-zoom button.txt{font-size:12px;letter-spacing:.02em}
+  .mv-zoom button.on{background:#1f1b16;color:#f6f0e2}
+  #mv-locate.on{color:#2b6fd6}#mv-locate.on.on{background:#f6f0e2}
+  .mv-toast{position:absolute;left:12px;right:66px;top:calc(64px + env(safe-area-inset-top));background:#1f1b16;color:#f6f0e2;padding:10px 12px;font:500 12px/1.45 "IBM Plex Mono",monospace;border-radius:2px;box-shadow:3px 3px 0 #cbbd9f;z-index:3}
+  .mv-guide{position:absolute;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));background:#f6f0e2;border:1.5px solid #1f1b16;box-shadow:3px 3px 0 #cbbd9f;padding:10px 12px 12px;border-radius:2px}
+  .mv-guide .g-t{display:flex;justify-content:space-between;align-items:center;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:#7b4a2a}
+  .mv-guide .g-num{width:26px;height:26px;border-radius:50%;background:#7b4a2a;color:#fff;display:grid;place-items:center;font-weight:600;letter-spacing:0}
+  .mv-guide .g-n{font:700 18px/1.2 Fraunces,Georgia,serif;margin:4px 0 4px}
+  .mv-guide .g-d{font:400 11.5px/1.45 "IBM Plex Mono",monospace;color:#5f5446}.mv-guide .g-d b{color:#1f1b16}
+  .mv-guide .g-a{display:flex;gap:8px;margin-top:10px}
+  .mv-guide .g-a button{flex:1;border:1px solid #1f1b16;background:#efe6d2;color:#1f1b16;font:600 13px "IBM Plex Mono",monospace;padding:11px 6px;border-radius:2px}
+  .mv-guide .g-a button.pri{background:#1f1b16;color:#f6f0e2;flex:1.4}.mv-guide .g-a button[data-g="off"]{flex:0 0 44px}
+  .mv-sheet .acts button.feito{font:600 12px "IBM Plex Mono",monospace;padding:9px 12px;border:1px dashed #1f1b16;border-radius:2px;background:transparent;color:#1f1b16}
+  .mv-sheet .acts button.feito.on{background:#5c6b45;border:1px solid #5c6b45;color:#fff}
+  /* ---- modo noturno ---- */
+  #mapview.night{background:#17191d;color:#e8e2d4}
+  #mapview.night #mv-svg .m-bg{fill:#17191d}#mapview.night #mv-svg .m-grid{stroke:#3a3f47;opacity:.5}
+  #mapview.night #mv-svg .m-park{fill:#1f2a1d}#mapview.night #mv-svg .m-water{fill:#16293a;stroke:#1f3a50}
+  #mapview.night #mv-svg .m-path{stroke:#5a5446}
+  #mapview.night #mv-svg .m-minc{stroke:#24272c}#mapview.night #mv-svg .m-min{stroke:#363a41}
+  #mapview.night #mv-svg .m-majc{stroke:#23262b}#mapview.night #mv-svg .m-maj{stroke:#4d525b}
+  #mapview.night #mv-svg .m-ride{stroke:#ff6a4d}
+  #mapview.night #mv-svg #mv-legs .casing path{stroke:#17191d}
+  #mapview.night #mv-svg .m-leg{stroke:#e6a565}
+  #mapview.night #mv-svg.hasel .m-leg.on{stroke:#ffe0b3}
+  #mapview.night #mv-svg #mv-labels text{fill:#a8a194;stroke:#17191d}#mapview.night #mv-svg #mv-labels text.t1{fill:#d6cfbf}
+  #mapview.night #mv-svg .stn rect{fill:#3b7be0;stroke:#17191d}#mapview.night #mv-svg .stn .nm{fill:#8db4f0;stroke:#17191d}
+  #mapview.night #mv-svg .pill rect{fill:#22252b;stroke:#e6a565}#mapview.night #mv-svg .pill text{fill:#e6a565}
+  #mapview.night #mv-svg .pill.ride rect{stroke:#ff6a4d}#mapview.night #mv-svg .pill.ride text{fill:#ff8a73}
+  #mapview.night #mv-svg .pill.hi rect{fill:#e6a565;stroke:#e6a565}#mapview.night #mv-svg .pill.hi text{fill:#17191d}
+  #mapview.night #mv-svg .mk circle{fill:#ece4d2;stroke:#17191d}#mapview.night #mv-svg .mk text{fill:#17191d}
+  #mapview.night #mv-svg .mk[data-i="0"] circle{fill:#3b7be0}#mapview.night #mv-svg .mk[data-i="0"] text{fill:#fff}
+  #mapview.night #mv-svg .mk.sel circle{fill:#e6a565}
+  #mapview.night .mv-top{background:linear-gradient(#17191d 60%,rgba(23,25,29,0))}
+  #mapview.night .mv-back{background:#ece4d2;color:#17191d}
+  #mapview.night .mv-zoom button,#mapview.night .mv-legend,#mapview.night .mv-hint,#mapview.night .mv-guide{background:#22252b;color:#e8e2d4;border-color:#5a5f68;box-shadow:2px 2px 0 #000}
+  #mapview.night .mv-zoom button.on{background:#e6a565;color:#17191d}
+  #mapview.night .mv-legend .lg-cas{stroke:#22252b}#mapview.night .mv-legend .lg-walk{stroke:#e6a565}#mapview.night .mv-legend .lg-ride{stroke:#ff6a4d}#mapview.night .mv-legend .lg-path{stroke:#6b6455}
+  #mapview.night .mv-scale{color:#cfc7b6}#mapview.night .mv-scale i{border-color:#cfc7b6}#mapview.night .mv-scale span{color:#8f887b}
+  #mapview.night .mv-bar{background:#ece4d2;color:#17191d;box-shadow:2px 2px 0 #000}#mapview.night .mv-bar b{color:#4a4338}
+  #mapview.night .mv-toast{background:#ece4d2;color:#17191d;box-shadow:2px 2px 0 #000}
+  #mapview.night .mv-guide .g-t{color:#e6a565}#mapview.night .mv-guide .g-num{background:#e6a565;color:#17191d}#mapview.night .mv-guide .g-d{color:#a8a194}#mapview.night .mv-guide .g-d b{color:#ece4d2}
+  #mapview.night .mv-guide .g-a button{background:#2c3037;color:#e8e2d4;border-color:#5a5f68}#mapview.night .mv-guide .g-a button.pri{background:#e6a565;color:#17191d;border-color:#e6a565}
+  #mapview.night .mv-sheet{background:#1e2126;color:#e8e2d4;border-top-color:#5a5f68}
+  #mapview.night .mv-sheet .grab{background:#1e2126;border-bottom-color:#3a3f47}#mapview.night .mv-sheet .grab span,#mapview.night .mv-sheet h3,#mapview.night .mv-sheet .addr,#mapview.night .mv-sheet .imp h4{color:#e6a565}
+  #mapview.night .mv-sheet .grab button,#mapview.night .mv-sheet .nav button,#mapview.night .mv-sheet .acts a,#mapview.night .mv-sheet .acts button.feito{background:#2c3037;color:#e8e2d4;border-color:#5a5f68}
+  #mapview.night .mv-sheet .acts a.pri{background:#e6a565;color:#17191d;border-color:#e6a565}
+  #mapview.night .mv-sheet .acts button.feito.on{background:#5c6b45;color:#fff}
+  #mapview.night .mv-sheet .what{color:#cfc7b6}#mapview.night .mv-sheet .addr a,#mapview.night .mv-sheet .src,#mapview.night .mv-sheet .src a{color:#a8a194}
+  #mapview.night .mv-sheet h3{border-top-color:#3a3f47}#mapview.night .mv-sheet .ph{filter:grayscale(.35) sepia(.2) brightness(.85)}
+  #mapview.night .mv-sheet .how,#mapview.night .mv-sheet .tot div{background:#262a31;border-color:#3a3f47}#mapview.night .mv-sheet .how b,#mapview.night .mv-sheet .tot b{color:#ece4d2}
+  #mapview.night .mv-sheet .how span{color:#e6a565}#mapview.night .mv-sheet .how small,#mapview.night .mv-sheet .tot small,#mapview.night .mv-sheet ol.legs small{color:#a8a194}
+  #mapview.night .mv-sheet ol.legs li{border-bottom-color:#3a3f47}#mapview.night .mv-sheet ol.legs .n{background:#ece4d2;color:#17191d}#mapview.night .mv-sheet ol.legs em{color:#e6a565}
   .mv-sheet{position:absolute;left:0;right:0;bottom:0;max-height:62dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#f6f0e2;border-top:2px solid #1f1b16;box-shadow:0 -6px 20px rgba(0,0,0,.18);padding:0 0 calc(14px + env(safe-area-inset-bottom))}
   .mv-sheet .grab{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;background:#f6f0e2;border-bottom:1px solid #cbbd9f;z-index:1}
   .mv-sheet .grab span{font:500 12px "IBM Plex Mono",monospace;color:#7b4a2a;letter-spacing:.04em}
@@ -298,13 +357,15 @@
     <a class="mv-back" href="#revolucao" aria-label="Voltar ao roteiro">← Roteiro</a>
     <div class="mv-title">Berlim Colonial <i>e Terceiro Reich</i></div>
   </div>
-  <div class="mv-zoom"><button type="button" data-z="in" aria-label="Aproximar">+</button><button type="button" data-z="out" aria-label="Afastar">−</button><button type="button" data-z="fit" aria-label="Ver tudo">⤢</button></div>
+  <div class="mv-zoom"><button type="button" data-z="in" aria-label="Aproximar">+</button><button type="button" data-z="out" aria-label="Afastar">−</button><button type="button" data-z="fit" aria-label="Ver tudo">⤢</button><button type="button" id="mv-locate" data-a="me" aria-label="Estou aqui">◎</button><button type="button" id="mv-night" data-a="night" aria-label="Modo noturno">☾</button><button type="button" id="mv-guidebtn" data-a="guide" class="txt" aria-label="Modo guia">Guia</button></div>
+  <div class="mv-toast" id="mv-toast" hidden></div>
+  <section class="mv-guide" id="mv-guide" hidden aria-live="polite"></section>
   <div class="mv-scale" id="mv-scale"><i></i><b>200 m</b><span>© OpenStreetMap</span></div>
   <div class="mv-legend" id="mv-legend" aria-label="Legenda">
-    <div><svg viewBox="0 0 30 8"><path d="M1 4H29" stroke="#f6f0e2" stroke-width="6" stroke-linecap="round"/><path d="M1 4H29" stroke="#7b4a2a" stroke-width="3.4" stroke-linecap="round"/></svg>Percurso a pé</div>
-    <div><svg viewBox="0 0 30 8"><path d="M1 4H29" stroke="#c2412a" stroke-width="3.4" stroke-dasharray="7 4" stroke-linecap="round"/></svg>U2 (metro)</div>
+    <div><svg viewBox="0 0 30 8"><path class="lg-cas" d="M1 4H29" stroke-width="6" stroke-linecap="round"/><path class="lg-walk" d="M1 4H29" stroke-width="3.4" stroke-linecap="round"/></svg>Percurso a pé</div>
+    <div><svg viewBox="0 0 30 8"><path class="lg-ride" d="M1 4H29" stroke-width="3.4" stroke-dasharray="7 4" stroke-linecap="round"/></svg>U2 (metro)</div>
     <div><svg viewBox="0 0 30 8"><path d="M1 4H29" stroke="#8d7fb0" stroke-width="1.6" stroke-dasharray="4 3"/></svg>Outras linhas U</div>
-    <div><svg viewBox="0 0 30 8"><path d="M1 4H29" stroke="#b7a47e" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>Caminhos</div>
+    <div><svg viewBox="0 0 30 8"><path class="lg-path" d="M1 4H29" stroke-width="1.4" stroke-dasharray="2 1.6"/></svg>Caminhos</div>
   </div>
   <div class="mv-hint" id="mv-hint">Toque num número para saber o que é, ou numa etiqueta de tempo.<br>Arraste para mover · dois dedos para ampliar.</div>
   <button type="button" class="mv-bar" id="mv-bar"><span>☰ Etapas</span><b id="mv-bar-t"></b></button>
@@ -846,22 +907,22 @@ DAYS.revolucao = {
   map:()=>routeMap(),
   stops:[
     {t:"15:00", loc:[["Axel-Springer-Straße 55, 10117 Berlin",52.5098492,13.3998213]], art:"hotel", img:"img/courtyard.jpg", ar:"4/3", ph:"day", name:"Saída do hotel", note:"Courtyard by Marriott Berlin City Center, na Axel-Springer-Straße. São 5 minutos a pé até à estação de Spittelmarkt, e daí o U2 vai direto até Zoologischer Garten, sem mudanças. O passeio faz-se de oeste para leste e acaba no Besselpark, a cerca de 650 m do hotel.", photo:H2},
-    {t:"15:25", loc:[["Olof-Palme-Platz, 10787 Berlin",52.5055584,13.3405896]], art:"eden", img:"img/eden.jpg", ar:"1024/734", ph:"day", book:"eden", name:"Antigo Hotel Eden · Olof-Palme-Platz", note:"A praça da fonte de pedras, à entrada do Aquário e junto à Porta dos Elefantes do Zoo. Do outro lado da antiga Budapester Straße ficava o Hotel Eden, o da fotografia antiga. O edifício já não existe.", route:dir(H2,"Olof-Palme-Platz Berlin","transit"), rl:"U2 · ~33 min porta a porta", photo:"Olof-Palme-Platz Berlin"},
-    {t:"15:40", loc:[["Lichtensteinbrücke, Landwehrkanal, 10787 Berlin",52.5089399,13.3432077]], art:"rosa", img:"img/rosa.jpg", ar:"3/2", ph:"day", book:"rosa", name:"Ponte Lichtenstein · memorial a Rosa Luxemburg", note:"Sobre o Landwehrkanal, entre o Zoo e o Tiergarten. Junto à ponte, à beira do canal, o nome de Rosa Luxemburg ergue-se em letras de metal sobre uma placa inclinada, virada para a água.", route:dir("Olof-Palme-Platz Berlin",RT), rl:"A pé · 13 min · 940 m", photo:RT},
-    {t:"15:55", loc:[["Neuer See, Tiergarten, 10787 Berlin",52.5124601,13.3412865]], art:"liebknecht", img:"img/liebknecht.jpg", ar:"4/3", ph:"day", book:"liebknecht", name:"Memorial a Karl Liebknecht · Neuer See", note:"Uma coluna de tijolo à beira do lago, a 200 m da ponte, com uma placa de texto no chão à frente. Mesmo ao lado fica o Café am Neuen See, se precisarem de um café quente antes de atravessar o parque.", route:dir(RT,LK), rl:"A pé · 11 min · 790 m", photo:LK},
-    {t:"16:10", loc:[["Großer Stern, 10557 Berlin",52.51452,13.35010]], art:"sieg", img:"img/sieg.jpg", ar:"4/4", ph:"dusk", book:"sieg", name:"Coluna da Vitória · Großer Stern", note:"A coluna da Vitória dourada, no centro da rotunda da Grande Estrela. Usem as passagens subterrâneas para lá chegar. Se quiserem subir (285 degraus, entrada paga), confirmem o horário: no inverno fecha cedo.", route:dir(LK,"Siegessäule Berlin"), rl:"A pé · 14 min · 1,0 km", photo:"Siegessäule Berlin"},
-    {t:"16:40", loc:[["Junto à Haus der Kulturen der Welt (John-Foster-Dulles-Allee 10), 10557 Berlin",52.518639,13.3620383]], art:"hirschfeld", img:"img/hirschfeld.jpg", ar:"500/360", ph:"dusk", book:"hirschfeld", name:"Instituto de Magnus Hirschfeld · margem do Spree", note:"Da Grande Estrela, sigam para nordeste pelo Tiergarten até ao Spree. O memorial é uma caixa de metal castanha junto ao rio, ao lado da Haus der Kulturen der Welt. Chegam ao Spree ao lusco-fusco: o sol põe-se por volta das 16h15. A fotografia mostra o instituto a 6 de maio de 1933, no dia em que estudantes nazis o invadiram.", route:dir("Siegessäule Berlin",HKW), rl:"A pé · 13 min · 970 m", photo:"Gedenkort Institut für Sexualwissenschaft Berlin"},
-    {t:"17:05", loc:[["Platz der Republik 1, 11011 Berlin",52.5186202,13.3761871]], art:"reichstag", img:"img/reichstag.jpg", ar:"671/298", ph:"dusk", book:"reichstag", name:"Reichstag", note:"A fachada oeste, na Platz der Republik. Ao anoitecer, a cúpula de vidro acende-se.", route:dir(HKW,RS), rl:"A pé · 16 min · 1,1 km", photo:RS},
-    {t:"17:25", loc:[["Pariser Platz, 10117 Berlin",52.5162746,13.377704]], art:"gate", img:"img/brandenburg.jpg", ar:"3/2", ph:"night", book:"gate", name:"Portas de Brandemburgo", note:"Início do passeio do livro sobre o colonialismo alemão. Daqui sigam para sul pela Ebertstraße, ao longo do Tiergarten.", route:dir(RS,BT), rl:"A pé · 7 min · 520 m", photo:BT},
-    {t:"17:40", loc:[["Memorial aos Homossexuais: Ebertstraße, 10785 Berlin",52.5132624,13.3761485],["Memorial do Holocausto: Cora-Berliner-Straße 1, 10117 Berlin",52.5139474,13.3787126]], art:"stelae", img:"img/stelae.jpg", ar:"900/500", ph:"night", book:"stelae", name:"Memorial aos Homossexuais Perseguidos e Memorial do Holocausto", note:"Primeiro o bloco de betão com o vídeo, do lado do Tiergarten da Ebertstraße. Depois atravessem a rua e cruzem os blocos do Memorial do Holocausto de oeste para leste, em direção à Wilhelmstraße.", route:dir(BT,"Holocaust-Mahnmal Berlin","walking",[HOMO]), rl:"A pé · 6 min · 440 m", photo:HOMO},
-    {t:"18:00", loc:[["Wilhelmstraße 51, 10117 Berlin",52.5125557,13.3832429]], art:"wilhelm", img:"img/wilhelm.jpg", ar:"519/799", ph:"night", book:"wilhelm", name:"Imperial Colonial Office · Reichskolonialamt", note:"Wilhelmstraße 51 (antigo n.º 62), onde hoje fica uma escola, junto ao centro juvenil Ikarus. Aqui funcionou o Ministério Colonial do Império (1907–1920), que administrava as colónias e comandava as tropas coloniais. Saiam do memorial pela Hannah-Arendt-Straße até à Wilhelmstraße. Há painéis históricos no passeio em quase cada número. O antigo Ministério da Educação da RDA (Unter den Linden 71) fica 300 m a norte, na esquina do Hotel Adlon, se quiserem desviar. A fotografia vem de um desses painéis.", route:dir("Holocaust-Mahnmal Berlin","Wilhelmstraße 51, 10117 Berlin"), rl:"A pé · 7 min · 480 m", photo:"Wilhelmstraße Berlin"},
-    {t:"18:15", loc:[["Wilhelmstraße 92, 10117 Berlin",52.5125647,13.3822734]], art:"w92", img:"img/radziwill.jpg", ar:"400/258", ph:"night", book:"w92", name:"Wilhelmstraße 92 · antiga Chancelaria de Bismarck", note:"Do outro lado da rua, um pouco a sul. A gravura antiga mostra o palácio que aqui existia, o Palais Radziwill: foi a Chancelaria de Bismarck, palco da Conferência de Berlim, e Hitler também a usou a partir de 1933. Procurem a placa no passeio.", route:dir("Wilhelmstraße 51, 10117 Berlin",W92), rl:"A pé · 2 min · 110 m", photo:W92},
-    {t:"18:30", loc:[["Wilhelmstraße 94, esquina com a Voßstraße, 10117 Berlin",52.5116069,13.3828302]], art:"chancelaria", img:"img/neuekanzlei.jpg", ar:"900/573", ph:"night", book:"chancelaria", name:"Local da Nova Chancelaria de Hitler", note:"Mesmo ao lado da antiga chancelaria de Bismarck: é o quarteirão seguinte da Wilhelmstraße, na esquina com a Voßstraße, em frente a uma entrada do Mall of Berlin. Hoje só há prédios da RDA. O postal da época mostra a fachada da nova chancelaria de Speer, construída ao lado da antiga, ao longo da Voßstraße.", route:dir(W92,W94), rl:"A pé · 3 min · 180 m", photo:"Voßstraße Berlin"},
-    {t:"18:45", loc:[["Potsdamer Platz, em frente ao n.º 10, 10785 Berlin",52.508451,13.3771342]], art:"potsdamer", img:"img/pedestal.jpg", ar:"800/583", ph:"night", book:"potsdamer", name:"Potsdamer Platz · o pedestal de Liebknecht", note:"Um pedestal de pedra sem estátua em frente ao edifício curvo de tijolo vermelho, por cima da entrada do metro. A fotografia é de dezembro de 1951, pouco depois da inauguração (Bundesarchiv). A inscrição diz que foi deste sítio que Liebknecht apelou, a 1 de maio de 1916, à luta contra a guerra imperialista e pela paz.", route:dir(W94,PP,"walking",["Voßstraße Berlin"]), rl:"A pé · 10 min · 710 m", photo:"Karl-Liebknecht-Denkmal Potsdamer Platz Berlin"},
-    {t:"19:10", loc:[["Besselpark, antiga Friedrichstraße 24, 10969 Berlin",52.5038396,13.391584]], art:"bessel", ph:"night", book:"bessel", name:"Besselpark · Liga para a Defesa da Raça Negra", note:"Pela Stresemannstraße e a Anhalter Straße até à Wilhelmstraße, depois a Puttkamerstraße até à Friedrichstraße. O Besselpark é o relvado ao lado da sede do jornal taz. Fim do percurso, a cerca de 650 m do hotel.", route:dir(PP,"Besselpark Berlin"), rl:"A pé · 18 min · 1,3 km", photo:"Besselpark Berlin"}
+    {t:"15:35", loc:[["Olof-Palme-Platz, 10787 Berlin",52.5055584,13.3405896]], art:"eden", img:"img/eden.jpg", ar:"1024/734", ph:"day", book:"eden", name:"Antigo Hotel Eden · Olof-Palme-Platz", note:"A praça da fonte de pedras, à entrada do Aquário e junto à Porta dos Elefantes do Zoo. Do outro lado da antiga Budapester Straße ficava o Hotel Eden, o da fotografia antiga. O edifício já não existe.", route:dir(H2,"Olof-Palme-Platz Berlin","transit"), rl:"U2 · ~33 min porta a porta", photo:"Olof-Palme-Platz Berlin"},
+    {t:"15:50", loc:[["Lichtensteinbrücke, Landwehrkanal, 10787 Berlin",52.5089399,13.3432077]], art:"rosa", img:"img/rosa.jpg", ar:"3/2", ph:"day", book:"rosa", name:"Ponte Lichtenstein · memorial a Rosa Luxemburg", note:"Sobre o Landwehrkanal, entre o Zoo e o Tiergarten. Junto à ponte, à beira do canal, o nome de Rosa Luxemburg ergue-se em letras de metal sobre uma placa inclinada, virada para a água.", route:dir("Olof-Palme-Platz Berlin",RT), rl:"A pé · 13 min · 940 m", photo:RT},
+    {t:"16:10", loc:[["Neuer See, Tiergarten, 10787 Berlin",52.5124601,13.3412865]], art:"liebknecht", img:"img/liebknecht.jpg", ar:"4/3", ph:"day", book:"liebknecht", name:"Memorial a Karl Liebknecht · Neuer See", note:"Uma coluna de tijolo à beira do lago, a 200 m da ponte, com uma placa de texto no chão à frente. Mesmo ao lado fica o Café am Neuen See, se precisarem de um café quente antes de atravessar o parque.", route:dir(RT,LK), rl:"A pé · 11 min · 790 m", photo:LK},
+    {t:"16:30", loc:[["Großer Stern, 10557 Berlin",52.51452,13.35010]], art:"sieg", img:"img/sieg.jpg", ar:"4/4", ph:"dusk", book:"sieg", name:"Coluna da Vitória · Großer Stern", note:"A coluna da Vitória dourada, no centro da rotunda da Grande Estrela. Usem as passagens subterrâneas para lá chegar. Se quiserem subir (285 degraus, entrada paga), confirmem o horário: no inverno fecha cedo.", route:dir(LK,"Siegessäule Berlin"), rl:"A pé · 14 min · 1,0 km", photo:"Siegessäule Berlin"},
+    {t:"16:55", loc:[["Junto à Haus der Kulturen der Welt (John-Foster-Dulles-Allee 10), 10557 Berlin",52.518639,13.3620383]], art:"hirschfeld", img:"img/hirschfeld.jpg", ar:"500/360", ph:"dusk", book:"hirschfeld", name:"Instituto de Magnus Hirschfeld · margem do Spree", note:"Da Grande Estrela, sigam para nordeste pelo Tiergarten até ao Spree. O memorial é uma caixa de metal castanha junto ao rio, ao lado da Haus der Kulturen der Welt. Chegam ao Spree ao lusco-fusco: o sol põe-se por volta das 16h15. A fotografia mostra o instituto a 6 de maio de 1933, no dia em que estudantes nazis o invadiram.", route:dir("Siegessäule Berlin",HKW), rl:"A pé · 13 min · 970 m", photo:"Gedenkort Institut für Sexualwissenschaft Berlin"},
+    {t:"17:20", loc:[["Platz der Republik 1, 11011 Berlin",52.5186202,13.3761871]], art:"reichstag", img:"img/reichstag.jpg", ar:"671/298", ph:"dusk", book:"reichstag", name:"Reichstag", note:"A fachada oeste, na Platz der Republik. Ao anoitecer, a cúpula de vidro acende-se.", route:dir(HKW,RS), rl:"A pé · 16 min · 1,1 km", photo:RS},
+    {t:"17:35", loc:[["Pariser Platz, 10117 Berlin",52.5162746,13.377704]], art:"gate", img:"img/brandenburg.jpg", ar:"3/2", ph:"night", book:"gate", name:"Portas de Brandemburgo", note:"Início do passeio do livro sobre o colonialismo alemão. Daqui sigam para sul pela Ebertstraße, ao longo do Tiergarten.", route:dir(RS,BT), rl:"A pé · 7 min · 520 m", photo:BT},
+    {t:"17:50", loc:[["Memorial aos Homossexuais: Ebertstraße, 10785 Berlin",52.5132624,13.3761485],["Memorial do Holocausto: Cora-Berliner-Straße 1, 10117 Berlin",52.5139474,13.3787126]], art:"stelae", img:"img/stelae.jpg", ar:"900/500", ph:"night", book:"stelae", name:"Memorial aos Homossexuais Perseguidos e Memorial do Holocausto", note:"Primeiro o bloco de betão com o vídeo, do lado do Tiergarten da Ebertstraße. Depois atravessem a rua e cruzem os blocos do Memorial do Holocausto de oeste para leste, em direção à Wilhelmstraße.", route:dir(BT,"Holocaust-Mahnmal Berlin","walking",[HOMO]), rl:"A pé · 6 min · 440 m", photo:HOMO},
+    {t:"18:10", loc:[["Wilhelmstraße 51, 10117 Berlin",52.5125557,13.3832429]], art:"wilhelm", img:"img/wilhelm.jpg", ar:"519/799", ph:"night", book:"wilhelm", name:"Imperial Colonial Office · Reichskolonialamt", note:"Wilhelmstraße 51 (antigo n.º 62), onde hoje fica uma escola, junto ao centro juvenil Ikarus. Aqui funcionou o Ministério Colonial do Império (1907–1920), que administrava as colónias e comandava as tropas coloniais. Saiam do memorial pela Hannah-Arendt-Straße até à Wilhelmstraße. Há painéis históricos no passeio em quase cada número. O antigo Ministério da Educação da RDA (Unter den Linden 71) fica 300 m a norte, na esquina do Hotel Adlon, se quiserem desviar. A fotografia vem de um desses painéis.", route:dir("Holocaust-Mahnmal Berlin","Wilhelmstraße 51, 10117 Berlin"), rl:"A pé · 7 min · 480 m", photo:"Wilhelmstraße Berlin"},
+    {t:"18:25", loc:[["Wilhelmstraße 92, 10117 Berlin",52.5125647,13.3822734]], art:"w92", img:"img/radziwill.jpg", ar:"400/258", ph:"night", book:"w92", name:"Wilhelmstraße 92 · antiga Chancelaria de Bismarck", note:"Do outro lado da rua, um pouco a sul. A gravura antiga mostra o palácio que aqui existia, o Palais Radziwill: foi a Chancelaria de Bismarck, palco da Conferência de Berlim, e Hitler também a usou a partir de 1933. Procurem a placa no passeio.", route:dir("Wilhelmstraße 51, 10117 Berlin",W92), rl:"A pé · 2 min · 110 m", photo:W92},
+    {t:"18:35", loc:[["Wilhelmstraße 94, esquina com a Voßstraße, 10117 Berlin",52.5116069,13.3828302]], art:"chancelaria", img:"img/neuekanzlei.jpg", ar:"900/573", ph:"night", book:"chancelaria", name:"Local da Nova Chancelaria de Hitler", note:"Mesmo ao lado da antiga chancelaria de Bismarck: é o quarteirão seguinte da Wilhelmstraße, na esquina com a Voßstraße, em frente a uma entrada do Mall of Berlin. Hoje só há prédios da RDA. O postal da época mostra a fachada da nova chancelaria de Speer, construída ao lado da antiga, ao longo da Voßstraße.", route:dir(W92,W94), rl:"A pé · 3 min · 180 m", photo:"Voßstraße Berlin"},
+    {t:"18:55", loc:[["Potsdamer Platz, em frente ao n.º 10, 10785 Berlin",52.508451,13.3771342]], art:"potsdamer", img:"img/pedestal.jpg", ar:"800/583", ph:"night", book:"potsdamer", name:"Potsdamer Platz · o pedestal de Liebknecht", note:"Um pedestal de pedra sem estátua em frente ao edifício curvo de tijolo vermelho, por cima da entrada do metro. A fotografia é de dezembro de 1951, pouco depois da inauguração (Bundesarchiv). A inscrição diz que foi deste sítio que Liebknecht apelou, a 1 de maio de 1916, à luta contra a guerra imperialista e pela paz.", route:dir(W94,PP,"walking",["Voßstraße Berlin"]), rl:"A pé · 10 min · 710 m", photo:"Karl-Liebknecht-Denkmal Potsdamer Platz Berlin"},
+    {t:"19:20", loc:[["Besselpark, antiga Friedrichstraße 24, 10969 Berlin",52.5038396,13.391584]], art:"bessel", ph:"night", book:"bessel", name:"Besselpark · Liga para a Defesa da Raça Negra", note:"Pela Stresemannstraße e a Anhalter Straße até à Wilhelmstraße, depois a Puttkamerstraße até à Friedrichstraße. O Besselpark é o relvado ao lado da sede do jornal taz. Fim do percurso, a cerca de 650 m do hotel.", route:dir(PP,"Besselpark Berlin"), rl:"A pé · 18 min · 1,3 km", photo:"Besselpark Berlin"}
   ],
   tips:[
-    "O percurso vai de oeste para leste: metro até ao Zoo e depois sempre a pé, saltando sempre para o sítio mais próximo, até acabar no Besselpark, perto do hotel. Em novembro o sol põe-se por volta das 16h15, por isso o parque vem primeiro: o Tiergarten é grande e escuro à noite, e o resto do passeio faz-se pelas ruas iluminadas.",
+    "O percurso vai de oeste para leste: metro até ao Zoo e depois sempre a pé, saltando sempre para o sítio mais próximo, até acabar no Besselpark, perto do hotel. Em novembro o sol põe-se por volta das 16h15, por isso o parque vem primeiro: a parte do Tiergarten acaba por volta das 17h, já ao crepúsculo, e o resto do passeio faz-se pelas ruas iluminadas. Os horários contam com os tempos a pé medidos no mapa e com uma pausa em cada paragem.",
     "Quase nenhuma destas paragens é um monumento. Muitas vezes é uma placa, um painel no passeio ou um espaço vazio, e é isso que o livro ensina a ler.",
     "Chega um bilhete simples AB para o U2 até ao Zoo.",
     "O mapa do autor com todas as paragens do livro está em revolutionaryberlin.wordpress.com/map."
@@ -1021,8 +1082,8 @@ function buildMap(){
       + `<g class="cs pill ride" data-to="1" data-len="${D.ride.len}" data-x="${D.ride.mid[0]}" data-y="${D.ride.mid[1]}"><rect x="-62" y="-9" width="124" height="18" rx="9"/><text y="3.8" text-anchor="middle">U2 · ~${RIDE_MIN} min · 10 est.</text></g>`;
   const stations=D.stations.map(([x,y,n])=>`<g class="cs stn" data-x="${x}" data-y="${y}"><rect x="-6.5" y="-6.5" width="13" height="13" rx="2"/><text class="u" y="3.6" text-anchor="middle">U</text><text class="nm" x="10" y="3.6">${n}</text></g>`).join("");
   svg.innerHTML = `<defs>${labels}</defs>
-    <rect x="-3000" y="-3000" width="${W+6000}" height="${H+6000}" fill="#efe6d2"/>
-    <path d="${grid}" stroke="#8a7a5c" stroke-width=".35" opacity=".35" fill="none"/>
+    <rect class="m-bg" x="-3000" y="-3000" width="${W+6000}" height="${H+6000}"/>
+    <path class="m-grid" d="${grid}"/>
     <path class="m-park" d="${D.park}"/><path class="m-water" d="${D.water}"/>
     <path class="m-path" d="${D.paths}"/>
     <path class="m-minc" d="${D.minor}"/><path class="m-majc" d="${D.major}"/><path class="m-min" d="${D.minor}"/><path class="m-maj" d="${D.major}"/>
@@ -1032,6 +1093,7 @@ function buildMap(){
     <g id="mv-labels">${ltext}</g>
     <g id="mv-stn">${stations}</g>
     <g id="mv-pills">${pills}</g>
+    <circle id="mv-acc" class="m-acc" r="0" style="display:none"/><g id="mv-me" class="cs" data-x="-999" data-y="-999" style="display:none"><circle r="14" class="me-halo"/><circle r="7.5" class="me-dot"/></g>
     <g id="mv-marks">${s7>=0&&st[s7].loc[1]?`<g class="cs mk mk2" data-i="${s7}" data-x="${mvX(st[s7].loc[1][2]).toFixed(2)}" data-y="${mvY(st[s7].loc[1][1]).toFixed(2)}"><circle r="7" fill="#1f1b16" stroke="#efe6d2" stroke-width="2"/></g>`:""}
       ${st.map((s,i)=>{ const [ ,la,lo]=s.loc[0]; const lab=i===0?"H":String(i);
       return `<g class="cs mk" data-i="${i}" data-x="${mvX(lo).toFixed(2)}" data-y="${mvY(la).toFixed(2)}"><circle r="13" fill="${i===0?"#3f6fa8":"#1f1b16"}" stroke="#efe6d2" stroke-width="2.5"/><text y="4.8" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-weight="600" font-size="13" fill="#fff">${lab}</text></g>`;}).join("")}</g>`;
@@ -1051,7 +1113,9 @@ function zoomUpdate(px){
   svg.style.setProperty("--fs",(10.5*px).toFixed(3)+"px"); svg.style.setProperty("--hw",(3*px).toFixed(3)+"px");
   MV.cs.forEach(g=>g.setAttribute("transform",`translate(${g.dataset.x} ${g.dataset.y}) scale(${px.toFixed(4)})`));
   MV.lab.forEach(t=>{ const ok = (+t.dataset.len/px) > (+t.dataset.n*6.3+18) && (t.classList.contains("t1") ? px<2.6 : px<1.1); t.classList.toggle("on",ok); });
-  MV.pills.forEach(p=>{ const sel=MV.sel>=0 && +p.dataset.to===MV.sel; p.classList.toggle("on", sel || (+p.dataset.len/px)>130); p.classList.toggle("hi",sel); });
+  clusterMarks(px);
+  const cur = MV.sel>=0 ? MV.sel : (GUIDE.on? MV.gsel : -1);
+  MV.pills.forEach(p=>{ const sel=cur>=0 && +p.dataset.to===cur; p.classList.toggle("on", sel || (+p.dataset.len/px)>130); p.classList.toggle("hi",sel); });
   svg.classList.toggle("near", px<1.3);
   // escala
   const mpp=px/UPM(), opts=[50,100,200,250,500,1000,2000]; let d=opts.find(o=>o/mpp>=60)||2000;
@@ -1077,7 +1141,7 @@ function centerOn(i){
 function wireMap(svg){
   const pts=new Map(); let start=null, moved=false;
   const toSvg=(cx,cy)=>{ const r=svg.getBoundingClientRect(), v=MV.vb; return [v.x+(cx-r.left)/r.width*v.w, v.y+(cy-r.top)/r.height*v.h]; };
-  svg.addEventListener("pointerdown",e=>{ const hn=document.getElementById("mv-hint"); if(hn) hn.hidden=true; svg.setPointerCapture(e.pointerId); pts.set(e.pointerId,[e.clientX,e.clientY]); moved=false; start={vb:{...MV.vb},pts:new Map(pts)}; });
+  svg.addEventListener("pointerdown",e=>{ const hn=document.getElementById("mv-hint"); if(hn) hn.hidden=true; GEO.follow=false; svg.setPointerCapture(e.pointerId); pts.set(e.pointerId,[e.clientX,e.clientY]); moved=false; start={vb:{...MV.vb},pts:new Map(pts)}; });
   svg.addEventListener("pointermove",e=>{
     if(!pts.has(e.pointerId)) return; pts.set(e.pointerId,[e.clientX,e.clientY]);
     const r=svg.getBoundingClientRect(), v0=start.vb;
@@ -1094,11 +1158,12 @@ function wireMap(svg){
     }
   });
   const end=e=>{ if(!pts.has(e.pointerId)) return; pts.delete(e.pointerId);
-    if(!moved && pts.size===0){ const t=document.elementFromPoint(e.clientX,e.clientY); const g=t&&t.closest&&t.closest(".mk"); if(g) selectStop(+g.dataset.i,true); else { const p=t&&t.closest&&t.closest(".pill"); if(p) selectStop(+p.dataset.to,true); } }
+    if(!moved && pts.size===0){ const t=document.elementFromPoint(e.clientX,e.clientY); const g=t&&t.closest&&t.closest(".mk"); if(g && g.dataset.cl && g.dataset.cl.includes(",")) zoomCluster(g.dataset.cl); else if(g) selectStop(+g.dataset.i,true); else { const p=t&&t.closest&&t.closest(".pill"); if(p) selectStop(+p.dataset.to,true); } }
     start={vb:{...MV.vb},pts:new Map(pts)}; };
   svg.addEventListener("pointerup",end); svg.addEventListener("pointercancel",end);
   svg.addEventListener("wheel",e=>{ e.preventDefault(); const [px,py]=toSvg(e.clientX,e.clientY), v=MV.vb, k=e.deltaY>0?1.15:1/1.15; setVB({x:px-(px-v.x)*k, y:py-(py-v.y)*k, w:v.w*k, h:v.h*k}); },{passive:false});
   document.querySelector(".mv-zoom").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return; const v=MV.vb;
+    if(b.dataset.a==="me"){ geoStart(true); return; } if(b.dataset.a==="night"){ setNight(!document.getElementById("mapview").classList.contains("night"),true); return; } if(b.dataset.a==="guide"){ guideToggle(!GUIDE.on); return; }
     if(b.dataset.z==="fit"){ fitAll(); return; } const k=b.dataset.z==="in"?1/1.5:1.5; const cx=v.x+v.w/2, cy=v.y+v.h/2; setVB({x:cx-v.w*k/2, y:cy-v.h*k/2, w:v.w*k, h:v.h*k}); });
   window.addEventListener("resize",()=>{ if(!document.getElementById("mapview").hidden && MV.vb){ const svgW=svg.clientWidth, svgH=svg.clientHeight; const v=MV.vb; const h=v.w*svgH/svgW; setVB({x:v.x, y:v.y+(v.h-h)/2, w:v.w, h}); } });
 }
@@ -1108,7 +1173,7 @@ function selectStop(i, fromTap){
   document.querySelectorAll("#mv-marks .mk").forEach(g=>g.classList.toggle("sel", +g.dataset.i===i));
   document.querySelectorAll("#mv-legs .m-leg").forEach(p=>p.classList.toggle("on", +p.dataset.to===i));
   document.getElementById("mv-svg").classList.toggle("hasel", i>0); document.querySelector(".m-ride").classList.toggle("on", i===1);
-  document.getElementById("mv-bar").hidden=true; if(MV.px) zoomUpdate(MV.px);
+  document.getElementById("mv-bar").hidden=true; document.getElementById("mv-guide").hidden=true; if(MV.px) zoomUpdate(MV.px);
   const ls=legSummary(i), prevName=i>0?st[i-1].name.split(" · ")[0]:"";
   const how = ls ? `<div class="how"><b>${ls.tot} min</b><span>desde ${i===1?"o hotel":"a paragem "+(i-1)+" ("+prevName+")"}</span><small>${ls.txt}${ls.via.length&&i!==1?" · via "+[...new Set(ls.via)].slice(0,4).join(", "):""}</small></div>` : "";
   const inner = md().legs.find(l=>l.inner&&l.to===i);
@@ -1119,6 +1184,7 @@ function selectStop(i, fromTap){
     <div class="in">${addr}<h2>${s.name}</h2><p class="what">${s.note}</p>${inner?`<p class="src">Entre os dois memoriais: ${fmtM(inner.m)}, ~${inner.min} min a pé.</p>`:""}
     ${b?`<h3>Importância</h3><div class="imp">${b.html}</div><p class="src">Fonte: <em>${SRC_BOOK}</em>, ${b.ref} (paginação da edição impressa).${b.extra?" "+b.extra:""}</p>`:""}</div>
     <div class="acts">${s.route?`<a class="pri" href="${s.route}" target="_blank" rel="noopener">${ICON_ROUTE}${s.rl}</a>`:""}<a href="${place(s.photo)}" target="_blank" rel="noopener">${ICON_PHOTO}Fotos</a></div>
+    ${i>0?`<div class="acts"><button type="button" class="feito${done["revolucao-"+i]?" on":""}" data-done="${i}">${done["revolucao-"+i]?"✓ Feita":"Marcar como feita"}</button></div>`:""}
     <div class="nav"><button type="button" data-step="-1" ${i===0?"disabled":""}>◀ Anterior</button><button type="button" data-step="1" ${i===st.length-1?"disabled":""}>Seguinte ▶</button></div>`;
   sheet.hidden=false; sheet.scrollTop=0;
   requestAnimationFrame(()=>centerOn(i));
@@ -1126,11 +1192,12 @@ function selectStop(i, fromTap){
 document.getElementById("mv-sheet").addEventListener("click",e=>{
   if(e.target.closest("[data-close]")){ closeSheet(); return; }
   const r=e.target.closest("[data-go]"); if(r){ selectStop(+r.dataset.go); return; }
+  const fd=e.target.closest("[data-done]"); if(fd){ const i=+fd.dataset.done, v=!done["revolucao-"+i]; setDone(i,v); fd.classList.toggle("on",v); fd.textContent=v?"✓ Feita":"Marcar como feita"; return; }
   const b=e.target.closest("[data-step]"); if(b){ const n=MV.sel+(+b.dataset.step); if(n>=0 && n<DAYS.revolucao.stops.length) selectStop(n); }
 });
 function closeSheet(){ const sh=document.getElementById("mv-sheet"); sh.hidden=true; MV.sel=-1;
   document.querySelectorAll("#mv-marks .mk").forEach(g=>g.classList.remove("sel")); document.querySelectorAll("#mv-legs .m-leg").forEach(p=>p.classList.remove("on"));
-  document.getElementById("mv-svg").classList.remove("hasel"); document.querySelector(".m-ride").classList.remove("on"); document.getElementById("mv-bar").hidden=false; if(MV.px) zoomUpdate(MV.px); }
+  document.getElementById("mv-svg").classList.remove("hasel"); document.querySelector(".m-ride").classList.remove("on"); document.getElementById("mv-bar").hidden=GUIDE.on; if(GUIDE.on) guideUpdate(false); if(MV.px) zoomUpdate(MV.px); }
 function showLegs(){
   const st=DAYS.revolucao.stops, D=md(), sheet=document.getElementById("mv-sheet");
   const walk=D.legs.reduce((a,l)=>a+l.m,0), wmin=D.legs.reduce((a,l)=>a+l.min,0);
@@ -1140,12 +1207,131 @@ function showLegs(){
     <div class="in"><div class="tot"><div><b>${fmtM(walk)}</b><small>a pé</small></div><div><b>~${Math.round(wmin/5)*5} min</b><small>a caminhar</small></div><div><b>U2</b><small>${fmtM(D.ride.m)} · ~${RIDE_MIN} min</small></div></div>
     <ol class="legs">${rows}</ol>
     <p class="src">Distâncias medidas na rede de ruas e caminhos do OpenStreetMap, a passo calmo (4,5 km/h). É a rede onde se pode circular de bicicleta; no Tiergarten e junto ao Reichstag, a pé, há trilhos que podem encurtar um pouco o caminho. Tempos sem as paragens. Mapa: ${D.attr}.</p></div>`;
-  sheet.hidden=false; sheet.scrollTop=0; document.getElementById("mv-bar").hidden=true; document.getElementById("mv-hint").hidden=true;
+  sheet.hidden=false; sheet.scrollTop=0; document.getElementById("mv-bar").hidden=true; document.getElementById("mv-hint").hidden=true; document.getElementById("mv-guide").hidden=true;
 }
+/* ---------- Agrupar paragens sobrepostas ---------- */
+function clusterMarks(px){
+  const mk=[...document.querySelectorAll("#mv-marks .mk:not(.mk2)")], R=26*px, groups=[];
+  mk.forEach(g=>g.classList.toggle("ok", +g.dataset.i>0 && !!done["revolucao-"+g.dataset.i]));
+  mk.forEach(g=>{ g.classList.remove("hid"); const i=+g.dataset.i, x=+g.dataset.x, y=+g.dataset.y;
+    if(i===MV.sel){ groups.push({a:g,m:[i],x,y,fixed:true}); return; }
+    const G=groups.find(G=>!G.fixed && Math.hypot(G.x-x,G.y-y)<R);
+    if(G){ G.m.push(i); g.classList.add("hid"); } else groups.push({a:g,m:[i],x,y}); });
+  groups.forEach(G=>{ const t=G.a.querySelector("text"), c=G.a.querySelector("circle"), m=G.m.sort((a,b)=>a-b), lab=i=>i===0?"H":String(i);
+    const cons=m.every((v,k)=>!k||v===m[k-1]+1);
+    t.textContent = m.length>1 ? (cons? lab(m[0])+"–"+lab(m[m.length-1]) : m.map(lab).join("·")) : lab(m[0]);
+    t.setAttribute("font-size", m.length>1?"10.5":"13"); c.setAttribute("r", m.length>1?"16":"13");
+    G.a.dataset.cl=m.join(","); G.a.classList.toggle("cl", m.length>1); });
+}
+function zoomCluster(list){
+  const st=DAYS.revolucao.stops, pts=list.split(",").map(i=>st[+i].loc[0]).map(([ ,la,lo])=>[mvX(lo),mvY(la)]);
+  const xs=pts.map(p=>p[0]), ys=pts.map(p=>p[1]), cx=(Math.min(...xs)+Math.max(...xs))/2, cy=(Math.min(...ys)+Math.max(...ys))/2;
+  let dmin=1e9; for(let a=0;a<pts.length;a++) for(let b=a+1;b<pts.length;b++) dmin=Math.min(dmin,Math.hypot(pts[a][0]-pts[b][0],pts[a][1]-pts[b][1]));
+  const svg=document.getElementById("mv-svg"), cw=svg.clientWidth, ch=svg.clientHeight, px=Math.max(60/cw, dmin/40);
+  setVB({x:cx-cw*px/2, y:cy-ch*px/2, w:cw*px, h:ch*px});
+}
+/* ---------- Aviso curto ---------- */
+function toast(msg,ms=4500){ const t=document.getElementById("mv-toast"); t.innerHTML=msg; t.hidden=false; clearTimeout(toast.h); toast.h=setTimeout(()=>t.hidden=true,ms); }
+/* ---------- Estou aqui (GPS) ---------- */
+const GEO={watch:null,pos:null,follow:false,first:true};
+const havM=(la1,lo1,la2,lo2)=>{ const R=6371000,r=Math.PI/180,dp=(la2-la1)*r,dl=(lo2-lo1)*r,h=Math.sin(dp/2)**2+Math.cos(la1*r)*Math.cos(la2*r)*Math.sin(dl/2)**2; return 2*R*Math.asin(Math.sqrt(h)); };
+function inMap(la,lo){ const B=md().B; return la<B[0]&&la>B[1]&&lo>B[2]&&lo<B[3]; }
+function geoStart(follow){
+  if(follow) GEO.follow=true;
+  if(!("geolocation" in navigator)){ toast("Este browser não dá acesso à localização."); return; }
+  if(GEO.pos){ placeMe(); if(inMap(GEO.pos.latitude,GEO.pos.longitude)) centerMe(); else outsideMsg(); }
+  else toast("A procurar a tua posição…",8000);
+  if(GEO.watch==null) GEO.watch=navigator.geolocation.watchPosition(onPos,onGeoErr,{enableHighAccuracy:true,maximumAge:5000,timeout:30000});
+}
+function onPos(p){
+  GEO.pos=p.coords; placeMe();
+  const ins=inMap(p.coords.latitude,p.coords.longitude);
+  if(GEO.first){ GEO.first=false; document.getElementById("mv-toast").hidden=true; if(ins){ if(GUIDE.on) guideFrame(nextStop()); else centerMe(); } else outsideMsg(); }
+  else if(GEO.follow && ins){ if(GUIDE.on) guideFrame(nextStop()); else centerMe(); }
+  guideUpdate();
+}
+function outsideMsg(){ const H=DAYS.revolucao.stops[0].loc[0], d=havM(GEO.pos.latitude,GEO.pos.longitude,H[1],H[2]);
+  toast(`Estás fora da área do mapa, a ${d>=100000?Math.round(d/1000).toLocaleString("pt-PT"):(d/1000).toFixed(1).replace(".",",")} km do hotel. O ponto azul aparece quando estiveres em Berlim.`,7000); }
+function onGeoErr(e){
+  document.getElementById("mv-locate").classList.remove("on");
+  toast(e.code===1 ? "Sem autorização para usar a localização. Autoriza-a nas definições do browser para esta página. Se estiveres a ver a página dentro do Claude, abre a versão do GitHub." : "Não foi possível obter a posição. Tenta outra vez ao ar livre.",8000);
+  if(e.code===1){ navigator.geolocation.clearWatch(GEO.watch); GEO.watch=null; }
+}
+function placeMe(){
+  const c=GEO.pos, me=document.getElementById("mv-me"), acc=document.getElementById("mv-acc"); if(!me) return;
+  const x=mvX(c.longitude), y=mvY(c.latitude); me.dataset.x=x.toFixed(2); me.dataset.y=y.toFixed(2); me.style.display="";
+  me.setAttribute("transform",`translate(${x.toFixed(2)} ${y.toFixed(2)}) scale(${(MV.px||1).toFixed(4)})`);
+  acc.setAttribute("cx",x.toFixed(2)); acc.setAttribute("cy",y.toFixed(2)); acc.setAttribute("r",(Math.min(c.accuracy||30,400)*UPM()).toFixed(2)); acc.style.display="";
+  document.getElementById("mv-locate").classList.add("on");
+}
+function centerMe(){
+  const svg=document.getElementById("mv-svg"), cw=svg.clientWidth, ch=svg.clientHeight, x=mvX(GEO.pos.longitude), y=mvY(GEO.pos.latitude);
+  const sheet=document.getElementById("mv-sheet"), bottom=!sheet.hidden?Math.min(ch*0.62,sheet.offsetHeight):(document.getElementById("mv-guide").hidden?60:150);
+  const w=Math.min(MV.vb.w, 260), px=w/cw, cyPx=(ch-bottom)/2+30;
+  setVB({x:x-w/2, y:y-cyPx*px, w, h:ch*px});
+}
+/* ---------- Modo guia ---------- */
+const GUIDE={on:false};
+function nextStop(){ const st=DAYS.revolucao.stops; for(let i=1;i<st.length;i++) if(!done["revolucao-"+i]) return i; return -1; }
+function setDone(i,val){ setTimeout(()=>{ if(MV.px) zoomUpdate(MV.px); },0); const id="revolucao-"+i; if(val) done[id]=true; else delete done[id]; store.set(doneKey,done);
+  const cb=document.querySelector(`input[data-id="${id}"]`); if(cb){ cb.checked=val; cb.closest(".stop").classList.toggle("done",val); } }
+function guideToggle(on){
+  GUIDE.on=on; document.getElementById("mv-guidebtn").classList.toggle("on",on);
+  if(on){ closeSheet(); document.getElementById("mv-hint").hidden=true; GEO.follow=true; geoStart(false); guideUpdate(true); }
+  else { document.getElementById("mv-guide").hidden=true; GEO.follow=false; highlightLeg(-1); document.getElementById("mv-bar").hidden=false; }
+}
+function highlightLeg(i){
+  document.querySelectorAll("#mv-legs .m-leg").forEach(p=>p.classList.toggle("on", +p.dataset.to===i));
+  document.getElementById("mv-svg").classList.toggle("hasel", i>0); document.querySelector(".m-ride").classList.toggle("on", i===1);
+  MV.gsel=i; if(MV.px) zoomUpdate(MV.px);
+}
+function guideUpdate(frame){
+  if(!GUIDE.on) return;
+  const box=document.getElementById("mv-guide"), st=DAYS.revolucao.stops, i=nextStop();
+  if(!document.getElementById("mv-sheet").hidden){ box.hidden=true; return; }
+  document.getElementById("mv-bar").hidden=true; box.hidden=false;
+  if(i<0){ box.innerHTML=`<div class="g-t">Percurso concluído ✓</div><div class="g-n">Todas as paragens estão marcadas como feitas.</div><div class="g-a"><button type="button" data-g="reset">Recomeçar</button><button type="button" data-g="off">Sair do guia</button></div>`; highlightLeg(-1); return; }
+  const s=st[i], ls=legSummary(i);
+  let dist="";
+  if(GEO.pos && inMap(GEO.pos.latitude,GEO.pos.longitude)){ const d=havM(GEO.pos.latitude,GEO.pos.longitude,s.loc[0][1],s.loc[0][2]); dist=`<b>${fmtM(d)}</b> de ti em linha reta · ~${Math.max(1,Math.round(d*1.3/75))} min a pé`; }
+  box.innerHTML=`<div class="g-t"><span>Próxima · ${s.t}</span><span class="g-num">${i}</span></div><div class="g-n">${s.name}</div>
+    <div class="g-d">${dist || (ls?`${ls.tot} min desde a paragem anterior · ${ls.txt}`:"")}</div>
+    <div class="g-a"><button type="button" class="pri" data-g="done">✓ Feito</button><button type="button" data-g="info">Ver paragem</button><button type="button" data-g="off" aria-label="Sair do guia">✕</button></div>`;
+  highlightLeg(i);
+  if(frame) guideFrame(i);
+}
+function guideFrame(i){
+  if(i<0) return;
+  if(!(GEO.pos && inMap(GEO.pos.latitude,GEO.pos.longitude))){ frameLeg(i); return; }
+  const s=DAYS.revolucao.stops[i].loc[0], d=havM(GEO.pos.latitude,GEO.pos.longitude,s[1],s[2]);
+  if(d>2500){ centerMe(); return; }
+  const xs=[mvX(GEO.pos.longitude),mvX(s[2])], ys=[mvY(GEO.pos.latitude),mvY(s[1])];
+  fitBox(Math.min(...xs)-20,Math.min(...ys)-20,Math.max(...xs)+20,Math.max(...ys)+20,30,170);
+}
+function frameLeg(i){
+  const st=DAYS.revolucao.stops, a=st[i].loc[0], b=(i>1?st[i-1].loc.slice(-1)[0]:a);
+  const x0=Math.min(mvX(a[2]),mvX(b[2])), x1=Math.max(mvX(a[2]),mvX(b[2])), y0=Math.min(mvY(a[1]),mvY(b[1])), y1=Math.max(mvY(a[1]),mvY(b[1]));
+  fitBox(x0-25,y0-25,x1+25,y1+25,30,160);
+}
+document.getElementById("mv-guide").addEventListener("click",e=>{
+  const b=e.target.closest("[data-g]"); if(!b) return; const a=b.dataset.g, i=nextStop();
+  if(a==="done" && i>0){ setDone(i,true); const n=nextStop(); guideUpdate(false); if(n>0){ GEO.follow=true; guideFrame(n); } }
+  else if(a==="info" && i>0) selectStop(i);
+  else if(a==="off") guideToggle(false);
+  else if(a==="reset"){ for(let k=1;k<DAYS.revolucao.stops.length;k++) setDone(k,false); guideUpdate(true); }
+});
+/* ---------- Modo noturno ---------- */
+const NIGHT_KEY="berlim-mapa-noite";
+function setNight(on,save){ document.getElementById("mapview").classList.toggle("night",on); document.getElementById("mv-night").classList.toggle("on",on);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", on?"#17191d":"#efe6d2");
+  if(save) try{ localStorage.setItem(NIGHT_KEY, on?"1":"0"); }catch(e){} }
+function initNight(){ let v=null; try{ v=localStorage.getItem(NIGHT_KEY); }catch(e){}
+  const h=new Date().getHours(); setNight(v===null ? (h>=17||h<7) : v==="1", false); }
+
 document.getElementById("mv-bar").addEventListener("click",showLegs);
 function openMap(){
   const mv=document.getElementById("mapview"); document.body.classList.add("mapmode"); document.body.dataset.day="revolucao"; mv.hidden=false;
-  if(!MV.built){ buildMap(); const D=md(); document.getElementById("mv-bar-t").textContent=`${fmtM(D.legs.reduce((a,l)=>a+l.m,0))} a pé · U2 ~${RIDE_MIN} min`; }
+  if(!MV.built){ initNight(); buildMap(); const D=md(); document.getElementById("mv-bar-t").textContent=`${fmtM(D.legs.reduce((a,l)=>a+l.m,0))} a pé · U2 ~${RIDE_MIN} min`; }
   requestAnimationFrame(()=>{ if(MV.sel>=0) selectStop(MV.sel); else fitAll(); });
 }
 function closeMap(){ document.body.classList.remove("mapmode"); const mv=document.getElementById("mapview"); if(mv) mv.hidden=true; }
@@ -1155,6 +1341,7 @@ document.addEventListener("change", e=>{
   const cb=e.target.closest('input[type="checkbox"][data-id]'); if(!cb) return;
   done[cb.dataset.id]=cb.checked; if(!cb.checked) delete done[cb.dataset.id]; store.set(doneKey,done);
   cb.closest(".stop").classList.toggle("done", cb.checked);
+  if(typeof GUIDE!=="undefined" && GUIDE.on) guideUpdate(false);
 });
 document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{ location.hash=b.dataset.day; show(b.dataset.day); window.scrollTo({top:0}); }));
 window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
